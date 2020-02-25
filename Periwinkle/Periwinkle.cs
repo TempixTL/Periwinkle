@@ -10,11 +10,15 @@ using System.Windows.Forms;
 
 namespace Periwinkle
 {
-    public partial class Form1 : Form
+    public partial class Periwinkle : Form
     {
-        public Form1()
+        public Periwinkle()
         {
             InitializeComponent();
+
+            Form f = new User();
+            f.MdiParent = this;
+            f.Show();
         }
     }
 }
