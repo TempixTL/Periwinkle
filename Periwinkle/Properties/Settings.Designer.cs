@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Periwinkle.Properties
+namespace LibraryApp.Properties
 {
 
 
