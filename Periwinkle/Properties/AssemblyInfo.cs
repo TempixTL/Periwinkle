@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Periwinkle")]
+[assembly: AssemblyTitle("LibraryApp")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Periwinkle")]
+[assembly: AssemblyProduct("LibraryApp")]
 [assembly: AssemblyCopyright("Copyright ©  2020")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("9ed01fe9-3f21-45cd-ac50-73014ced3449")]
+[assembly: Guid("71387899-a9b8-4e77-a062-71aaef832d25")]
 
 // Version information for an assembly consists of the following four values:
 //
