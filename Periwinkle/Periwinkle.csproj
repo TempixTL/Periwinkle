@@ -151,5 +151,8 @@
   <ItemGroup>
     <None Include="Images\library-blurred.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\furelise.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

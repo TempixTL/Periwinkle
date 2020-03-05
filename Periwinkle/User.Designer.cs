@@ -36,8 +36,6 @@ namespace LibraryApp
             this.txtFirst = new System.Windows.Forms.TextBox();
             this.txtLast = new System.Windows.Forms.TextBox();
             this.lblLast = new System.Windows.Forms.Label();
-            this.txtMI = new System.Windows.Forms.TextBox();
-            this.lblMiddle = new System.Windows.Forms.Label();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.btnTest = new System.Windows.Forms.Button();
             this.btnA = new System.Windows.Forms.Button();
@@ -88,30 +86,22 @@ namespace LibraryApp
             this.btnNextLeft = new System.Windows.Forms.Button();
             this.btnFirstLeft = new System.Windows.Forms.Button();
             this.btnCellPhone = new System.Windows.Forms.Button();
-            this.btnHomePhone = new System.Windows.Forms.Button();
             this.txtUserName = new System.Windows.Forms.TextBox();
             this.lblUsername = new System.Windows.Forms.Label();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.lblPassword = new System.Windows.Forms.Label();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
             this.txtNotes = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.PersonalInfo = new System.Windows.Forms.TabPage();
-            this.txtUniversityID = new System.Windows.Forms.MaskedTextBox();
+            this.txtRenewalDate = new System.Windows.Forms.MaskedTextBox();
             this.txtCellPhone = new System.Windows.Forms.MaskedTextBox();
-            this.txtHomePhone = new System.Windows.Forms.MaskedTextBox();
-            this.rbMale = new System.Windows.Forms.RadioButton();
-            this.rbFemale = new System.Windows.Forms.RadioButton();
-            this.chAdministrator = new System.Windows.Forms.CheckBox();
-            this.cbDeptID = new System.Windows.Forms.ComboBox();
+            this.cbMembership = new System.Windows.Forms.ComboBox();
             this.txtID = new System.Windows.Forms.Label();
             this.Notes = new System.Windows.Forms.TabPage();
             this.label15 = new System.Windows.Forms.Label();
@@ -241,26 +231,6 @@ namespace LibraryApp
             this.lblLast.Size = new System.Drawing.Size(42, 19);
             this.lblLast.TabIndex = 2;
             this.lblLast.Text = "Last";
-            // 
-            // txtMI
-            // 
-            this.txtMI.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMI.Location = new System.Drawing.Point(373, 52);
-            this.txtMI.Name = "txtMI";
-            this.txtMI.Size = new System.Drawing.Size(40, 26);
-            this.txtMI.TabIndex = 1;
-            this.txtMI.Leave += new System.EventHandler(this.TxtMI_Leave);
-            // 
-            // lblMiddle
-            // 
-            this.lblMiddle.AutoSize = true;
-            this.lblMiddle.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMiddle.Location = new System.Drawing.Point(341, 56);
-            this.lblMiddle.Name = "lblMiddle";
-            this.lblMiddle.Size = new System.Drawing.Size(26, 19);
-            this.lblMiddle.TabIndex = 12;
-            this.lblMiddle.Text = "MI";
-            this.toolTip1.SetToolTip(this.lblMiddle, "Enter Middle Initial");
             // 
             // btnTest
             // 
@@ -702,12 +672,12 @@ namespace LibraryApp
             this.btnCheckOutTransfer.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(2)))), ((int)(((byte)(89)))));
             this.btnCheckOutTransfer.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnCheckOutTransfer.ForeColor = System.Drawing.Color.White;
-            this.btnCheckOutTransfer.Location = new System.Drawing.Point(15, 303);
+            this.btnCheckOutTransfer.Location = new System.Drawing.Point(12, 287);
             this.btnCheckOutTransfer.Name = "btnCheckOutTransfer";
             this.btnCheckOutTransfer.Size = new System.Drawing.Size(370, 23);
             this.btnCheckOutTransfer.TabIndex = 42;
-            this.btnCheckOutTransfer.Text = "Check-Out Items";
-            this.toolTip1.SetToolTip(this.btnCheckOutTransfer, "Transfer to Check-Out Sub-System");
+            this.btnCheckOutTransfer.Text = "View Playlists";
+            this.toolTip1.SetToolTip(this.btnCheckOutTransfer, "Transfer to User\'s Playlists in Music Sub-System");
             this.btnCheckOutTransfer.UseVisualStyleBackColor = false;
             // 
             // btnPayFineTransfer
@@ -716,12 +686,12 @@ namespace LibraryApp
             this.btnPayFineTransfer.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(2)))), ((int)(((byte)(89)))));
             this.btnPayFineTransfer.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnPayFineTransfer.ForeColor = System.Drawing.Color.White;
-            this.btnPayFineTransfer.Location = new System.Drawing.Point(397, 303);
+            this.btnPayFineTransfer.Location = new System.Drawing.Point(394, 287);
             this.btnPayFineTransfer.Name = "btnPayFineTransfer";
             this.btnPayFineTransfer.Size = new System.Drawing.Size(370, 23);
             this.btnPayFineTransfer.TabIndex = 43;
-            this.btnPayFineTransfer.Text = "Pay Fines";
-            this.toolTip1.SetToolTip(this.btnPayFineTransfer, "Transfer to Fine Payment Sub-System");
+            this.btnPayFineTransfer.Text = "Pay Membership";
+            this.toolTip1.SetToolTip(this.btnPayFineTransfer, "Transfer to Payment Sub-System");
             this.btnPayFineTransfer.UseVisualStyleBackColor = false;
             // 
             // btnViewDetails1
@@ -1006,27 +976,13 @@ namespace LibraryApp
             this.btnCellPhone.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnCellPhone.FlatAppearance.BorderSize = 0;
             this.btnCellPhone.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCellPhone.Location = new System.Drawing.Point(649, 179);
+            this.btnCellPhone.Location = new System.Drawing.Point(310, 227);
             this.btnCellPhone.Name = "btnCellPhone";
             this.btnCellPhone.Size = new System.Drawing.Size(26, 26);
             this.btnCellPhone.TabIndex = 34;
             this.toolTip1.SetToolTip(this.btnCellPhone, "Dialing Cell Phone");
             this.btnCellPhone.UseVisualStyleBackColor = false;
             this.btnCellPhone.Click += new System.EventHandler(this.btnCellPhone_Click);
-            // 
-            // btnHomePhone
-            // 
-            this.btnHomePhone.BackgroundImage = global::LibraryApp.Properties.Resources.phone_48;
-            this.btnHomePhone.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnHomePhone.FlatAppearance.BorderSize = 0;
-            this.btnHomePhone.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHomePhone.Location = new System.Drawing.Point(309, 178);
-            this.btnHomePhone.Name = "btnHomePhone";
-            this.btnHomePhone.Size = new System.Drawing.Size(26, 26);
-            this.btnHomePhone.TabIndex = 33;
-            this.toolTip1.SetToolTip(this.btnHomePhone, "Dialing Home Phone");
-            this.btnHomePhone.UseVisualStyleBackColor = false;
-            this.btnHomePhone.Click += new System.EventHandler(this.btnHomePhone_Click);
             // 
             // txtUserName
             // 
@@ -1059,7 +1015,7 @@ namespace LibraryApp
             // 
             this.lblPassword.AutoSize = true;
             this.lblPassword.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPassword.Location = new System.Drawing.Point(376, 95);
+            this.lblPassword.Location = new System.Drawing.Point(375, 95);
             this.lblPassword.Name = "lblPassword";
             this.lblPassword.Size = new System.Drawing.Size(86, 19);
             this.lblPassword.TabIndex = 16;
@@ -1083,21 +1039,11 @@ namespace LibraryApp
             this.label3.TabIndex = 18;
             this.label3.Text = "E-Mail";
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(14, 182);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(108, 19);
-            this.label4.TabIndex = 20;
-            this.label4.Text = "Home Phone";
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(369, 182);
+            this.label1.Location = new System.Drawing.Point(30, 230);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(92, 19);
             this.label1.TabIndex = 22;
@@ -1107,41 +1053,21 @@ namespace LibraryApp
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(416, 223);
+            this.label2.Location = new System.Drawing.Point(19, 183);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(45, 19);
+            this.label2.Size = new System.Drawing.Size(103, 19);
             this.label2.TabIndex = 26;
-            this.label2.Text = "Dept";
+            this.label2.Text = "Membership";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(16, 224);
+            this.label5.Location = new System.Drawing.Point(386, 183);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(106, 19);
+            this.label5.Size = new System.Drawing.Size(75, 19);
             this.label5.TabIndex = 24;
-            this.label5.Text = "University ID";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(349, 266);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(112, 19);
-            this.label6.TabIndex = 30;
-            this.label6.Text = "Administrator";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(57, 266);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(65, 19);
-            this.label7.TabIndex = 28;
-            this.label7.Text = "Gender";
+            this.label5.Text = "Renewal";
             // 
             // txtNotes
             // 
@@ -1180,24 +1106,15 @@ namespace LibraryApp
             this.PersonalInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(208)))), ((int)(((byte)(242)))));
             this.PersonalInfo.Controls.Add(this.btnPayFineTransfer);
             this.PersonalInfo.Controls.Add(this.btnCheckOutTransfer);
-            this.PersonalInfo.Controls.Add(this.txtUniversityID);
+            this.PersonalInfo.Controls.Add(this.txtRenewalDate);
             this.PersonalInfo.Controls.Add(this.txtCellPhone);
-            this.PersonalInfo.Controls.Add(this.txtHomePhone);
-            this.PersonalInfo.Controls.Add(this.rbMale);
-            this.PersonalInfo.Controls.Add(this.rbFemale);
-            this.PersonalInfo.Controls.Add(this.chAdministrator);
-            this.PersonalInfo.Controls.Add(this.cbDeptID);
+            this.PersonalInfo.Controls.Add(this.cbMembership);
             this.PersonalInfo.Controls.Add(this.btnCellPhone);
-            this.PersonalInfo.Controls.Add(this.btnHomePhone);
             this.PersonalInfo.Controls.Add(this.txtID);
             this.PersonalInfo.Controls.Add(this.lblFirst);
             this.PersonalInfo.Controls.Add(this.txtFirst);
             this.PersonalInfo.Controls.Add(this.lblLast);
-            this.PersonalInfo.Controls.Add(this.label6);
             this.PersonalInfo.Controls.Add(this.txtLast);
-            this.PersonalInfo.Controls.Add(this.lblMiddle);
-            this.PersonalInfo.Controls.Add(this.label7);
-            this.PersonalInfo.Controls.Add(this.txtMI);
             this.PersonalInfo.Controls.Add(this.lblUsername);
             this.PersonalInfo.Controls.Add(this.label2);
             this.PersonalInfo.Controls.Add(this.txtUserName);
@@ -1207,7 +1124,6 @@ namespace LibraryApp
             this.PersonalInfo.Controls.Add(this.label3);
             this.PersonalInfo.Controls.Add(this.label1);
             this.PersonalInfo.Controls.Add(this.txtEmail);
-            this.PersonalInfo.Controls.Add(this.label4);
             this.PersonalInfo.Location = new System.Drawing.Point(4, 25);
             this.PersonalInfo.Name = "PersonalInfo";
             this.PersonalInfo.Padding = new System.Windows.Forms.Padding(3);
@@ -1215,80 +1131,35 @@ namespace LibraryApp
             this.PersonalInfo.TabIndex = 0;
             this.PersonalInfo.Text = "Personal Info";
             // 
-            // txtUniversityID
+            // txtRenewalDate
             // 
-            this.txtUniversityID.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUniversityID.Location = new System.Drawing.Point(128, 220);
-            this.txtUniversityID.Mask = "999999999";
-            this.txtUniversityID.Name = "txtUniversityID";
-            this.txtUniversityID.Size = new System.Drawing.Size(207, 26);
-            this.txtUniversityID.TabIndex = 41;
+            this.txtRenewalDate.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtRenewalDate.Location = new System.Drawing.Point(467, 180);
+            this.txtRenewalDate.Mask = "00/00/0000";
+            this.txtRenewalDate.Name = "txtRenewalDate";
+            this.txtRenewalDate.Size = new System.Drawing.Size(111, 26);
+            this.txtRenewalDate.TabIndex = 41;
+            this.txtRenewalDate.ValidatingType = typeof(System.DateTime);
             // 
             // txtCellPhone
             // 
             this.txtCellPhone.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCellPhone.Location = new System.Drawing.Point(467, 179);
+            this.txtCellPhone.Location = new System.Drawing.Point(128, 227);
             this.txtCellPhone.Mask = "(999) 000-0000";
             this.txtCellPhone.Name = "txtCellPhone";
             this.txtCellPhone.Size = new System.Drawing.Size(166, 26);
             this.txtCellPhone.TabIndex = 40;
             // 
-            // txtHomePhone
+            // cbMembership
             // 
-            this.txtHomePhone.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtHomePhone.Location = new System.Drawing.Point(128, 179);
-            this.txtHomePhone.Mask = "(999) 000-0000";
-            this.txtHomePhone.Name = "txtHomePhone";
-            this.txtHomePhone.Size = new System.Drawing.Size(166, 26);
-            this.txtHomePhone.TabIndex = 39;
-            // 
-            // rbMale
-            // 
-            this.rbMale.AutoSize = true;
-            this.rbMale.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbMale.Location = new System.Drawing.Point(216, 263);
-            this.rbMale.Name = "rbMale";
-            this.rbMale.Size = new System.Drawing.Size(62, 23);
-            this.rbMale.TabIndex = 38;
-            this.rbMale.TabStop = true;
-            this.rbMale.Text = "Male";
-            this.rbMale.UseVisualStyleBackColor = true;
-            this.rbMale.Enter += new System.EventHandler(this.RbMale_Enter);
-            // 
-            // rbFemale
-            // 
-            this.rbFemale.AutoSize = true;
-            this.rbFemale.BackColor = System.Drawing.Color.Transparent;
-            this.rbFemale.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbFemale.Location = new System.Drawing.Point(128, 263);
-            this.rbFemale.Name = "rbFemale";
-            this.rbFemale.Size = new System.Drawing.Size(82, 23);
-            this.rbFemale.TabIndex = 37;
-            this.rbFemale.TabStop = true;
-            this.rbFemale.Text = "Female";
-            this.rbFemale.UseVisualStyleBackColor = false;
-            this.rbFemale.Enter += new System.EventHandler(this.RbFemale_Enter);
-            // 
-            // chAdministrator
-            // 
-            this.chAdministrator.AutoSize = true;
-            this.chAdministrator.Location = new System.Drawing.Point(467, 270);
-            this.chAdministrator.Name = "chAdministrator";
-            this.chAdministrator.Size = new System.Drawing.Size(15, 14);
-            this.chAdministrator.TabIndex = 36;
-            this.chAdministrator.UseVisualStyleBackColor = true;
-            this.chAdministrator.Enter += new System.EventHandler(this.ChAdministrator_Enter);
-            // 
-            // cbDeptID
-            // 
-            this.cbDeptID.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbDeptID.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbDeptID.FormattingEnabled = true;
-            this.cbDeptID.Location = new System.Drawing.Point(467, 220);
-            this.cbDeptID.Name = "cbDeptID";
-            this.cbDeptID.Size = new System.Drawing.Size(208, 27);
-            this.cbDeptID.TabIndex = 35;
-            this.cbDeptID.Enter += new System.EventHandler(this.CbDeptID_Enter);
+            this.cbMembership.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbMembership.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbMembership.FormattingEnabled = true;
+            this.cbMembership.Location = new System.Drawing.Point(128, 180);
+            this.cbMembership.Name = "cbMembership";
+            this.cbMembership.Size = new System.Drawing.Size(208, 27);
+            this.cbMembership.TabIndex = 35;
+            this.cbMembership.Enter += new System.EventHandler(this.CbDeptID_Enter);
             // 
             // txtID
             // 
@@ -2115,8 +1986,6 @@ namespace LibraryApp
         private System.Windows.Forms.Label lblFirst;
         private System.Windows.Forms.TextBox txtFirst;
         private System.Windows.Forms.Label lblLast;
-        private System.Windows.Forms.TextBox txtMI;
-        private System.Windows.Forms.Label lblMiddle;
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.TextBox txtUserName;
         private System.Windows.Forms.Label lblUsername;
@@ -2124,12 +1993,9 @@ namespace LibraryApp
         private System.Windows.Forms.Label lblPassword;
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtNotes;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TabControl tabControl1;
@@ -2169,7 +2035,6 @@ namespace LibraryApp
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label txtFirst2;
         private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.Button btnHomePhone;
         private System.Windows.Forms.Button btnCellPhone;
         private System.Windows.Forms.TextBox txtLast;
         private System.Windows.Forms.Panel pnlNavigation;
@@ -2212,12 +2077,8 @@ namespace LibraryApp
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.ComboBox cbOrderBy;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.ComboBox cbDeptID;
-        private System.Windows.Forms.CheckBox chAdministrator;
-        private System.Windows.Forms.RadioButton rbMale;
-        private System.Windows.Forms.RadioButton rbFemale;
-        private System.Windows.Forms.MaskedTextBox txtHomePhone;
-        private System.Windows.Forms.MaskedTextBox txtUniversityID;
+        private System.Windows.Forms.ComboBox cbMembership;
+        private System.Windows.Forms.MaskedTextBox txtRenewalDate;
         private System.Windows.Forms.MaskedTextBox txtCellPhone;
         private System.Windows.Forms.Button btnCheckOutTransfer;
         private System.Windows.Forms.Button btnPayFineTransfer;
