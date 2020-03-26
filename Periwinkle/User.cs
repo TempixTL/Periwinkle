@@ -14,7 +14,7 @@ namespace LibraryApp
         private long Port = 12345;
         private bool DataToggle = true;
         private String QuickLinkText = "Full Name";
-        private bool ViewFirstRecord = true;
+        private int RecordNo = 0;
 
         private List<Control> editFields = new List<Control>();
 
@@ -41,15 +41,13 @@ namespace LibraryApp
             ViewMode();
 
             editFields.Add(txtFirst);
-            editFields.Add(txtMI);
             editFields.Add(txtLast);
             editFields.Add(txtUserName);
             editFields.Add(txtPassword);
             editFields.Add(txtEmail);
-            editFields.Add(txtHomePhone);
             editFields.Add(txtCellPhone);
-            editFields.Add(txtUniversityID);
-            editFields.Add(cbDeptID);
+            editFields.Add(txtRenewalDate);
+            editFields.Add(cbMembership);
             editFields.Add(txtNotes);
         }
 
@@ -132,41 +130,43 @@ namespace LibraryApp
         // Environment: C# VS 2017
         private void FillFormVariables()
         {
-            if (ViewFirstRecord)
+            if (RecordNo == 0)
             {
                 txtFirst.Text = "Tom";
-                txtMI.Text = "E";
                 txtLast.Text = "Hicks";
                 txtID.Text = "ID 1";
                 txtUserName.Text = "thicks";
                 txtPassword.Text = "password";
                 txtEmail.Text = "thicks@trinity.edu";
-                txtHomePhone.Text = "(999) 999-9999";
                 txtCellPhone.Text = "(888) 888-8888";
-                txtUniversityID.Text = "7654321";
-                cbDeptID.Text = "Computer Science";
-                rbMale.Checked = true;
-                rbFemale.Checked = false;
-                chAdministrator.Checked = true;
+                txtRenewalDate.Text = "10/01/1985";
+                cbMembership.Text = "Premium++";
                 txtNotes.Text = "Good guy!";
             }
-            else
+            else if (RecordNo == 1)
             {
                 txtFirst.Text = "Tom";
-                txtMI.Text = "D";
                 txtLast.Text = "Lauerman";
                 txtID.Text = "ID 7";
                 txtUserName.Text = "tlauerma";
                 txtPassword.Text = "password";
                 txtEmail.Text = "tlauerma@trinity.edu";
-                txtHomePhone.Text = "(123) 456-7890";
                 txtCellPhone.Text = "(012) 345-6789";
-                txtUniversityID.Text = "1234567";
-                cbDeptID.Text = "Computer Science";
-                rbMale.Checked = true;
-                rbFemale.Checked = false;
-                chAdministrator.Checked = false;
+                txtRenewalDate.Text = "11/23/1998";
+                cbMembership.Text = "Free";
                 txtNotes.Text = "Front-end developer";
+            } else
+            {
+                txtFirst.Text = "Emerson";
+                txtLast.Text = "Spradling";
+                txtID.Text = "19";
+                txtUserName.Text = "espradli";
+                txtPassword.Text = "password";
+                txtEmail.Text = "espradli@trinity.edu";
+                txtCellPhone.Text = "(123) 456-7890";
+                txtRenewalDate.Text = "10/16/1998";
+                cbMembership.Text = "Artist";
+                txtNotes.Text = "Toots on the horn!";
             }
 
             SynchronizeCommonFields();
@@ -183,19 +183,14 @@ namespace LibraryApp
         private void FillFormBlank()
         {
             txtFirst.Text = "";
-            txtMI.Text = "";
             txtLast.Text = "";
             txtID.Text = "ID";
             txtUserName.Text = "";
             txtPassword.Text = "";
             txtEmail.Text = "";
-            txtHomePhone.Text = "";
             txtCellPhone.Text = "";
-            txtUniversityID.Text = "";
-            cbDeptID.Text = "--- Select Major ---";
-            rbMale.Checked = false;
-            rbFemale.Checked = false;
-            chAdministrator.Checked = false;
+            txtRenewalDate.Text = "";
+            cbMembership.Text = "--- Select Major ---";
             txtNotes.Text = "";
 
             SynchronizeCommonFields();
@@ -213,9 +208,6 @@ namespace LibraryApp
         {
             txtFirst1.Text = txtFirst.Text;
             txtFirst2.Text = txtFirst.Text;
-
-            txtMI1.Text = txtMI.Text;
-            txtMI2.Text = txtMI.Text;
 
             txtLast1.Text = txtLast.Text;
             txtLast2.Text = txtLast.Text;
@@ -299,7 +291,7 @@ namespace LibraryApp
         // Environment: C# VS 2017
         private void LoadLastRecord()
         {
-            ViewFirstRecord = false;
+            RecordNo = 2;
             FillFormVariables();
         }
 
@@ -314,7 +306,7 @@ namespace LibraryApp
         //===========================================================================//
         private void LoadFirstRecord()
         {
-            ViewFirstRecord = true;
+            RecordNo = 0;
             FillFormVariables();
         }
 
@@ -328,7 +320,7 @@ namespace LibraryApp
         // Environment: C# VS 2017
         private void LoadNextRecord()
         {
-            ViewFirstRecord = !ViewFirstRecord;
+            RecordNo = (RecordNo+1) % 3;
             FillFormVariables();
         }
 
@@ -342,7 +334,7 @@ namespace LibraryApp
         // Environment: C# VS 2017
         private void LoadPreviousRecord()
         {
-            ViewFirstRecord = !ViewFirstRecord;
+            RecordNo = ((RecordNo-1) % 3 + 3) % 3;
             FillFormVariables();
         }
 
@@ -368,11 +360,11 @@ namespace LibraryApp
         {
             if (Letter == 'H')
             {
-                ViewFirstRecord = true;
+                RecordNo = 0;
             }
             else if (Letter == 'L')
             {
-                ViewFirstRecord = false;
+                RecordNo = 1;
             }
 
             FillFormVariables();
@@ -454,8 +446,8 @@ namespace LibraryApp
 
             lbTrace.Items.Add("cbOrderBy.Text ....... = " + cbOrderBy.Text);
             lbTrace.Items.Add("cbSelect.Text ........ = " + cbSelect.Text);
-            lbTrace.Items.Add("cbDeptID.DispalyValue  = " + cbDeptID.Text.ToString());
-            lbTrace.Items.Add("cbDeptID.SelectedValue = " + cbDeptID.SelectedValue.ToString());
+            lbTrace.Items.Add("cbDeptID.DispalyValue  = " + cbMembership.Text.ToString());
+            lbTrace.Items.Add("cbDeptID.SelectedValue = " + cbMembership.SelectedValue.ToString());
             lbTrace.Items.Add("");
         }
 
@@ -466,7 +458,6 @@ namespace LibraryApp
         {
             lbTraceNote("-", "Test Module 4", "CheckBox Control", "Settings");
 
-            lbTrace.Items.Add("chAdministrator.Checked ....... = " + chAdministrator.Checked.ToString());
             lbTrace.Items.Add("");
         }
 
@@ -477,8 +468,6 @@ namespace LibraryApp
         {
             lbTraceNote("-", "Test Module 5", "Radio Button Control", "Settings");
 
-            lbTrace.Items.Add("rbFemale.Checked ....... = " + rbFemale.Checked.ToString());
-            lbTrace.Items.Add("rbMale.Checked ......... = " + rbMale.Checked.ToString());
             lbTrace.Items.Add("");
         }
 
@@ -548,15 +537,7 @@ namespace LibraryApp
                 cntrl.BackColor = Color.White;
             }
 
-            rbMale.BackColor = Color.Transparent;
-            rbFemale.BackColor = Color.Transparent;
-            rbMale.ForeColor = Color.White;
-            rbFemale.ForeColor = Color.White;
-
-            chAdministrator.BackColor = Color.Transparent;
-
             // --------------------- Hide The Phone Buttons ----------------------
-            btnHomePhone.Show();
             btnCellPhone.Show();
 
             // ----------------- Hide The Data Transfer Buttons ------------------
@@ -656,15 +637,7 @@ namespace LibraryApp
                 cntrl.BackColor = Color.FromArgb(227, 220, 184);
             }
 
-            rbMale.BackColor = Color.FromArgb(227, 220, 184);
-            rbFemale.BackColor = Color.FromArgb(227, 220, 184);
-            rbMale.ForeColor = Color.Black;
-            rbFemale.ForeColor = Color.Black;
-
-            chAdministrator.BackColor = Color.FromArgb(227, 220, 184);
-
             // --------------------- Hide The Phone Buttons ----------------------
-            btnHomePhone.Hide();
             btnCellPhone.Hide();
 
             // ----------------- Hide The Data Transfer Buttons ------------------
@@ -714,7 +687,7 @@ namespace LibraryApp
         private void Delete()
         {
             // String Query = "UPDATE User SET Deleted = 'T' WHERE ID = '" + CurrentID.ToString() + "';";
-            ViewFirstRecord = !ViewFirstRecord;
+            RecordNo = (RecordNo+1) % 3;
             FillFormVariables();
         }
         //===========================================================================//
@@ -773,17 +746,17 @@ namespace LibraryApp
         public void PopulateDeptIDComboBox()
         {
             Dictionary<Int32, String> departments = new Dictionary<Int32, String>();
-            departments.Add(0, "--- Select Major ---");
-            departments.Add(19, "Astronomy");
-            departments.Add(1, "Computer Science");
-            departments.Add(13, "Communications");
-            departments.Add(6, "English");
-            departments.Add(15, "Political Science");
+            departments.Add(0, "--- Select Membership ---");
+            departments.Add(19, "Free");
+            departments.Add(1, "Premium");
+            departments.Add(69, "Premium+");
+            departments.Add(70, "Premium++");
+            departments.Add(13, "Artist");
 
-            cbDeptID.DataSource = new BindingSource(departments, null);
-            cbDeptID.DisplayMember = "Value";
-            cbDeptID.ValueMember = "Key";
-            cbDeptID.DropDownStyle = ComboBoxStyle.DropDownList;
+            cbMembership.DataSource = new BindingSource(departments, null);
+            cbMembership.DisplayMember = "Value";
+            cbMembership.ValueMember = "Key";
+            cbMembership.DropDownStyle = ComboBoxStyle.DropDownList;
         }
 
         private void btnTest_Click(object sender, EventArgs e)
