@@ -66,17 +66,6 @@ namespace LibraryApp
             this.btnB = new System.Windows.Forms.Button();
             this.btnCheckOutTransfer = new System.Windows.Forms.Button();
             this.btnPayFineTransfer = new System.Windows.Forms.Button();
-            this.btnViewDetails1 = new System.Windows.Forms.Button();
-            this.btnViewDetails2 = new System.Windows.Forms.Button();
-            this.btnViewDetails3 = new System.Windows.Forms.Button();
-            this.btnDelete3 = new System.Windows.Forms.Button();
-            this.btnDelete2 = new System.Windows.Forms.Button();
-            this.btnDelete1 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
             this.btnPreviousRight = new System.Windows.Forms.Button();
             this.btnLastRight = new System.Windows.Forms.Button();
             this.btnNextRight = new System.Windows.Forms.Button();
@@ -93,15 +82,11 @@ namespace LibraryApp
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.txtNotes = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.PersonalInfo = new System.Windows.Forms.TabPage();
-            this.txtRenewalDate = new System.Windows.Forms.MaskedTextBox();
             this.txtCellPhone = new System.Windows.Forms.MaskedTextBox();
-            this.cbMembership = new System.Windows.Forms.ComboBox();
             this.txtID = new System.Windows.Forms.Label();
             this.Notes = new System.Windows.Forms.TabPage();
             this.label15 = new System.Windows.Forms.Label();
@@ -112,31 +97,10 @@ namespace LibraryApp
             this.label11 = new System.Windows.Forms.Label();
             this.txtFirst1 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.CheckOut = new System.Windows.Forms.TabPage();
-            this.lblCODetail = new System.Windows.Forms.Label();
-            this.pnlCODetail = new System.Windows.Forms.Panel();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.dgCODetail = new System.Windows.Forms.DataGridView();
-            this.DetailTransactionID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.BookID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Returned = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.BookTitle = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ReturnBook = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label14 = new System.Windows.Forms.Label();
-            this.pnlCheckOut = new System.Windows.Forms.Panel();
-            this.txtCheckOut3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.dgCheckOut = new System.Windows.Forms.DataGridView();
-            this.UserID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TransactionID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ViewDetails = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.TDelete = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.Membership = new System.Windows.Forms.TabPage();
+            this.txtRenewalDate = new System.Windows.Forms.MaskedTextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.txtID2 = new System.Windows.Forms.Label();
             this.txtLast2 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
@@ -182,14 +146,16 @@ namespace LibraryApp
             this.label10 = new System.Windows.Forms.Label();
             this.lbTrace = new System.Windows.Forms.ListBox();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.btnUpgrade = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.lblPerks = new System.Windows.Forms.Label();
+            this.txtMembership = new System.Windows.Forms.TextBox();
+            this.txtPrice = new System.Windows.Forms.TextBox();
+            this.lblPrice = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.PersonalInfo.SuspendLayout();
             this.Notes.SuspendLayout();
-            this.CheckOut.SuspendLayout();
-            this.pnlCODetail.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgCODetail)).BeginInit();
-            this.pnlCheckOut.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgCheckOut)).BeginInit();
+            this.Membership.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.pnlNavigation.SuspendLayout();
             this.SuspendLayout();
@@ -672,7 +638,7 @@ namespace LibraryApp
             this.btnCheckOutTransfer.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(2)))), ((int)(((byte)(89)))));
             this.btnCheckOutTransfer.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnCheckOutTransfer.ForeColor = System.Drawing.Color.White;
-            this.btnCheckOutTransfer.Location = new System.Drawing.Point(12, 287);
+            this.btnCheckOutTransfer.Location = new System.Drawing.Point(16, 265);
             this.btnCheckOutTransfer.Name = "btnCheckOutTransfer";
             this.btnCheckOutTransfer.Size = new System.Drawing.Size(370, 23);
             this.btnCheckOutTransfer.TabIndex = 42;
@@ -686,169 +652,13 @@ namespace LibraryApp
             this.btnPayFineTransfer.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(2)))), ((int)(((byte)(89)))));
             this.btnPayFineTransfer.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnPayFineTransfer.ForeColor = System.Drawing.Color.White;
-            this.btnPayFineTransfer.Location = new System.Drawing.Point(394, 287);
+            this.btnPayFineTransfer.Location = new System.Drawing.Point(398, 265);
             this.btnPayFineTransfer.Name = "btnPayFineTransfer";
             this.btnPayFineTransfer.Size = new System.Drawing.Size(370, 23);
             this.btnPayFineTransfer.TabIndex = 43;
             this.btnPayFineTransfer.Text = "Pay Membership";
             this.toolTip1.SetToolTip(this.btnPayFineTransfer, "Transfer to Payment Sub-System");
             this.btnPayFineTransfer.UseVisualStyleBackColor = false;
-            // 
-            // btnViewDetails1
-            // 
-            this.btnViewDetails1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(107)))), ((int)(((byte)(255)))));
-            this.btnViewDetails1.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnViewDetails1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnViewDetails1.ForeColor = System.Drawing.Color.White;
-            this.btnViewDetails1.Location = new System.Drawing.Point(492, 0);
-            this.btnViewDetails1.Name = "btnViewDetails1";
-            this.btnViewDetails1.Size = new System.Drawing.Size(120, 23);
-            this.btnViewDetails1.TabIndex = 3;
-            this.btnViewDetails1.Text = "View Details";
-            this.toolTip1.SetToolTip(this.btnViewDetails1, "View the Details of this Transaction");
-            this.btnViewDetails1.UseVisualStyleBackColor = false;
-            // 
-            // btnViewDetails2
-            // 
-            this.btnViewDetails2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(107)))), ((int)(((byte)(255)))));
-            this.btnViewDetails2.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnViewDetails2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnViewDetails2.ForeColor = System.Drawing.Color.White;
-            this.btnViewDetails2.Location = new System.Drawing.Point(492, 22);
-            this.btnViewDetails2.Name = "btnViewDetails2";
-            this.btnViewDetails2.Size = new System.Drawing.Size(120, 23);
-            this.btnViewDetails2.TabIndex = 4;
-            this.btnViewDetails2.Text = "View Details";
-            this.toolTip1.SetToolTip(this.btnViewDetails2, "View the Details of this Transaction");
-            this.btnViewDetails2.UseVisualStyleBackColor = false;
-            // 
-            // btnViewDetails3
-            // 
-            this.btnViewDetails3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(107)))), ((int)(((byte)(255)))));
-            this.btnViewDetails3.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnViewDetails3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnViewDetails3.ForeColor = System.Drawing.Color.White;
-            this.btnViewDetails3.Location = new System.Drawing.Point(492, 44);
-            this.btnViewDetails3.Name = "btnViewDetails3";
-            this.btnViewDetails3.Size = new System.Drawing.Size(120, 23);
-            this.btnViewDetails3.TabIndex = 5;
-            this.btnViewDetails3.Text = "* View Details *";
-            this.toolTip1.SetToolTip(this.btnViewDetails3, "View the Details of this Transaction");
-            this.btnViewDetails3.UseVisualStyleBackColor = false;
-            this.btnViewDetails3.Click += new System.EventHandler(this.btnViewDetails3_Click);
-            // 
-            // btnDelete3
-            // 
-            this.btnDelete3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(107)))), ((int)(((byte)(255)))));
-            this.btnDelete3.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnDelete3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnDelete3.ForeColor = System.Drawing.Color.White;
-            this.btnDelete3.Location = new System.Drawing.Point(611, 44);
-            this.btnDelete3.Name = "btnDelete3";
-            this.btnDelete3.Size = new System.Drawing.Size(120, 23);
-            this.btnDelete3.TabIndex = 8;
-            this.btnDelete3.Text = "* Delete *";
-            this.toolTip1.SetToolTip(this.btnDelete3, "Delete this Transaction");
-            this.btnDelete3.UseVisualStyleBackColor = false;
-            this.btnDelete3.Click += new System.EventHandler(this.btnDelete3_Click);
-            // 
-            // btnDelete2
-            // 
-            this.btnDelete2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(107)))), ((int)(((byte)(255)))));
-            this.btnDelete2.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnDelete2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnDelete2.ForeColor = System.Drawing.Color.White;
-            this.btnDelete2.Location = new System.Drawing.Point(611, 22);
-            this.btnDelete2.Name = "btnDelete2";
-            this.btnDelete2.Size = new System.Drawing.Size(120, 23);
-            this.btnDelete2.TabIndex = 7;
-            this.btnDelete2.Text = "Delete";
-            this.toolTip1.SetToolTip(this.btnDelete2, "Delete this Transaction");
-            this.btnDelete2.UseVisualStyleBackColor = false;
-            // 
-            // btnDelete1
-            // 
-            this.btnDelete1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(107)))), ((int)(((byte)(255)))));
-            this.btnDelete1.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnDelete1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnDelete1.ForeColor = System.Drawing.Color.White;
-            this.btnDelete1.Location = new System.Drawing.Point(611, 0);
-            this.btnDelete1.Name = "btnDelete1";
-            this.btnDelete1.Size = new System.Drawing.Size(120, 23);
-            this.btnDelete1.TabIndex = 6;
-            this.btnDelete1.Text = "Delete";
-            this.toolTip1.SetToolTip(this.btnDelete1, "Delete this Transaction");
-            this.btnDelete1.UseVisualStyleBackColor = false;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(107)))), ((int)(((byte)(255)))));
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(606, 0);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(125, 23);
-            this.button1.TabIndex = 9;
-            this.button1.Text = "Return Book";
-            this.toolTip1.SetToolTip(this.button1, "Return this Book");
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(107)))), ((int)(((byte)(255)))));
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(606, 22);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(125, 23);
-            this.button2.TabIndex = 11;
-            this.button2.Text = "Return Book";
-            this.toolTip1.SetToolTip(this.button2, "Return this Book");
-            this.button2.UseVisualStyleBackColor = false;
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(107)))), ((int)(((byte)(255)))));
-            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(606, 44);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(125, 23);
-            this.button3.TabIndex = 15;
-            this.button3.Text = "Return Book";
-            this.toolTip1.SetToolTip(this.button3, "Return this Book");
-            this.button3.UseVisualStyleBackColor = false;
-            // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(107)))), ((int)(((byte)(255)))));
-            this.button4.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(606, 66);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(125, 23);
-            this.button4.TabIndex = 16;
-            this.button4.Text = "Return Book";
-            this.toolTip1.SetToolTip(this.button4, "Return this Book");
-            this.button4.UseVisualStyleBackColor = false;
-            // 
-            // button5
-            // 
-            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(107)))), ((int)(((byte)(255)))));
-            this.button5.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Location = new System.Drawing.Point(606, 88);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(125, 23);
-            this.button5.TabIndex = 17;
-            this.button5.Text = "Return Book";
-            this.toolTip1.SetToolTip(this.button5, "Return this Book");
-            this.button5.UseVisualStyleBackColor = false;
             // 
             // btnPreviousRight
             // 
@@ -976,7 +786,7 @@ namespace LibraryApp
             this.btnCellPhone.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnCellPhone.FlatAppearance.BorderSize = 0;
             this.btnCellPhone.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCellPhone.Location = new System.Drawing.Point(310, 227);
+            this.btnCellPhone.Location = new System.Drawing.Point(310, 177);
             this.btnCellPhone.Name = "btnCellPhone";
             this.btnCellPhone.Size = new System.Drawing.Size(26, 26);
             this.btnCellPhone.TabIndex = 34;
@@ -1043,31 +853,11 @@ namespace LibraryApp
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(30, 230);
+            this.label1.Location = new System.Drawing.Point(30, 180);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(92, 19);
             this.label1.TabIndex = 22;
             this.label1.Text = "Cell Phone";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(19, 183);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(103, 19);
-            this.label2.TabIndex = 26;
-            this.label2.Text = "Membership";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(386, 183);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(75, 19);
-            this.label5.TabIndex = 24;
-            this.label5.Text = "Renewal";
             // 
             // txtNotes
             // 
@@ -1092,7 +882,7 @@ namespace LibraryApp
             // 
             this.tabControl1.Controls.Add(this.PersonalInfo);
             this.tabControl1.Controls.Add(this.Notes);
-            this.tabControl1.Controls.Add(this.CheckOut);
+            this.tabControl1.Controls.Add(this.Membership);
             this.tabControl1.Font = new System.Drawing.Font("Arial", 10F);
             this.tabControl1.Location = new System.Drawing.Point(0, 24);
             this.tabControl1.Name = "tabControl1";
@@ -1106,9 +896,7 @@ namespace LibraryApp
             this.PersonalInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(208)))), ((int)(((byte)(242)))));
             this.PersonalInfo.Controls.Add(this.btnPayFineTransfer);
             this.PersonalInfo.Controls.Add(this.btnCheckOutTransfer);
-            this.PersonalInfo.Controls.Add(this.txtRenewalDate);
             this.PersonalInfo.Controls.Add(this.txtCellPhone);
-            this.PersonalInfo.Controls.Add(this.cbMembership);
             this.PersonalInfo.Controls.Add(this.btnCellPhone);
             this.PersonalInfo.Controls.Add(this.txtID);
             this.PersonalInfo.Controls.Add(this.lblFirst);
@@ -1116,10 +904,8 @@ namespace LibraryApp
             this.PersonalInfo.Controls.Add(this.lblLast);
             this.PersonalInfo.Controls.Add(this.txtLast);
             this.PersonalInfo.Controls.Add(this.lblUsername);
-            this.PersonalInfo.Controls.Add(this.label2);
             this.PersonalInfo.Controls.Add(this.txtUserName);
             this.PersonalInfo.Controls.Add(this.lblPassword);
-            this.PersonalInfo.Controls.Add(this.label5);
             this.PersonalInfo.Controls.Add(this.txtPassword);
             this.PersonalInfo.Controls.Add(this.label3);
             this.PersonalInfo.Controls.Add(this.label1);
@@ -1131,35 +917,14 @@ namespace LibraryApp
             this.PersonalInfo.TabIndex = 0;
             this.PersonalInfo.Text = "Personal Info";
             // 
-            // txtRenewalDate
-            // 
-            this.txtRenewalDate.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRenewalDate.Location = new System.Drawing.Point(467, 180);
-            this.txtRenewalDate.Mask = "00/00/0000";
-            this.txtRenewalDate.Name = "txtRenewalDate";
-            this.txtRenewalDate.Size = new System.Drawing.Size(111, 26);
-            this.txtRenewalDate.TabIndex = 41;
-            this.txtRenewalDate.ValidatingType = typeof(System.DateTime);
-            // 
             // txtCellPhone
             // 
             this.txtCellPhone.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCellPhone.Location = new System.Drawing.Point(128, 227);
+            this.txtCellPhone.Location = new System.Drawing.Point(128, 177);
             this.txtCellPhone.Mask = "(999) 000-0000";
             this.txtCellPhone.Name = "txtCellPhone";
             this.txtCellPhone.Size = new System.Drawing.Size(166, 26);
             this.txtCellPhone.TabIndex = 40;
-            // 
-            // cbMembership
-            // 
-            this.cbMembership.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbMembership.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbMembership.FormattingEnabled = true;
-            this.cbMembership.Location = new System.Drawing.Point(128, 180);
-            this.cbMembership.Name = "cbMembership";
-            this.cbMembership.Size = new System.Drawing.Size(208, 27);
-            this.cbMembership.TabIndex = 35;
-            this.cbMembership.Enter += new System.EventHandler(this.CbDeptID_Enter);
             // 
             // txtID
             // 
@@ -1270,243 +1035,60 @@ namespace LibraryApp
             this.label9.TabIndex = 33;
             this.label9.Text = "First";
             // 
-            // CheckOut
+            // Membership
             // 
-            this.CheckOut.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(208)))), ((int)(((byte)(242)))));
-            this.CheckOut.Controls.Add(this.lblCODetail);
-            this.CheckOut.Controls.Add(this.pnlCODetail);
-            this.CheckOut.Controls.Add(this.dgCODetail);
-            this.CheckOut.Controls.Add(this.label14);
-            this.CheckOut.Controls.Add(this.pnlCheckOut);
-            this.CheckOut.Controls.Add(this.dgCheckOut);
-            this.CheckOut.Controls.Add(this.txtID2);
-            this.CheckOut.Controls.Add(this.txtLast2);
-            this.CheckOut.Controls.Add(this.label18);
-            this.CheckOut.Controls.Add(this.txtMI2);
-            this.CheckOut.Controls.Add(this.label20);
-            this.CheckOut.Controls.Add(this.txtFirst2);
-            this.CheckOut.Controls.Add(this.label22);
-            this.CheckOut.Location = new System.Drawing.Point(4, 25);
-            this.CheckOut.Name = "CheckOut";
-            this.CheckOut.Size = new System.Drawing.Size(782, 341);
-            this.CheckOut.TabIndex = 2;
-            this.CheckOut.Text = "Check-Out Records";
+            this.Membership.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(208)))), ((int)(((byte)(242)))));
+            this.Membership.Controls.Add(this.txtPrice);
+            this.Membership.Controls.Add(this.lblPrice);
+            this.Membership.Controls.Add(this.txtMembership);
+            this.Membership.Controls.Add(this.lblPerks);
+            this.Membership.Controls.Add(this.textBox1);
+            this.Membership.Controls.Add(this.btnUpgrade);
+            this.Membership.Controls.Add(this.txtRenewalDate);
+            this.Membership.Controls.Add(this.label2);
+            this.Membership.Controls.Add(this.label5);
+            this.Membership.Controls.Add(this.txtID2);
+            this.Membership.Controls.Add(this.txtLast2);
+            this.Membership.Controls.Add(this.label18);
+            this.Membership.Controls.Add(this.txtMI2);
+            this.Membership.Controls.Add(this.label20);
+            this.Membership.Controls.Add(this.txtFirst2);
+            this.Membership.Controls.Add(this.label22);
+            this.Membership.Location = new System.Drawing.Point(4, 25);
+            this.Membership.Name = "Membership";
+            this.Membership.Size = new System.Drawing.Size(782, 341);
+            this.Membership.TabIndex = 2;
+            this.Membership.Text = "Membership Settings";
             // 
-            // lblCODetail
+            // txtRenewalDate
             // 
-            this.lblCODetail.AutoSize = true;
-            this.lblCODetail.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCODetail.Location = new System.Drawing.Point(234, 157);
-            this.lblCODetail.Name = "lblCODetail";
-            this.lblCODetail.Size = new System.Drawing.Size(313, 14);
-            this.lblCODetail.TabIndex = 52;
-            this.lblCODetail.Text = "--- Details Associated with the Transactions Selected Above ---";
+            this.txtRenewalDate.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtRenewalDate.Location = new System.Drawing.Point(630, 55);
+            this.txtRenewalDate.Mask = "00/00/0000";
+            this.txtRenewalDate.Name = "txtRenewalDate";
+            this.txtRenewalDate.Size = new System.Drawing.Size(111, 26);
+            this.txtRenewalDate.TabIndex = 50;
+            this.txtRenewalDate.ValidatingType = typeof(System.DateTime);
             // 
-            // pnlCODetail
+            // label2
             // 
-            this.pnlCODetail.Controls.Add(this.button5);
-            this.pnlCODetail.Controls.Add(this.button4);
-            this.pnlCODetail.Controls.Add(this.button3);
-            this.pnlCODetail.Controls.Add(this.textBox8);
-            this.pnlCODetail.Controls.Add(this.textBox7);
-            this.pnlCODetail.Controls.Add(this.textBox6);
-            this.pnlCODetail.Controls.Add(this.button2);
-            this.pnlCODetail.Controls.Add(this.textBox5);
-            this.pnlCODetail.Controls.Add(this.button1);
-            this.pnlCODetail.Controls.Add(this.textBox4);
-            this.pnlCODetail.Location = new System.Drawing.Point(15, 196);
-            this.pnlCODetail.Name = "pnlCODetail";
-            this.pnlCODetail.Size = new System.Drawing.Size(753, 130);
-            this.pnlCODetail.TabIndex = 51;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(19, 58);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(103, 19);
+            this.label2.TabIndex = 48;
+            this.label2.Text = "Membership";
             // 
-            // textBox8
+            // label5
             // 
-            this.textBox8.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox8.Location = new System.Drawing.Point(0, 88);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(607, 23);
-            this.textBox8.TabIndex = 14;
-            this.textBox8.Text = "                      7           28            F  Modern Algebra and Analysis";
-            // 
-            // textBox7
-            // 
-            this.textBox7.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.Location = new System.Drawing.Point(0, 66);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(607, 23);
-            this.textBox7.TabIndex = 13;
-            this.textBox7.Text = "                      7           63            F  Microelectronic Circuits";
-            // 
-            // textBox6
-            // 
-            this.textBox6.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(0, 44);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(607, 23);
-            this.textBox6.TabIndex = 12;
-            this.textBox6.Text = "                      7           20            F  Intro to High Energy Physics";
-            // 
-            // textBox5
-            // 
-            this.textBox5.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(0, 22);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(607, 23);
-            this.textBox5.TabIndex = 10;
-            this.textBox5.Text = "                      7           50            F  Computer Organization and Desi" +
-    "gn";
-            // 
-            // textBox4
-            // 
-            this.textBox4.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(0, 0);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(607, 23);
-            this.textBox4.TabIndex = 9;
-            this.textBox4.Text = "                      7           73            F  Agile Testing: A Practical Gui" +
-    "de...";
-            // 
-            // dgCODetail
-            // 
-            this.dgCODetail.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(208)))), ((int)(((byte)(242)))));
-            this.dgCODetail.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgCODetail.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.DetailTransactionID,
-            this.BookID,
-            this.Returned,
-            this.BookTitle,
-            this.ReturnBook});
-            this.dgCODetail.Location = new System.Drawing.Point(15, 171);
-            this.dgCODetail.Name = "dgCODetail";
-            this.dgCODetail.Size = new System.Drawing.Size(753, 155);
-            this.dgCODetail.TabIndex = 50;
-            // 
-            // DetailTransactionID
-            // 
-            this.DetailTransactionID.HeaderText = "Transaction ID";
-            this.DetailTransactionID.Name = "DetailTransactionID";
-            this.DetailTransactionID.Width = 125;
-            // 
-            // BookID
-            // 
-            this.BookID.HeaderText = "Book ID";
-            this.BookID.Name = "BookID";
-            this.BookID.Width = 90;
-            // 
-            // Returned
-            // 
-            this.Returned.HeaderText = "Returned?";
-            this.Returned.Name = "Returned";
-            // 
-            // BookTitle
-            // 
-            this.BookTitle.HeaderText = "Book Title";
-            this.BookTitle.Name = "BookTitle";
-            this.BookTitle.Width = 250;
-            // 
-            // ReturnBook
-            // 
-            this.ReturnBook.HeaderText = "";
-            this.ReturnBook.Name = "ReturnBook";
-            this.ReturnBook.Width = 125;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(310, 40);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(154, 14);
-            this.label14.TabIndex = 49;
-            this.label14.Text = "--- Check-Out Transactions ---";
-            // 
-            // pnlCheckOut
-            // 
-            this.pnlCheckOut.Controls.Add(this.btnDelete3);
-            this.pnlCheckOut.Controls.Add(this.btnDelete2);
-            this.pnlCheckOut.Controls.Add(this.btnDelete1);
-            this.pnlCheckOut.Controls.Add(this.btnViewDetails3);
-            this.pnlCheckOut.Controls.Add(this.btnViewDetails2);
-            this.pnlCheckOut.Controls.Add(this.btnViewDetails1);
-            this.pnlCheckOut.Controls.Add(this.txtCheckOut3);
-            this.pnlCheckOut.Controls.Add(this.textBox2);
-            this.pnlCheckOut.Controls.Add(this.textBox1);
-            this.pnlCheckOut.Location = new System.Drawing.Point(15, 79);
-            this.pnlCheckOut.Name = "pnlCheckOut";
-            this.pnlCheckOut.Size = new System.Drawing.Size(753, 68);
-            this.pnlCheckOut.TabIndex = 48;
-            // 
-            // txtCheckOut3
-            // 
-            this.txtCheckOut3.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCheckOut3.Location = new System.Drawing.Point(0, 44);
-            this.txtCheckOut3.Name = "txtCheckOut3";
-            this.txtCheckOut3.Size = new System.Drawing.Size(492, 23);
-            this.txtCheckOut3.TabIndex = 2;
-            this.txtCheckOut3.Text = "                         5                     7             6/7/2017";
-            // 
-            // textBox2
-            // 
-            this.textBox2.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(0, 22);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(492, 23);
-            this.textBox2.TabIndex = 1;
-            this.textBox2.Text = "                        10                    14            3/15/2017";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(0, 0);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(492, 23);
-            this.textBox1.TabIndex = 0;
-            this.textBox1.Text = "                        10                   957            3/14/2017";
-            // 
-            // dgCheckOut
-            // 
-            this.dgCheckOut.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(208)))), ((int)(((byte)(242)))));
-            this.dgCheckOut.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgCheckOut.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.UserID,
-            this.TransactionID,
-            this.TDate,
-            this.ViewDetails,
-            this.TDelete});
-            this.dgCheckOut.Location = new System.Drawing.Point(15, 54);
-            this.dgCheckOut.Name = "dgCheckOut";
-            this.dgCheckOut.Size = new System.Drawing.Size(753, 93);
-            this.dgCheckOut.TabIndex = 47;
-            // 
-            // UserID
-            // 
-            this.UserID.HeaderText = "User ID";
-            this.UserID.Name = "UserID";
-            this.UserID.Width = 150;
-            // 
-            // TransactionID
-            // 
-            this.TransactionID.HeaderText = "Transaction ID";
-            this.TransactionID.Name = "TransactionID";
-            this.TransactionID.Width = 150;
-            // 
-            // TDate
-            // 
-            this.TDate.HeaderText = "Date";
-            this.TDate.Name = "TDate";
-            this.TDate.Width = 150;
-            // 
-            // ViewDetails
-            // 
-            this.ViewDetails.HeaderText = "";
-            this.ViewDetails.Name = "ViewDetails";
-            this.ViewDetails.Width = 120;
-            // 
-            // TDelete
-            // 
-            this.TDelete.HeaderText = "";
-            this.TDelete.Name = "TDelete";
-            this.TDelete.Width = 120;
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(549, 58);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(75, 19);
+            this.label5.TabIndex = 47;
+            this.label5.Text = "Renewal";
             // 
             // txtID2
             // 
@@ -1825,7 +1407,7 @@ namespace LibraryApp
             // dATAToolStripMenuItem
             // 
             this.dATAToolStripMenuItem.Name = "dATAToolStripMenuItem";
-            this.dATAToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
+            this.dATAToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
             this.dATAToolStripMenuItem.Text = "DATA";
             this.dATAToolStripMenuItem.ToolTipText = "Toggle Dummy Data in the Form";
             this.dATAToolStripMenuItem.Click += new System.EventHandler(this.DataToolStripMenuItem_Click);
@@ -1939,6 +1521,65 @@ namespace LibraryApp
             this.imageList1.ImageSize = new System.Drawing.Size(16, 16);
             this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
             // 
+            // btnUpgrade
+            // 
+            this.btnUpgrade.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(107)))), ((int)(((byte)(255)))));
+            this.btnUpgrade.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(2)))), ((int)(((byte)(89)))));
+            this.btnUpgrade.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnUpgrade.ForeColor = System.Drawing.Color.White;
+            this.btnUpgrade.Location = new System.Drawing.Point(208, 301);
+            this.btnUpgrade.Name = "btnUpgrade";
+            this.btnUpgrade.Size = new System.Drawing.Size(370, 23);
+            this.btnUpgrade.TabIndex = 51;
+            this.btnUpgrade.Text = "Upgrade Membership";
+            this.toolTip1.SetToolTip(this.btnUpgrade, "Transfer to User\'s Playlists in Music Sub-System");
+            this.btnUpgrade.UseVisualStyleBackColor = false;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(23, 119);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(731, 164);
+            this.textBox1.TabIndex = 52;
+            // 
+            // lblPerks
+            // 
+            this.lblPerks.AutoSize = true;
+            this.lblPerks.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPerks.Location = new System.Drawing.Point(19, 92);
+            this.lblPerks.Name = "lblPerks";
+            this.lblPerks.Size = new System.Drawing.Size(213, 19);
+            this.lblPerks.TabIndex = 53;
+            this.lblPerks.Text = "Current Membership Perks";
+            // 
+            // txtMembership
+            // 
+            this.txtMembership.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
+            this.txtMembership.Location = new System.Drawing.Point(128, 55);
+            this.txtMembership.Name = "txtMembership";
+            this.txtMembership.Size = new System.Drawing.Size(148, 26);
+            this.txtMembership.TabIndex = 54;
+            // 
+            // txtPrice
+            // 
+            this.txtPrice.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
+            this.txtPrice.Location = new System.Drawing.Point(395, 54);
+            this.txtPrice.Name = "txtPrice";
+            this.txtPrice.Size = new System.Drawing.Size(79, 26);
+            this.txtPrice.TabIndex = 56;
+            // 
+            // lblPrice
+            // 
+            this.lblPrice.AutoSize = true;
+            this.lblPrice.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPrice.Location = new System.Drawing.Point(341, 58);
+            this.lblPrice.Name = "lblPrice";
+            this.lblPrice.Size = new System.Drawing.Size(48, 19);
+            this.lblPrice.TabIndex = 55;
+            this.lblPrice.Text = "Price";
+            // 
             // User
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -1965,14 +1606,8 @@ namespace LibraryApp
             this.PersonalInfo.PerformLayout();
             this.Notes.ResumeLayout(false);
             this.Notes.PerformLayout();
-            this.CheckOut.ResumeLayout(false);
-            this.CheckOut.PerformLayout();
-            this.pnlCODetail.ResumeLayout(false);
-            this.pnlCODetail.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgCODetail)).EndInit();
-            this.pnlCheckOut.ResumeLayout(false);
-            this.pnlCheckOut.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgCheckOut)).EndInit();
+            this.Membership.ResumeLayout(false);
+            this.Membership.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.pnlNavigation.ResumeLayout(false);
@@ -1994,14 +1629,12 @@ namespace LibraryApp
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtNotes;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage PersonalInfo;
         private System.Windows.Forms.TabPage Notes;
-        private System.Windows.Forms.TabPage CheckOut;
+        private System.Windows.Forms.TabPage Membership;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem addToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem;
@@ -2077,47 +1710,10 @@ namespace LibraryApp
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.ComboBox cbOrderBy;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.ComboBox cbMembership;
-        private System.Windows.Forms.MaskedTextBox txtRenewalDate;
         private System.Windows.Forms.MaskedTextBox txtCellPhone;
         private System.Windows.Forms.Button btnCheckOutTransfer;
         private System.Windows.Forms.Button btnPayFineTransfer;
-        private System.Windows.Forms.DataGridView dgCheckOut;
         private System.Windows.Forms.ImageList imageList1;
-        private System.Windows.Forms.Panel pnlCheckOut;
-        private System.Windows.Forms.Button btnViewDetails3;
-        private System.Windows.Forms.Button btnViewDetails2;
-        private System.Windows.Forms.Button btnViewDetails1;
-        private System.Windows.Forms.TextBox txtCheckOut3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button btnDelete3;
-        private System.Windows.Forms.Button btnDelete2;
-        private System.Windows.Forms.Button btnDelete1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn UserID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TransactionID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TDate;
-        private System.Windows.Forms.DataGridViewButtonColumn ViewDetails;
-        private System.Windows.Forms.DataGridViewButtonColumn TDelete;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Panel pnlCODetail;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.DataGridView dgCODetail;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DetailTransactionID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn BookID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Returned;
-        private System.Windows.Forms.DataGridViewTextBoxColumn BookTitle;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ReturnBook;
-        private System.Windows.Forms.Label lblCODetail;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.Button button2;
         private Label label15;
         private ToolStripMenuItem departmentsAddEditDeleteToolStripMenuItem;
         private ToolStripMenuItem userTypesAddEditDeleteToolStripMenuItem;
@@ -2133,6 +1729,15 @@ namespace LibraryApp
         private ToolStripMenuItem allUsersInViewToolStripMenuItem1;
         private ToolStripMenuItem allUsersWhoOweMoneyToolStripMenuItem;
         private ToolStripMenuItem allUsersWhoHaveBooksOverdueToolStripMenuItem;
+        private MaskedTextBox txtRenewalDate;
+        private Label label2;
+        private Label label5;
+        private TextBox txtPrice;
+        private Label lblPrice;
+        private TextBox txtMembership;
+        private Label lblPerks;
+        private TextBox textBox1;
+        private Button btnUpgrade;
     }
 }
 
