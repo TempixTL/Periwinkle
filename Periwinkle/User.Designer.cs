@@ -75,6 +75,7 @@ namespace LibraryApp
             this.btnNextLeft = new System.Windows.Forms.Button();
             this.btnFirstLeft = new System.Windows.Forms.Button();
             this.btnCellPhone = new System.Windows.Forms.Button();
+            this.btnUpgrade = new System.Windows.Forms.Button();
             this.txtUserName = new System.Windows.Forms.TextBox();
             this.lblUsername = new System.Windows.Forms.Label();
             this.txtPassword = new System.Windows.Forms.TextBox();
@@ -98,6 +99,11 @@ namespace LibraryApp
             this.txtFirst1 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.Membership = new System.Windows.Forms.TabPage();
+            this.txtPrice = new System.Windows.Forms.TextBox();
+            this.lblPrice = new System.Windows.Forms.Label();
+            this.txtMembership = new System.Windows.Forms.TextBox();
+            this.lblPerks = new System.Windows.Forms.Label();
+            this.txtPerks = new System.Windows.Forms.TextBox();
             this.txtRenewalDate = new System.Windows.Forms.MaskedTextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -146,12 +152,6 @@ namespace LibraryApp
             this.label10 = new System.Windows.Forms.Label();
             this.lbTrace = new System.Windows.Forms.ListBox();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.btnUpgrade = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.lblPerks = new System.Windows.Forms.Label();
-            this.txtMembership = new System.Windows.Forms.TextBox();
-            this.txtPrice = new System.Windows.Forms.TextBox();
-            this.lblPrice = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.PersonalInfo.SuspendLayout();
             this.Notes.SuspendLayout();
@@ -794,6 +794,20 @@ namespace LibraryApp
             this.btnCellPhone.UseVisualStyleBackColor = false;
             this.btnCellPhone.Click += new System.EventHandler(this.btnCellPhone_Click);
             // 
+            // btnUpgrade
+            // 
+            this.btnUpgrade.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(107)))), ((int)(((byte)(255)))));
+            this.btnUpgrade.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(2)))), ((int)(((byte)(89)))));
+            this.btnUpgrade.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnUpgrade.ForeColor = System.Drawing.Color.White;
+            this.btnUpgrade.Location = new System.Drawing.Point(208, 301);
+            this.btnUpgrade.Name = "btnUpgrade";
+            this.btnUpgrade.Size = new System.Drawing.Size(370, 23);
+            this.btnUpgrade.TabIndex = 51;
+            this.btnUpgrade.Text = "Upgrade Membership";
+            this.toolTip1.SetToolTip(this.btnUpgrade, "Transfer to User\'s Playlists in Music Sub-System");
+            this.btnUpgrade.UseVisualStyleBackColor = false;
+            // 
             // txtUserName
             // 
             this.txtUserName.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1042,7 +1056,7 @@ namespace LibraryApp
             this.Membership.Controls.Add(this.lblPrice);
             this.Membership.Controls.Add(this.txtMembership);
             this.Membership.Controls.Add(this.lblPerks);
-            this.Membership.Controls.Add(this.textBox1);
+            this.Membership.Controls.Add(this.txtPerks);
             this.Membership.Controls.Add(this.btnUpgrade);
             this.Membership.Controls.Add(this.txtRenewalDate);
             this.Membership.Controls.Add(this.label2);
@@ -1059,6 +1073,51 @@ namespace LibraryApp
             this.Membership.Size = new System.Drawing.Size(782, 341);
             this.Membership.TabIndex = 2;
             this.Membership.Text = "Membership Settings";
+            // 
+            // txtPrice
+            // 
+            this.txtPrice.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
+            this.txtPrice.Location = new System.Drawing.Point(336, 54);
+            this.txtPrice.Name = "txtPrice";
+            this.txtPrice.Size = new System.Drawing.Size(211, 26);
+            this.txtPrice.TabIndex = 56;
+            // 
+            // lblPrice
+            // 
+            this.lblPrice.AutoSize = true;
+            this.lblPrice.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPrice.Location = new System.Drawing.Point(282, 58);
+            this.lblPrice.Name = "lblPrice";
+            this.lblPrice.Size = new System.Drawing.Size(48, 19);
+            this.lblPrice.TabIndex = 55;
+            this.lblPrice.Text = "Price";
+            // 
+            // txtMembership
+            // 
+            this.txtMembership.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
+            this.txtMembership.Location = new System.Drawing.Point(128, 55);
+            this.txtMembership.Name = "txtMembership";
+            this.txtMembership.Size = new System.Drawing.Size(148, 26);
+            this.txtMembership.TabIndex = 54;
+            // 
+            // lblPerks
+            // 
+            this.lblPerks.AutoSize = true;
+            this.lblPerks.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPerks.Location = new System.Drawing.Point(19, 92);
+            this.lblPerks.Name = "lblPerks";
+            this.lblPerks.Size = new System.Drawing.Size(213, 19);
+            this.lblPerks.TabIndex = 53;
+            this.lblPerks.Text = "Current Membership Perks";
+            // 
+            // txtPerks
+            // 
+            this.txtPerks.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPerks.Location = new System.Drawing.Point(23, 119);
+            this.txtPerks.Multiline = true;
+            this.txtPerks.Name = "txtPerks";
+            this.txtPerks.Size = new System.Drawing.Size(731, 164);
+            this.txtPerks.TabIndex = 52;
             // 
             // txtRenewalDate
             // 
@@ -1297,19 +1356,19 @@ namespace LibraryApp
             // thisUserToolStripMenuItem
             // 
             this.thisUserToolStripMenuItem.Name = "thisUserToolStripMenuItem";
-            this.thisUserToolStripMenuItem.Size = new System.Drawing.Size(236, 22);
+            this.thisUserToolStripMenuItem.Size = new System.Drawing.Size(235, 22);
             this.thisUserToolStripMenuItem.Text = "This User";
             // 
             // allUsersInViewToolStripMenuItem
             // 
             this.allUsersInViewToolStripMenuItem.Name = "allUsersInViewToolStripMenuItem";
-            this.allUsersInViewToolStripMenuItem.Size = new System.Drawing.Size(236, 22);
+            this.allUsersInViewToolStripMenuItem.Size = new System.Drawing.Size(235, 22);
             this.allUsersInViewToolStripMenuItem.Text = "All Users In View";
             // 
             // allUsersMatchingThisSearchToolStripMenuItem
             // 
             this.allUsersMatchingThisSearchToolStripMenuItem.Name = "allUsersMatchingThisSearchToolStripMenuItem";
-            this.allUsersMatchingThisSearchToolStripMenuItem.Size = new System.Drawing.Size(236, 22);
+            this.allUsersMatchingThisSearchToolStripMenuItem.Size = new System.Drawing.Size(235, 22);
             this.allUsersMatchingThisSearchToolStripMenuItem.Text = "All Users Matching This Search";
             // 
             // printContactListToolStripMenuItem
@@ -1407,7 +1466,7 @@ namespace LibraryApp
             // dATAToolStripMenuItem
             // 
             this.dATAToolStripMenuItem.Name = "dATAToolStripMenuItem";
-            this.dATAToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
+            this.dATAToolStripMenuItem.Size = new System.Drawing.Size(47, 20);
             this.dATAToolStripMenuItem.Text = "DATA";
             this.dATAToolStripMenuItem.ToolTipText = "Toggle Dummy Data in the Form";
             this.dATAToolStripMenuItem.Click += new System.EventHandler(this.DataToolStripMenuItem_Click);
@@ -1520,65 +1579,6 @@ namespace LibraryApp
             this.imageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
             this.imageList1.ImageSize = new System.Drawing.Size(16, 16);
             this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
-            // 
-            // btnUpgrade
-            // 
-            this.btnUpgrade.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(107)))), ((int)(((byte)(255)))));
-            this.btnUpgrade.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(2)))), ((int)(((byte)(89)))));
-            this.btnUpgrade.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnUpgrade.ForeColor = System.Drawing.Color.White;
-            this.btnUpgrade.Location = new System.Drawing.Point(208, 301);
-            this.btnUpgrade.Name = "btnUpgrade";
-            this.btnUpgrade.Size = new System.Drawing.Size(370, 23);
-            this.btnUpgrade.TabIndex = 51;
-            this.btnUpgrade.Text = "Upgrade Membership";
-            this.toolTip1.SetToolTip(this.btnUpgrade, "Transfer to User\'s Playlists in Music Sub-System");
-            this.btnUpgrade.UseVisualStyleBackColor = false;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(23, 119);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(731, 164);
-            this.textBox1.TabIndex = 52;
-            // 
-            // lblPerks
-            // 
-            this.lblPerks.AutoSize = true;
-            this.lblPerks.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPerks.Location = new System.Drawing.Point(19, 92);
-            this.lblPerks.Name = "lblPerks";
-            this.lblPerks.Size = new System.Drawing.Size(213, 19);
-            this.lblPerks.TabIndex = 53;
-            this.lblPerks.Text = "Current Membership Perks";
-            // 
-            // txtMembership
-            // 
-            this.txtMembership.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
-            this.txtMembership.Location = new System.Drawing.Point(128, 55);
-            this.txtMembership.Name = "txtMembership";
-            this.txtMembership.Size = new System.Drawing.Size(148, 26);
-            this.txtMembership.TabIndex = 54;
-            // 
-            // txtPrice
-            // 
-            this.txtPrice.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
-            this.txtPrice.Location = new System.Drawing.Point(395, 54);
-            this.txtPrice.Name = "txtPrice";
-            this.txtPrice.Size = new System.Drawing.Size(79, 26);
-            this.txtPrice.TabIndex = 56;
-            // 
-            // lblPrice
-            // 
-            this.lblPrice.AutoSize = true;
-            this.lblPrice.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPrice.Location = new System.Drawing.Point(341, 58);
-            this.lblPrice.Name = "lblPrice";
-            this.lblPrice.Size = new System.Drawing.Size(48, 19);
-            this.lblPrice.TabIndex = 55;
-            this.lblPrice.Text = "Price";
             // 
             // User
             // 
@@ -1736,7 +1736,7 @@ namespace LibraryApp
         private Label lblPrice;
         private TextBox txtMembership;
         private Label lblPerks;
-        private TextBox textBox1;
+        private TextBox txtPerks;
         private Button btnUpgrade;
     }
 }

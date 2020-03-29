@@ -133,6 +133,7 @@ namespace LibraryApp
             if (RecordNo == 0)
             {
                 txtFirst.Text = "Tom";
+                txtMI1.Text = "E";
                 txtLast.Text = "Hicks";
                 txtID.Text = "ID 1";
                 txtUserName.Text = "thicks";
@@ -143,10 +144,12 @@ namespace LibraryApp
                 txtMembership.Text = "Premium++";
                 txtPrice.Text = "$19.99 Per Month";
                 txtNotes.Text = "Good guy!";
+                txtPerks.Text = "Ad-free Streaming on Multiple Devices\r\nUp to Five Devices per Account\r\nFree Shipping on All Physical Orders\r\nUnlimited Library Size";
             }
             else if (RecordNo == 1)
             {
                 txtFirst.Text = "Tom";
+                txtMI1.Text = "D";
                 txtLast.Text = "Lauerman";
                 txtID.Text = "ID 7";
                 txtUserName.Text = "tlauerma";
@@ -157,9 +160,11 @@ namespace LibraryApp
                 txtMembership.Text = "Free";
                 txtPrice.Text = "$0.00 Per Month";
                 txtNotes.Text = "Front-end developer";
+                txtPerks.Text = "Ad-supported Radio Streaming";
             } else
             {
                 txtFirst.Text = "Emerson";
+                txtMI1.Text = "E";
                 txtLast.Text = "Spradling";
                 txtID.Text = "19";
                 txtUserName.Text = "espradli";
@@ -170,6 +175,7 @@ namespace LibraryApp
                 txtMembership.Text = "Artist";
                 txtPrice.Text = "$99.99 Per Month";
                 txtNotes.Text = "Toots on the horn!";
+                txtPerks.Text = "Ad-free Streaming on Multiple Devices\r\nUp to Five Devices per Account\r\nFree Shipping on All Physical Orders\r\nUnlimited Library Size\r\nIncludes Artist Profile and Uploading Capabilies";
             }
 
             SynchronizeCommonFields();
@@ -186,6 +192,7 @@ namespace LibraryApp
         private void FillFormBlank()
         {
             txtFirst.Text = "";
+            txtMI1.Text = "";
             txtLast.Text = "";
             txtID.Text = "ID";
             txtUserName.Text = "";
@@ -193,8 +200,11 @@ namespace LibraryApp
             txtEmail.Text = "";
             txtCellPhone.Text = "";
             txtRenewalDate.Text = "";
-            txtMembership.Text = "--- Select Major ---";
+            txtMembership.Text = "*Select Below*";
+            txtPrice.Text = "";
+            txtRenewalDate.Text = "00/00/0000";
             txtNotes.Text = "";
+            txtPerks.Text = "";
 
             SynchronizeCommonFields();
         }
@@ -214,6 +224,8 @@ namespace LibraryApp
 
             txtLast1.Text = txtLast.Text;
             txtLast2.Text = txtLast.Text;
+
+            txtMI2.Text = txtMI1.Text;
 
             txtID1.Text = txtID.Text;
             txtID2.Text = txtID.Text;
