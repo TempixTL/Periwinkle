@@ -144,7 +144,6 @@ namespace LibraryApp
                 txtMembership.Text = "Premium++";
                 txtPrice.Text = "$19.99 Per Month";
                 txtNotes.Text = "Good guy!";
-                txtPerks.Text = "Ad-free Streaming on Multiple Devices\r\nUp to Five Devices per Account\r\nFree Shipping on All Physical Orders\r\nUnlimited Library Size";
             }
             else if (RecordNo == 1)
             {
@@ -160,7 +159,6 @@ namespace LibraryApp
                 txtMembership.Text = "Free";
                 txtPrice.Text = "$0.00 Per Month";
                 txtNotes.Text = "Front-end developer";
-                txtPerks.Text = "Ad-supported Radio Streaming";
             } else
             {
                 txtFirst.Text = "Emerson";
@@ -175,9 +173,9 @@ namespace LibraryApp
                 txtMembership.Text = "Artist";
                 txtPrice.Text = "$99.99 Per Month";
                 txtNotes.Text = "Toots on the horn!";
-                txtPerks.Text = "Ad-free Streaming on Multiple Devices\r\nUp to Five Devices per Account\r\nFree Shipping on All Physical Orders\r\nUnlimited Library Size\r\nIncludes Artist Profile and Uploading Capabilies";
             }
 
+            updatePerks(txtMembership.Text);
             SynchronizeCommonFields();
         }
 
@@ -998,6 +996,37 @@ namespace LibraryApp
         private void byPhoneToolStripMenuItem_Click(object sender, EventArgs e)
         {
             pf.LaunchSearchWindow("Search User By Phone", "Enter Phone", "(210) 999-7438");
+        }
+
+        private void btnUpgrade_Click(object sender, EventArgs e)
+        {
+            pf.LaunchMembershipUpgradeWindow(txtFirst.Text + " " + txtMI1.Text + " " + txtLast.Text, txtMembership.Text);
+        }
+
+        public void ChangeMembership(String Membership, String Price)
+        {
+            txtMembership.Text = Membership;
+            txtPrice.Text = Price;
+            updatePerks(Membership);
+        }
+        private void updatePerks(String Membership)
+        {
+            if (Membership == "Free")
+            {
+                txtPerks.Text = "Ad-supported Radio Streaming";
+            }
+            else if (Membership == "Premium")
+            {
+                txtPerks.Text = "Ad-free Streaming on Multiple Devices\r\nUp to Five Devices per Account\r\nUp to 500 Songs in Your Library";
+            }
+            else if (Membership == "Premium++")
+            {
+                txtPerks.Text = "Ad-free Streaming on Multiple Devices\r\nUp to Five Devices per Account\r\nFree Shipping on All Physical Orders\r\nUnlimited Library Size";
+            }
+            else if (Membership == "Artist")
+            {
+                txtPerks.Text = "Ad-free Streaming on Multiple Devices\r\nUp to Five Devices per Account\r\nFree Shipping on All Physical Orders\r\nUnlimited Library Size\r\nIncludes Artist Profile and Uploading Capabilies";
+            }
         }
     }
 }

@@ -19,6 +19,7 @@ namespace LibraryApp
         public SupportingClass SupportingClassForm;
         public Undelete UndeleteForm;
         public Search SearchForm;
+        public MembershipUpgrade MembershipForm;
 
         public String UserName = "thicks";
         public long Password = 12345;
@@ -106,6 +107,14 @@ namespace LibraryApp
             SearchForm.MdiParent = this;
             SearchForm.Location = new Point(300, 200);
             SearchForm.Show();
+        }
+
+        public void LaunchMembershipUpgradeWindow(String Name, String CurrentMembership)
+        {
+            MembershipForm = new MembershipUpgrade(this, Name, CurrentMembership);
+            MembershipForm.MdiParent = this;
+            MembershipForm.Location = new Point(850, 20);
+            MembershipForm.Show();
         }
     }
 }

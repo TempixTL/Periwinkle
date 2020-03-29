@@ -66,15 +66,6 @@ namespace LibraryApp
             this.btnB = new System.Windows.Forms.Button();
             this.btnCheckOutTransfer = new System.Windows.Forms.Button();
             this.btnPayFineTransfer = new System.Windows.Forms.Button();
-            this.btnPreviousRight = new System.Windows.Forms.Button();
-            this.btnLastRight = new System.Windows.Forms.Button();
-            this.btnNextRight = new System.Windows.Forms.Button();
-            this.btnFirstRight = new System.Windows.Forms.Button();
-            this.btnPreviousLeft = new System.Windows.Forms.Button();
-            this.btnLastLeft = new System.Windows.Forms.Button();
-            this.btnNextLeft = new System.Windows.Forms.Button();
-            this.btnFirstLeft = new System.Windows.Forms.Button();
-            this.btnCellPhone = new System.Windows.Forms.Button();
             this.btnUpgrade = new System.Windows.Forms.Button();
             this.txtUserName = new System.Windows.Forms.TextBox();
             this.lblUsername = new System.Windows.Forms.Label();
@@ -152,6 +143,15 @@ namespace LibraryApp
             this.label10 = new System.Windows.Forms.Label();
             this.lbTrace = new System.Windows.Forms.ListBox();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.btnPreviousRight = new System.Windows.Forms.Button();
+            this.btnLastRight = new System.Windows.Forms.Button();
+            this.btnNextRight = new System.Windows.Forms.Button();
+            this.btnFirstRight = new System.Windows.Forms.Button();
+            this.btnPreviousLeft = new System.Windows.Forms.Button();
+            this.btnLastLeft = new System.Windows.Forms.Button();
+            this.btnNextLeft = new System.Windows.Forms.Button();
+            this.btnFirstLeft = new System.Windows.Forms.Button();
+            this.btnCellPhone = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.PersonalInfo.SuspendLayout();
             this.Notes.SuspendLayout();
@@ -638,7 +638,7 @@ namespace LibraryApp
             this.btnCheckOutTransfer.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(2)))), ((int)(((byte)(89)))));
             this.btnCheckOutTransfer.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnCheckOutTransfer.ForeColor = System.Drawing.Color.White;
-            this.btnCheckOutTransfer.Location = new System.Drawing.Point(16, 265);
+            this.btnCheckOutTransfer.Location = new System.Drawing.Point(16, 300);
             this.btnCheckOutTransfer.Name = "btnCheckOutTransfer";
             this.btnCheckOutTransfer.Size = new System.Drawing.Size(370, 23);
             this.btnCheckOutTransfer.TabIndex = 42;
@@ -652,147 +652,13 @@ namespace LibraryApp
             this.btnPayFineTransfer.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(2)))), ((int)(((byte)(89)))));
             this.btnPayFineTransfer.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnPayFineTransfer.ForeColor = System.Drawing.Color.White;
-            this.btnPayFineTransfer.Location = new System.Drawing.Point(398, 265);
+            this.btnPayFineTransfer.Location = new System.Drawing.Point(398, 300);
             this.btnPayFineTransfer.Name = "btnPayFineTransfer";
             this.btnPayFineTransfer.Size = new System.Drawing.Size(370, 23);
             this.btnPayFineTransfer.TabIndex = 43;
             this.btnPayFineTransfer.Text = "Pay Membership";
             this.toolTip1.SetToolTip(this.btnPayFineTransfer, "Transfer to Payment Sub-System");
             this.btnPayFineTransfer.UseVisualStyleBackColor = false;
-            // 
-            // btnPreviousRight
-            // 
-            this.btnPreviousRight.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(107)))), ((int)(((byte)(255)))));
-            this.btnPreviousRight.BackgroundImage = global::LibraryApp.Properties.Resources.Previous;
-            this.btnPreviousRight.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnPreviousRight.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(2)))), ((int)(((byte)(89)))));
-            this.btnPreviousRight.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnPreviousRight.Location = new System.Drawing.Point(686, 45);
-            this.btnPreviousRight.Name = "btnPreviousRight";
-            this.btnPreviousRight.Size = new System.Drawing.Size(30, 30);
-            this.btnPreviousRight.TabIndex = 7;
-            this.toolTip1.SetToolTip(this.btnPreviousRight, "Navigate to the Previous Logical Record Within the View");
-            this.btnPreviousRight.UseVisualStyleBackColor = false;
-            this.btnPreviousRight.Click += new System.EventHandler(this.btnPreviousRight_Click);
-            // 
-            // btnLastRight
-            // 
-            this.btnLastRight.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(107)))), ((int)(((byte)(255)))));
-            this.btnLastRight.BackgroundImage = global::LibraryApp.Properties.Resources.Last;
-            this.btnLastRight.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnLastRight.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(2)))), ((int)(((byte)(89)))));
-            this.btnLastRight.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnLastRight.Location = new System.Drawing.Point(715, 74);
-            this.btnLastRight.Name = "btnLastRight";
-            this.btnLastRight.Size = new System.Drawing.Size(30, 30);
-            this.btnLastRight.TabIndex = 6;
-            this.toolTip1.SetToolTip(this.btnLastRight, "Navigate to the Last Logical Record Within the View");
-            this.btnLastRight.UseVisualStyleBackColor = false;
-            this.btnLastRight.Click += new System.EventHandler(this.btnLastRight_Click);
-            // 
-            // btnNextRight
-            // 
-            this.btnNextRight.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(107)))), ((int)(((byte)(255)))));
-            this.btnNextRight.BackgroundImage = global::LibraryApp.Properties.Resources.Next;
-            this.btnNextRight.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnNextRight.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(2)))), ((int)(((byte)(89)))));
-            this.btnNextRight.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnNextRight.Location = new System.Drawing.Point(744, 45);
-            this.btnNextRight.Name = "btnNextRight";
-            this.btnNextRight.Size = new System.Drawing.Size(30, 30);
-            this.btnNextRight.TabIndex = 5;
-            this.toolTip1.SetToolTip(this.btnNextRight, "Navigate to the Next Logical Record Within the View");
-            this.btnNextRight.UseVisualStyleBackColor = false;
-            this.btnNextRight.Click += new System.EventHandler(this.btnNextRight_Click);
-            // 
-            // btnFirstRight
-            // 
-            this.btnFirstRight.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(107)))), ((int)(((byte)(255)))));
-            this.btnFirstRight.BackgroundImage = global::LibraryApp.Properties.Resources.First;
-            this.btnFirstRight.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnFirstRight.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(2)))), ((int)(((byte)(89)))));
-            this.btnFirstRight.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnFirstRight.Location = new System.Drawing.Point(715, 16);
-            this.btnFirstRight.Name = "btnFirstRight";
-            this.btnFirstRight.Size = new System.Drawing.Size(30, 30);
-            this.btnFirstRight.TabIndex = 4;
-            this.toolTip1.SetToolTip(this.btnFirstRight, "Navigate to the First Logical Record Within the View");
-            this.btnFirstRight.UseVisualStyleBackColor = false;
-            this.btnFirstRight.Click += new System.EventHandler(this.btnFirstRight_Click);
-            // 
-            // btnPreviousLeft
-            // 
-            this.btnPreviousLeft.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(107)))), ((int)(((byte)(255)))));
-            this.btnPreviousLeft.BackgroundImage = global::LibraryApp.Properties.Resources.Previous;
-            this.btnPreviousLeft.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnPreviousLeft.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(2)))), ((int)(((byte)(89)))));
-            this.btnPreviousLeft.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnPreviousLeft.Location = new System.Drawing.Point(16, 45);
-            this.btnPreviousLeft.Name = "btnPreviousLeft";
-            this.btnPreviousLeft.Size = new System.Drawing.Size(30, 30);
-            this.btnPreviousLeft.TabIndex = 3;
-            this.toolTip1.SetToolTip(this.btnPreviousLeft, "Navigate to the Previous Logical Record Within the View");
-            this.btnPreviousLeft.UseVisualStyleBackColor = false;
-            this.btnPreviousLeft.Click += new System.EventHandler(this.btnPreviousLeft_Click);
-            // 
-            // btnLastLeft
-            // 
-            this.btnLastLeft.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(107)))), ((int)(((byte)(255)))));
-            this.btnLastLeft.BackgroundImage = global::LibraryApp.Properties.Resources.Last;
-            this.btnLastLeft.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnLastLeft.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(2)))), ((int)(((byte)(89)))));
-            this.btnLastLeft.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnLastLeft.Location = new System.Drawing.Point(45, 74);
-            this.btnLastLeft.Name = "btnLastLeft";
-            this.btnLastLeft.Size = new System.Drawing.Size(30, 30);
-            this.btnLastLeft.TabIndex = 2;
-            this.toolTip1.SetToolTip(this.btnLastLeft, "Navigate to the Last Logical Record Within the View");
-            this.btnLastLeft.UseVisualStyleBackColor = false;
-            this.btnLastLeft.Click += new System.EventHandler(this.btnLastLeft_Click);
-            // 
-            // btnNextLeft
-            // 
-            this.btnNextLeft.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(107)))), ((int)(((byte)(255)))));
-            this.btnNextLeft.BackgroundImage = global::LibraryApp.Properties.Resources.Next;
-            this.btnNextLeft.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnNextLeft.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(2)))), ((int)(((byte)(89)))));
-            this.btnNextLeft.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnNextLeft.Location = new System.Drawing.Point(74, 45);
-            this.btnNextLeft.Name = "btnNextLeft";
-            this.btnNextLeft.Size = new System.Drawing.Size(30, 30);
-            this.btnNextLeft.TabIndex = 1;
-            this.toolTip1.SetToolTip(this.btnNextLeft, "Navigate to the Next Logical Record Within the View");
-            this.btnNextLeft.UseVisualStyleBackColor = false;
-            this.btnNextLeft.Click += new System.EventHandler(this.btnNextLeft_Click);
-            // 
-            // btnFirstLeft
-            // 
-            this.btnFirstLeft.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(107)))), ((int)(((byte)(255)))));
-            this.btnFirstLeft.BackgroundImage = global::LibraryApp.Properties.Resources.First;
-            this.btnFirstLeft.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnFirstLeft.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(2)))), ((int)(((byte)(89)))));
-            this.btnFirstLeft.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnFirstLeft.Location = new System.Drawing.Point(45, 16);
-            this.btnFirstLeft.Name = "btnFirstLeft";
-            this.btnFirstLeft.Size = new System.Drawing.Size(30, 30);
-            this.btnFirstLeft.TabIndex = 0;
-            this.toolTip1.SetToolTip(this.btnFirstLeft, "Navigate to the First Logical Record Within the View");
-            this.btnFirstLeft.UseVisualStyleBackColor = false;
-            this.btnFirstLeft.Click += new System.EventHandler(this.btnFirstLeft_Click);
-            // 
-            // btnCellPhone
-            // 
-            this.btnCellPhone.BackgroundImage = global::LibraryApp.Properties.Resources.phone_48;
-            this.btnCellPhone.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnCellPhone.FlatAppearance.BorderSize = 0;
-            this.btnCellPhone.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCellPhone.Location = new System.Drawing.Point(310, 177);
-            this.btnCellPhone.Name = "btnCellPhone";
-            this.btnCellPhone.Size = new System.Drawing.Size(26, 26);
-            this.btnCellPhone.TabIndex = 34;
-            this.toolTip1.SetToolTip(this.btnCellPhone, "Dialing Cell Phone");
-            this.btnCellPhone.UseVisualStyleBackColor = false;
-            this.btnCellPhone.Click += new System.EventHandler(this.btnCellPhone_Click);
             // 
             // btnUpgrade
             // 
@@ -807,11 +673,12 @@ namespace LibraryApp
             this.btnUpgrade.Text = "Upgrade Membership";
             this.toolTip1.SetToolTip(this.btnUpgrade, "Transfer to User\'s Playlists in Music Sub-System");
             this.btnUpgrade.UseVisualStyleBackColor = false;
+            this.btnUpgrade.Click += new System.EventHandler(this.btnUpgrade_Click);
             // 
             // txtUserName
             // 
             this.txtUserName.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUserName.Location = new System.Drawing.Point(128, 91);
+            this.txtUserName.Location = new System.Drawing.Point(128, 115);
             this.txtUserName.Name = "txtUserName";
             this.txtUserName.Size = new System.Drawing.Size(207, 26);
             this.txtUserName.TabIndex = 3;
@@ -820,7 +687,7 @@ namespace LibraryApp
             // 
             this.lblUsername.AutoSize = true;
             this.lblUsername.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsername.Location = new System.Drawing.Point(35, 95);
+            this.lblUsername.Location = new System.Drawing.Point(35, 119);
             this.lblUsername.Name = "lblUsername";
             this.lblUsername.Size = new System.Drawing.Size(87, 19);
             this.lblUsername.TabIndex = 14;
@@ -829,7 +696,7 @@ namespace LibraryApp
             // txtPassword
             // 
             this.txtPassword.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPassword.Location = new System.Drawing.Point(467, 91);
+            this.txtPassword.Location = new System.Drawing.Point(467, 115);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '●';
             this.txtPassword.Size = new System.Drawing.Size(297, 26);
@@ -839,7 +706,7 @@ namespace LibraryApp
             // 
             this.lblPassword.AutoSize = true;
             this.lblPassword.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPassword.Location = new System.Drawing.Point(375, 95);
+            this.lblPassword.Location = new System.Drawing.Point(375, 119);
             this.lblPassword.Name = "lblPassword";
             this.lblPassword.Size = new System.Drawing.Size(86, 19);
             this.lblPassword.TabIndex = 16;
@@ -848,7 +715,7 @@ namespace LibraryApp
             // txtEmail
             // 
             this.txtEmail.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmail.Location = new System.Drawing.Point(128, 135);
+            this.txtEmail.Location = new System.Drawing.Point(128, 179);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(636, 26);
             this.txtEmail.TabIndex = 5;
@@ -857,7 +724,7 @@ namespace LibraryApp
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(67, 135);
+            this.label3.Location = new System.Drawing.Point(67, 179);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(55, 19);
             this.label3.TabIndex = 18;
@@ -867,7 +734,7 @@ namespace LibraryApp
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(30, 180);
+            this.label1.Location = new System.Drawing.Point(30, 247);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(92, 19);
             this.label1.TabIndex = 22;
@@ -934,7 +801,7 @@ namespace LibraryApp
             // txtCellPhone
             // 
             this.txtCellPhone.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCellPhone.Location = new System.Drawing.Point(128, 177);
+            this.txtCellPhone.Location = new System.Drawing.Point(128, 244);
             this.txtCellPhone.Mask = "(999) 000-0000";
             this.txtCellPhone.Name = "txtCellPhone";
             this.txtCellPhone.Size = new System.Drawing.Size(166, 26);
@@ -1077,8 +944,9 @@ namespace LibraryApp
             // txtPrice
             // 
             this.txtPrice.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
-            this.txtPrice.Location = new System.Drawing.Point(336, 54);
+            this.txtPrice.Location = new System.Drawing.Point(336, 55);
             this.txtPrice.Name = "txtPrice";
+            this.txtPrice.ReadOnly = true;
             this.txtPrice.Size = new System.Drawing.Size(211, 26);
             this.txtPrice.TabIndex = 56;
             // 
@@ -1097,6 +965,7 @@ namespace LibraryApp
             this.txtMembership.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
             this.txtMembership.Location = new System.Drawing.Point(128, 55);
             this.txtMembership.Name = "txtMembership";
+            this.txtMembership.ReadOnly = true;
             this.txtMembership.Size = new System.Drawing.Size(148, 26);
             this.txtMembership.TabIndex = 54;
             // 
@@ -1116,6 +985,7 @@ namespace LibraryApp
             this.txtPerks.Location = new System.Drawing.Point(23, 119);
             this.txtPerks.Multiline = true;
             this.txtPerks.Name = "txtPerks";
+            this.txtPerks.ReadOnly = true;
             this.txtPerks.Size = new System.Drawing.Size(731, 164);
             this.txtPerks.TabIndex = 52;
             // 
@@ -1125,6 +995,7 @@ namespace LibraryApp
             this.txtRenewalDate.Location = new System.Drawing.Point(630, 55);
             this.txtRenewalDate.Mask = "00/00/0000";
             this.txtRenewalDate.Name = "txtRenewalDate";
+            this.txtRenewalDate.ReadOnly = true;
             this.txtRenewalDate.Size = new System.Drawing.Size(111, 26);
             this.txtRenewalDate.TabIndex = 50;
             this.txtRenewalDate.ValidatingType = typeof(System.DateTime);
@@ -1579,6 +1450,140 @@ namespace LibraryApp
             this.imageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
             this.imageList1.ImageSize = new System.Drawing.Size(16, 16);
             this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            // 
+            // btnPreviousRight
+            // 
+            this.btnPreviousRight.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(107)))), ((int)(((byte)(255)))));
+            this.btnPreviousRight.BackgroundImage = global::LibraryApp.Properties.Resources.Previous;
+            this.btnPreviousRight.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnPreviousRight.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(2)))), ((int)(((byte)(89)))));
+            this.btnPreviousRight.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnPreviousRight.Location = new System.Drawing.Point(686, 45);
+            this.btnPreviousRight.Name = "btnPreviousRight";
+            this.btnPreviousRight.Size = new System.Drawing.Size(30, 30);
+            this.btnPreviousRight.TabIndex = 7;
+            this.toolTip1.SetToolTip(this.btnPreviousRight, "Navigate to the Previous Logical Record Within the View");
+            this.btnPreviousRight.UseVisualStyleBackColor = false;
+            this.btnPreviousRight.Click += new System.EventHandler(this.btnPreviousRight_Click);
+            // 
+            // btnLastRight
+            // 
+            this.btnLastRight.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(107)))), ((int)(((byte)(255)))));
+            this.btnLastRight.BackgroundImage = global::LibraryApp.Properties.Resources.Last;
+            this.btnLastRight.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnLastRight.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(2)))), ((int)(((byte)(89)))));
+            this.btnLastRight.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnLastRight.Location = new System.Drawing.Point(715, 74);
+            this.btnLastRight.Name = "btnLastRight";
+            this.btnLastRight.Size = new System.Drawing.Size(30, 30);
+            this.btnLastRight.TabIndex = 6;
+            this.toolTip1.SetToolTip(this.btnLastRight, "Navigate to the Last Logical Record Within the View");
+            this.btnLastRight.UseVisualStyleBackColor = false;
+            this.btnLastRight.Click += new System.EventHandler(this.btnLastRight_Click);
+            // 
+            // btnNextRight
+            // 
+            this.btnNextRight.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(107)))), ((int)(((byte)(255)))));
+            this.btnNextRight.BackgroundImage = global::LibraryApp.Properties.Resources.Next;
+            this.btnNextRight.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnNextRight.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(2)))), ((int)(((byte)(89)))));
+            this.btnNextRight.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnNextRight.Location = new System.Drawing.Point(744, 45);
+            this.btnNextRight.Name = "btnNextRight";
+            this.btnNextRight.Size = new System.Drawing.Size(30, 30);
+            this.btnNextRight.TabIndex = 5;
+            this.toolTip1.SetToolTip(this.btnNextRight, "Navigate to the Next Logical Record Within the View");
+            this.btnNextRight.UseVisualStyleBackColor = false;
+            this.btnNextRight.Click += new System.EventHandler(this.btnNextRight_Click);
+            // 
+            // btnFirstRight
+            // 
+            this.btnFirstRight.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(107)))), ((int)(((byte)(255)))));
+            this.btnFirstRight.BackgroundImage = global::LibraryApp.Properties.Resources.First;
+            this.btnFirstRight.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnFirstRight.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(2)))), ((int)(((byte)(89)))));
+            this.btnFirstRight.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnFirstRight.Location = new System.Drawing.Point(715, 16);
+            this.btnFirstRight.Name = "btnFirstRight";
+            this.btnFirstRight.Size = new System.Drawing.Size(30, 30);
+            this.btnFirstRight.TabIndex = 4;
+            this.toolTip1.SetToolTip(this.btnFirstRight, "Navigate to the First Logical Record Within the View");
+            this.btnFirstRight.UseVisualStyleBackColor = false;
+            this.btnFirstRight.Click += new System.EventHandler(this.btnFirstRight_Click);
+            // 
+            // btnPreviousLeft
+            // 
+            this.btnPreviousLeft.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(107)))), ((int)(((byte)(255)))));
+            this.btnPreviousLeft.BackgroundImage = global::LibraryApp.Properties.Resources.Previous;
+            this.btnPreviousLeft.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnPreviousLeft.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(2)))), ((int)(((byte)(89)))));
+            this.btnPreviousLeft.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnPreviousLeft.Location = new System.Drawing.Point(16, 45);
+            this.btnPreviousLeft.Name = "btnPreviousLeft";
+            this.btnPreviousLeft.Size = new System.Drawing.Size(30, 30);
+            this.btnPreviousLeft.TabIndex = 3;
+            this.toolTip1.SetToolTip(this.btnPreviousLeft, "Navigate to the Previous Logical Record Within the View");
+            this.btnPreviousLeft.UseVisualStyleBackColor = false;
+            this.btnPreviousLeft.Click += new System.EventHandler(this.btnPreviousLeft_Click);
+            // 
+            // btnLastLeft
+            // 
+            this.btnLastLeft.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(107)))), ((int)(((byte)(255)))));
+            this.btnLastLeft.BackgroundImage = global::LibraryApp.Properties.Resources.Last;
+            this.btnLastLeft.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnLastLeft.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(2)))), ((int)(((byte)(89)))));
+            this.btnLastLeft.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnLastLeft.Location = new System.Drawing.Point(45, 74);
+            this.btnLastLeft.Name = "btnLastLeft";
+            this.btnLastLeft.Size = new System.Drawing.Size(30, 30);
+            this.btnLastLeft.TabIndex = 2;
+            this.toolTip1.SetToolTip(this.btnLastLeft, "Navigate to the Last Logical Record Within the View");
+            this.btnLastLeft.UseVisualStyleBackColor = false;
+            this.btnLastLeft.Click += new System.EventHandler(this.btnLastLeft_Click);
+            // 
+            // btnNextLeft
+            // 
+            this.btnNextLeft.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(107)))), ((int)(((byte)(255)))));
+            this.btnNextLeft.BackgroundImage = global::LibraryApp.Properties.Resources.Next;
+            this.btnNextLeft.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnNextLeft.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(2)))), ((int)(((byte)(89)))));
+            this.btnNextLeft.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnNextLeft.Location = new System.Drawing.Point(74, 45);
+            this.btnNextLeft.Name = "btnNextLeft";
+            this.btnNextLeft.Size = new System.Drawing.Size(30, 30);
+            this.btnNextLeft.TabIndex = 1;
+            this.toolTip1.SetToolTip(this.btnNextLeft, "Navigate to the Next Logical Record Within the View");
+            this.btnNextLeft.UseVisualStyleBackColor = false;
+            this.btnNextLeft.Click += new System.EventHandler(this.btnNextLeft_Click);
+            // 
+            // btnFirstLeft
+            // 
+            this.btnFirstLeft.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(107)))), ((int)(((byte)(255)))));
+            this.btnFirstLeft.BackgroundImage = global::LibraryApp.Properties.Resources.First;
+            this.btnFirstLeft.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnFirstLeft.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(2)))), ((int)(((byte)(89)))));
+            this.btnFirstLeft.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnFirstLeft.Location = new System.Drawing.Point(45, 16);
+            this.btnFirstLeft.Name = "btnFirstLeft";
+            this.btnFirstLeft.Size = new System.Drawing.Size(30, 30);
+            this.btnFirstLeft.TabIndex = 0;
+            this.toolTip1.SetToolTip(this.btnFirstLeft, "Navigate to the First Logical Record Within the View");
+            this.btnFirstLeft.UseVisualStyleBackColor = false;
+            this.btnFirstLeft.Click += new System.EventHandler(this.btnFirstLeft_Click);
+            // 
+            // btnCellPhone
+            // 
+            this.btnCellPhone.BackgroundImage = global::LibraryApp.Properties.Resources.phone_48;
+            this.btnCellPhone.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnCellPhone.FlatAppearance.BorderSize = 0;
+            this.btnCellPhone.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCellPhone.Location = new System.Drawing.Point(310, 244);
+            this.btnCellPhone.Name = "btnCellPhone";
+            this.btnCellPhone.Size = new System.Drawing.Size(26, 26);
+            this.btnCellPhone.TabIndex = 34;
+            this.toolTip1.SetToolTip(this.btnCellPhone, "Dialing Cell Phone");
+            this.btnCellPhone.UseVisualStyleBackColor = false;
+            this.btnCellPhone.Click += new System.EventHandler(this.btnCellPhone_Click);
             // 
             // User
             // 
