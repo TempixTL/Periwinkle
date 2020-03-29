@@ -87,11 +87,11 @@
     <Compile Include="Undelete.Designer.cs">
       <DependentUpon>Undelete.cs</DependentUpon>
     </Compile>
-    <Compile Include="User.cs">
+    <Compile Include="Artist.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="User.Designer.cs">
-      <DependentUpon>User.cs</DependentUpon>
+    <Compile Include="Artist.Designer.cs">
+      <DependentUpon>Artist.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -116,8 +116,8 @@
     <EmbeddedResource Include="Undelete.resx">
       <DependentUpon>Undelete.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="User.resx">
-      <DependentUpon>User.cs</DependentUpon>
+    <EmbeddedResource Include="Artist.resx">
+      <DependentUpon>Artist.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

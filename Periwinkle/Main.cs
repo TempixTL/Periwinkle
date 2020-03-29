@@ -12,7 +12,7 @@ namespace LibraryApp
 {
     public partial class Main : Form
     {
-        public User UserForm;
+        public Artist UserForm;
         public bool UserInViewMode = true;
         public bool UserInEditMode = false;
         public bool UserInAddMode = false;
@@ -30,7 +30,7 @@ namespace LibraryApp
         public Main()
         {
             InitializeComponent();
-            UserForm = new User(this);
+            UserForm = new Artist(this);
             UserForm.MdiParent = this;
         }
 

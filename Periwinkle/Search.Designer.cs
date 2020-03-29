@@ -84,6 +84,7 @@
             this.txtPrompt.TabIndex = 4;
             this.txtPrompt.Text = "Enter Name";
             this.txtPrompt.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtPrompt.TextChanged += new System.EventHandler(this.txtPrompt_TextChanged);
             // 
             // btnSearchNow
             // 
