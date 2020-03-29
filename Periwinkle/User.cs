@@ -47,7 +47,7 @@ namespace LibraryApp
             editFields.Add(txtEmail);
             editFields.Add(txtCellPhone);
             editFields.Add(txtRenewalDate);
-            editFields.Add(cbMembership);
+            editFields.Add(txtMembership);
             editFields.Add(txtNotes);
         }
 
@@ -133,6 +133,7 @@ namespace LibraryApp
             if (RecordNo == 0)
             {
                 txtFirst.Text = "Tom";
+                txtMI1.Text = "E";
                 txtLast.Text = "Hicks";
                 txtID.Text = "ID 1";
                 txtUserName.Text = "thicks";
@@ -140,12 +141,14 @@ namespace LibraryApp
                 txtEmail.Text = "thicks@trinity.edu";
                 txtCellPhone.Text = "(888) 888-8888";
                 txtRenewalDate.Text = "10/01/1985";
-                cbMembership.Text = "Premium++";
+                txtMembership.Text = "Premium++";
+                txtPrice.Text = "$19.99 Per Month";
                 txtNotes.Text = "Good guy!";
             }
             else if (RecordNo == 1)
             {
                 txtFirst.Text = "Tom";
+                txtMI1.Text = "D";
                 txtLast.Text = "Lauerman";
                 txtID.Text = "ID 7";
                 txtUserName.Text = "tlauerma";
@@ -153,11 +156,13 @@ namespace LibraryApp
                 txtEmail.Text = "tlauerma@trinity.edu";
                 txtCellPhone.Text = "(012) 345-6789";
                 txtRenewalDate.Text = "11/23/1998";
-                cbMembership.Text = "Free";
+                txtMembership.Text = "Free";
+                txtPrice.Text = "$0.00 Per Month";
                 txtNotes.Text = "Front-end developer";
             } else
             {
                 txtFirst.Text = "Emerson";
+                txtMI1.Text = "E";
                 txtLast.Text = "Spradling";
                 txtID.Text = "19";
                 txtUserName.Text = "espradli";
@@ -165,10 +170,12 @@ namespace LibraryApp
                 txtEmail.Text = "espradli@trinity.edu";
                 txtCellPhone.Text = "(123) 456-7890";
                 txtRenewalDate.Text = "10/16/1998";
-                cbMembership.Text = "Artist";
+                txtMembership.Text = "Artist";
+                txtPrice.Text = "$99.99 Per Month";
                 txtNotes.Text = "Toots on the horn!";
             }
 
+            updatePerks(txtMembership.Text);
             SynchronizeCommonFields();
         }
 
@@ -183,6 +190,7 @@ namespace LibraryApp
         private void FillFormBlank()
         {
             txtFirst.Text = "";
+            txtMI1.Text = "";
             txtLast.Text = "";
             txtID.Text = "ID";
             txtUserName.Text = "";
@@ -190,8 +198,11 @@ namespace LibraryApp
             txtEmail.Text = "";
             txtCellPhone.Text = "";
             txtRenewalDate.Text = "";
-            cbMembership.Text = "--- Select Major ---";
+            txtMembership.Text = "*Select Below*";
+            txtPrice.Text = "";
+            txtRenewalDate.Text = "00/00/0000";
             txtNotes.Text = "";
+            txtPerks.Text = "";
 
             SynchronizeCommonFields();
         }
@@ -211,6 +222,8 @@ namespace LibraryApp
 
             txtLast1.Text = txtLast.Text;
             txtLast2.Text = txtLast.Text;
+
+            txtMI2.Text = txtMI1.Text;
 
             txtID1.Text = txtID.Text;
             txtID2.Text = txtID.Text;
@@ -446,8 +459,8 @@ namespace LibraryApp
 
             lbTrace.Items.Add("cbOrderBy.Text ....... = " + cbOrderBy.Text);
             lbTrace.Items.Add("cbSelect.Text ........ = " + cbSelect.Text);
-            lbTrace.Items.Add("cbDeptID.DispalyValue  = " + cbMembership.Text.ToString());
-            lbTrace.Items.Add("cbDeptID.SelectedValue = " + cbMembership.SelectedValue.ToString());
+            lbTrace.Items.Add("cbDeptID.DispalyValue  = " + txtMembership.Text.ToString());
+            lbTrace.Items.Add("cbDeptID.SelectedValue = " + txtMembership.Text.ToString());
             lbTrace.Items.Add("");
         }
 
@@ -565,8 +578,8 @@ namespace LibraryApp
             }
 
             // Transaction Views
-            pnlCheckOut.Show();
-            pnlCheckOut.BringToFront();
+            //pnlCheckOut.Show();
+            //pnlCheckOut.BringToFront();
 
             // Fill Form Variables
             if (!DataToggle)
@@ -651,8 +664,8 @@ namespace LibraryApp
             // Transaction Panels
             if (pf.UserInAddMode)
             {
-                pnlCheckOut.Hide();
-                pnlCODetail.Hide();
+                //pnlCheckOut.Hide();
+                //pnlCODetail.Hide();
             }
         }
         //===========================================================================//
@@ -753,10 +766,10 @@ namespace LibraryApp
             departments.Add(70, "Premium++");
             departments.Add(13, "Artist");
 
-            cbMembership.DataSource = new BindingSource(departments, null);
-            cbMembership.DisplayMember = "Value";
-            cbMembership.ValueMember = "Key";
-            cbMembership.DropDownStyle = ComboBoxStyle.DropDownList;
+            //txtMembership.DataSource = new BindingSource(departments, null);
+            //txtMembership.DisplayMember = "Value";
+            //txtMembership.ValueMember = "Key";
+            //txtMembership.DropDownStyle = ComboBoxStyle.DropDownList;
         }
 
         private void btnTest_Click(object sender, EventArgs e)
@@ -884,35 +897,35 @@ namespace LibraryApp
         private void tabControl1_Selected(Object sender, TabControlEventArgs e)
         {
             // Hide Detail Components
-            dgCODetail.Hide();
-            pnlCODetail.Hide();
-            lblCODetail.Hide();
+            //dgCODetail.Hide();
+            //pnlCODetail.Hide();
+            //lblCODetail.Hide();
 
             // Show possibly deleted records
-            btnDelete3.Show();
-            btnViewDetails3.Show();
-            txtCheckOut3.Show();
+            //btnDelete3.Show();
+            //btnViewDetails3.Show();
+            //txtCheckOut3.Show();
         }
 
         private void btnViewDetails3_Click(object sender, EventArgs e)
         {
-            dgCODetail.Show();
-            pnlCODetail.Show();
-            lblCODetail.Show();
+            //dgCODetail.Show();
+            //pnlCODetail.Show();
+            //lblCODetail.Show();
 
-            pnlCODetail.BringToFront();
+            //pnlCODetail.BringToFront();
         }
 
         private void btnDelete3_Click(object sender, EventArgs e)
         {
-            btnDelete3.Hide();
-            btnViewDetails3.Hide();
-            txtCheckOut3.Hide();
+            //btnDelete3.Hide();
+            //btnViewDetails3.Hide();
+            //txtCheckOut3.Hide();
 
             // Hide Detail Components
-            dgCODetail.Hide();
-            pnlCODetail.Hide();
-            lblCODetail.Hide();
+            //dgCODetail.Hide();
+            //pnlCODetail.Hide();
+            //lblCODetail.Hide();
         }
 
         private void btnNextRight_Click(object sender, EventArgs e)
@@ -983,6 +996,37 @@ namespace LibraryApp
         private void byPhoneToolStripMenuItem_Click(object sender, EventArgs e)
         {
             pf.LaunchSearchWindow("Search User By Phone", "Enter Phone", "(210) 999-7438");
+        }
+
+        private void btnUpgrade_Click(object sender, EventArgs e)
+        {
+            pf.LaunchMembershipUpgradeWindow(txtFirst.Text + " " + txtMI1.Text + " " + txtLast.Text, txtMembership.Text);
+        }
+
+        public void ChangeMembership(String Membership, String Price)
+        {
+            txtMembership.Text = Membership;
+            txtPrice.Text = Price;
+            updatePerks(Membership);
+        }
+        private void updatePerks(String Membership)
+        {
+            if (Membership == "Free")
+            {
+                txtPerks.Text = "Ad-supported Radio Streaming";
+            }
+            else if (Membership == "Premium")
+            {
+                txtPerks.Text = "Ad-free Streaming on Multiple Devices\r\nUp to Five Devices per Account\r\nUp to 500 Songs in Your Library";
+            }
+            else if (Membership == "Premium++")
+            {
+                txtPerks.Text = "Ad-free Streaming on Multiple Devices\r\nUp to Five Devices per Account\r\nFree Shipping on All Physical Orders\r\nUnlimited Library Size";
+            }
+            else if (Membership == "Artist")
+            {
+                txtPerks.Text = "Ad-free Streaming on Multiple Devices\r\nUp to Five Devices per Account\r\nFree Shipping on All Physical Orders\r\nUnlimited Library Size\r\nIncludes Artist Profile and Uploading Capabilies";
+            }
         }
     }
 }
