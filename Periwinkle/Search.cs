@@ -105,7 +105,7 @@ namespace LibraryApp
                 MessageBox.Show("I am sorry, but the value you entered is not in our database!");
             else
             {
-                if (txtValue.Text == "Hicks")
+                if (txtValue.Text == "Vivaldi")
                 {
                     SearchSelectForm = new SearchSelect();
                     SearchSelectForm.Show();
@@ -113,6 +113,11 @@ namespace LibraryApp
                 }
                 this.Close();
             }
+        }
+
+        private void txtPrompt_TextChanged(object sender, EventArgs e)
+        {
+
         }
 
         //--------------------------------------------------------------------------------

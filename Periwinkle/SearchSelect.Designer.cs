@@ -109,7 +109,7 @@
             this.txtRec1.Name = "txtRec1";
             this.txtRec1.Size = new System.Drawing.Size(319, 26);
             this.txtRec1.TabIndex = 1;
-            this.txtRec1.Text = "Hicks, Bill";
+            this.txtRec1.Text = "Vivaldi, Iseppo";
             // 
             // btnView1
             // 
@@ -146,7 +146,7 @@
             this.txtRec2.Name = "txtRec2";
             this.txtRec2.Size = new System.Drawing.Size(319, 26);
             this.txtRec2.TabIndex = 4;
-            this.txtRec2.Text = "Hicks, Ken";
+            this.txtRec2.Text = "Vivaldi, Bonaventura ";
             // 
             // btnView4
             // 
@@ -169,7 +169,7 @@
             this.txtRec4.Name = "txtRec4";
             this.txtRec4.Size = new System.Drawing.Size(319, 26);
             this.txtRec4.TabIndex = 10;
-            this.txtRec4.Text = "Hicks, Sarah";
+            this.txtRec4.Text = "Vivaldi, Cecilia ";
             // 
             // btnView3
             // 
@@ -192,7 +192,7 @@
             this.txtRec3.Name = "txtRec3";
             this.txtRec3.Size = new System.Drawing.Size(319, 26);
             this.txtRec3.TabIndex = 7;
-            this.txtRec3.Text = "Hicks, Rita";
+            this.txtRec3.Text = "Vivaldi, Margarita ";
             // 
             // btnView8
             // 
@@ -259,7 +259,7 @@
             this.txtRec6.Name = "txtRec6";
             this.txtRec6.Size = new System.Drawing.Size(319, 26);
             this.txtRec6.TabIndex = 16;
-            this.txtRec6.Text = "Hicks, Tom";
+            this.txtRec6.Text = "Vivaldi, Gerolama ";
             // 
             // btnView5
             // 
@@ -283,7 +283,7 @@
             this.txtRec5.Name = "txtRec5";
             this.txtRec5.Size = new System.Drawing.Size(319, 26);
             this.txtRec5.TabIndex = 13;
-            this.txtRec5.Text = "Hicks, Sherry";
+            this.txtRec5.Text = "Vivaldi, Antonio ";
             // 
             // btnView10
             // 
