@@ -74,16 +74,18 @@
             // checkOutSubSystemToolStripMenuItem
             // 
             this.checkOutSubSystemToolStripMenuItem.Name = "checkOutSubSystemToolStripMenuItem";
-            this.checkOutSubSystemToolStripMenuItem.Size = new System.Drawing.Size(143, 20);
-            this.checkOutSubSystemToolStripMenuItem.Text = "Check-Out Sub-System";
+            this.checkOutSubSystemToolStripMenuItem.Size = new System.Drawing.Size(113, 20);
+            this.checkOutSubSystemToolStripMenuItem.Text = "Artist Sub-System";
             this.checkOutSubSystemToolStripMenuItem.ToolTipText = "Load the Check-Out Sub-System";
+            this.checkOutSubSystemToolStripMenuItem.Click += new System.EventHandler(this.checkOutSubSystemToolStripMenuItem_Click);
             // 
             // mediaSubSystemToolStripMenuItem
             // 
             this.mediaSubSystemToolStripMenuItem.Name = "mediaSubSystemToolStripMenuItem";
-            this.mediaSubSystemToolStripMenuItem.Size = new System.Drawing.Size(118, 20);
-            this.mediaSubSystemToolStripMenuItem.Text = "Media Sub-System";
+            this.mediaSubSystemToolStripMenuItem.Size = new System.Drawing.Size(117, 20);
+            this.mediaSubSystemToolStripMenuItem.Text = "Music Sub-System";
             this.mediaSubSystemToolStripMenuItem.ToolTipText = "Load the Media Sub-System";
+            this.mediaSubSystemToolStripMenuItem.Click += new System.EventHandler(this.mediaSubSystemToolStripMenuItem_Click);
             // 
             // toolStripMenuItem1
             // 

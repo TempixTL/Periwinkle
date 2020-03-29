@@ -13,6 +13,8 @@ namespace LibraryApp
     public partial class Main : Form
     {
         public User UserForm;
+        public Artist ArtistForm;
+        public Music MusicForm;
         public bool UserInViewMode = true;
         public bool UserInEditMode = false;
         public bool UserInAddMode = false;
@@ -32,6 +34,10 @@ namespace LibraryApp
             InitializeComponent();
             UserForm = new User(this);
             UserForm.MdiParent = this;
+            ArtistForm = new Artist(this);
+            ArtistForm.MdiParent = this;
+            MusicForm = new Music(this);
+            MusicForm.MdiParent = this;
         }
 
         private void Main_Load(object sender, EventArgs e)
@@ -115,6 +121,16 @@ namespace LibraryApp
             MembershipForm.MdiParent = this;
             MembershipForm.Location = new Point(850, 20);
             MembershipForm.Show();
+        }
+
+        private void checkOutSubSystemToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ArtistForm.Show();
+        }
+
+        private void mediaSubSystemToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MusicForm.Show();
         }
     }
 }
