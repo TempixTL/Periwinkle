@@ -109,6 +109,11 @@ namespace LibraryApp
                 txtRec5.Text = Value;
         }
 
+        private void lbDescription_Click(object sender, EventArgs e)
+        {
+
+        }
+
         //--------------------------------------------------------------------------------
         #endregion ------------- Dr. Hicks Initializtion Utilities -----------------------
         //--------------------------------------------------------------------------------

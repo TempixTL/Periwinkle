@@ -462,6 +462,7 @@
             this.lbDescription.Size = new System.Drawing.Size(101, 20);
             this.lbDescription.TabIndex = 31;
             this.lbDescription.Text = "lbDescription";
+            this.lbDescription.Click += new System.EventHandler(this.lbDescription_Click);
             // 
             // SupportingClass
             // 

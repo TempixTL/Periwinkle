@@ -90,6 +90,7 @@
             this.txtValue.Name = "txtValue";
             this.txtValue.Size = new System.Drawing.Size(225, 26);
             this.txtValue.TabIndex = 3;
+            this.txtValue.TextChanged += new System.EventHandler(this.txtValue_TextChanged);
             // 
             // SupportingClassAddEdit
             // 
