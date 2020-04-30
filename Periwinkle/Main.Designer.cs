@@ -33,9 +33,10 @@
             this.userSubSystemToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.checkOutSubSystemToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mediaSubSystemToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.playlistToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.playlistToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.followingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -49,6 +50,7 @@
             this.checkOutSubSystemToolStripMenuItem,
             this.mediaSubSystemToolStripMenuItem,
             this.playlistToolStripMenuItem,
+            this.followingToolStripMenuItem,
             this.toolStripMenuItem1,
             this.exitToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
@@ -89,6 +91,13 @@
             this.mediaSubSystemToolStripMenuItem.ToolTipText = "Load the Media Sub-System";
             this.mediaSubSystemToolStripMenuItem.Click += new System.EventHandler(this.mediaSubSystemToolStripMenuItem_Click);
             // 
+            // playlistToolStripMenuItem
+            // 
+            this.playlistToolStripMenuItem.Name = "playlistToolStripMenuItem";
+            this.playlistToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
+            this.playlistToolStripMenuItem.Text = "Playlists";
+            this.playlistToolStripMenuItem.Click += new System.EventHandler(this.playlistToolStripMenuItem_Click);
+            // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
@@ -103,12 +112,12 @@
             this.exitToolStripMenuItem.ToolTipText = "Exit the Library System";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
-            // playlistToolStripMenuItem
+            // followingToolStripMenuItem
             // 
-            this.playlistToolStripMenuItem.Name = "playlistToolStripMenuItem";
-            this.playlistToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
-            this.playlistToolStripMenuItem.Text = "Playlists";
-            this.playlistToolStripMenuItem.Click += new System.EventHandler(this.playlistToolStripMenuItem_Click);
+            this.followingToolStripMenuItem.Name = "followingToolStripMenuItem";
+            this.followingToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
+            this.followingToolStripMenuItem.Text = "Following";
+            this.followingToolStripMenuItem.Click += new System.EventHandler(this.followingToolStripMenuItem_Click);
             // 
             // Main
             // 
@@ -140,5 +149,6 @@
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem playlistToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem followingToolStripMenuItem;
     }
 }

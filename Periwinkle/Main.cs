@@ -17,6 +17,8 @@ namespace LibraryApp
         public Music MusicForm;
 
         public UserPlaylists PlaylistsForm;
+        public Following FollowingForm;
+        
 
         public bool UserInViewMode = true;
         public bool UserInEditMode = false;
@@ -44,6 +46,8 @@ namespace LibraryApp
 
             PlaylistsForm = new UserPlaylists(this);
             PlaylistsForm.MdiParent = this;
+            FollowingForm = new Following(this);
+            FollowingForm.MdiParent = this;
         }
 
         private void Main_Load(object sender, EventArgs e)
@@ -151,6 +155,13 @@ namespace LibraryApp
             PlaylistsForm = new UserPlaylists(this);
             PlaylistsForm.MdiParent = this;
             PlaylistsForm.Show();
+        }
+
+        private void followingToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FollowingForm = new Following(this);
+            FollowingForm.MdiParent = this;
+            FollowingForm.Show();
         }
     }
 }

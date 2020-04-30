@@ -60,14 +60,6 @@ namespace LibraryApp
             this.btnW = new System.Windows.Forms.Button();
             this.btnV = new System.Windows.Forms.Button();
             this.btnB = new System.Windows.Forms.Button();
-            this.btnPreviousRight = new System.Windows.Forms.Button();
-            this.btnLastRight = new System.Windows.Forms.Button();
-            this.btnNextRight = new System.Windows.Forms.Button();
-            this.btnFirstRight = new System.Windows.Forms.Button();
-            this.btnPreviousLeft = new System.Windows.Forms.Button();
-            this.btnLastLeft = new System.Windows.Forms.Button();
-            this.btnNextLeft = new System.Windows.Forms.Button();
-            this.btnFirstLeft = new System.Windows.Forms.Button();
             this.btnViewDetails1 = new System.Windows.Forms.Button();
             this.btnViewDetails2 = new System.Windows.Forms.Button();
             this.btnViewDetails3 = new System.Windows.Forms.Button();
@@ -86,6 +78,29 @@ namespace LibraryApp
             this.button12 = new System.Windows.Forms.Button();
             this.button13 = new System.Windows.Forms.Button();
             this.button14 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button15 = new System.Windows.Forms.Button();
+            this.button16 = new System.Windows.Forms.Button();
+            this.button27 = new System.Windows.Forms.Button();
+            this.button28 = new System.Windows.Forms.Button();
+            this.button29 = new System.Windows.Forms.Button();
+            this.button30 = new System.Windows.Forms.Button();
+            this.button31 = new System.Windows.Forms.Button();
+            this.button32 = new System.Windows.Forms.Button();
+            this.button33 = new System.Windows.Forms.Button();
+            this.button34 = new System.Windows.Forms.Button();
+            this.button17 = new System.Windows.Forms.Button();
+            this.button18 = new System.Windows.Forms.Button();
+            this.button21 = new System.Windows.Forms.Button();
+            this.button22 = new System.Windows.Forms.Button();
+            this.button23 = new System.Windows.Forms.Button();
+            this.button24 = new System.Windows.Forms.Button();
+            this.button25 = new System.Windows.Forms.Button();
+            this.button26 = new System.Windows.Forms.Button();
+            this.button19 = new System.Windows.Forms.Button();
+            this.button20 = new System.Windows.Forms.Button();
+            this.button35 = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.addToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -96,6 +111,7 @@ namespace LibraryApp
             this.searchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.byNameToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.byUniversityIDToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sendLinkToUserToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.closeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dATAToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -111,11 +127,14 @@ namespace LibraryApp
             this.txtNotes = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.Playlist = new System.Windows.Forms.TabPage();
+            this.txtVisibility = new System.Windows.Forms.Label();
             this.txtPlaylistName = new System.Windows.Forms.TextBox();
             this.txtPlaylistOwner = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
             this.pnlPlaylist1 = new System.Windows.Forms.Panel();
+            this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.textBox8 = new System.Windows.Forms.TextBox();
             this.textBox9 = new System.Windows.Forms.TextBox();
@@ -126,58 +145,39 @@ namespace LibraryApp
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.dgAlbums = new System.Windows.Forms.DataGridView();
-            this.label22 = new System.Windows.Forms.Label();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.AlbumID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.AlbumTitle = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ViewDetails = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.pnlPlaylist2 = new System.Windows.Forms.Panel();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.button15 = new System.Windows.Forms.Button();
-            this.button16 = new System.Windows.Forms.Button();
-            this.textBox16 = new System.Windows.Forms.TextBox();
-            this.button27 = new System.Windows.Forms.Button();
-            this.button28 = new System.Windows.Forms.Button();
-            this.button29 = new System.Windows.Forms.Button();
-            this.button30 = new System.Windows.Forms.Button();
-            this.button31 = new System.Windows.Forms.Button();
-            this.button32 = new System.Windows.Forms.Button();
-            this.button33 = new System.Windows.Forms.Button();
-            this.button34 = new System.Windows.Forms.Button();
-            this.textBox17 = new System.Windows.Forms.TextBox();
-            this.textBox18 = new System.Windows.Forms.TextBox();
-            this.textBox19 = new System.Windows.Forms.TextBox();
             this.pnlPlaylist3 = new System.Windows.Forms.Panel();
             this.textBox11 = new System.Windows.Forms.TextBox();
-            this.button17 = new System.Windows.Forms.Button();
-            this.button18 = new System.Windows.Forms.Button();
-            this.button21 = new System.Windows.Forms.Button();
-            this.button22 = new System.Windows.Forms.Button();
-            this.button23 = new System.Windows.Forms.Button();
-            this.button24 = new System.Windows.Forms.Button();
-            this.button25 = new System.Windows.Forms.Button();
-            this.button26 = new System.Windows.Forms.Button();
             this.textBox13 = new System.Windows.Forms.TextBox();
             this.textBox14 = new System.Windows.Forms.TextBox();
             this.textBox15 = new System.Windows.Forms.TextBox();
-            this.button19 = new System.Windows.Forms.Button();
-            this.button20 = new System.Windows.Forms.Button();
-            this.button35 = new System.Windows.Forms.Button();
-            this.txtVisibility = new System.Windows.Forms.Label();
-            this.sendLinkToUserToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pnlPlaylist2 = new System.Windows.Forms.Panel();
+            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.textBox16 = new System.Windows.Forms.TextBox();
+            this.textBox17 = new System.Windows.Forms.TextBox();
+            this.textBox18 = new System.Windows.Forms.TextBox();
+            this.textBox19 = new System.Windows.Forms.TextBox();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.btnPreviousRight = new System.Windows.Forms.Button();
+            this.btnLastRight = new System.Windows.Forms.Button();
+            this.btnNextRight = new System.Windows.Forms.Button();
+            this.btnFirstRight = new System.Windows.Forms.Button();
+            this.btnPreviousLeft = new System.Windows.Forms.Button();
+            this.btnLastLeft = new System.Windows.Forms.Button();
+            this.btnNextLeft = new System.Windows.Forms.Button();
+            this.btnFirstLeft = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.pnlNavigation.SuspendLayout();
             this.Notes.SuspendLayout();
             this.Playlist.SuspendLayout();
             this.pnlPlaylist1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgAlbums)).BeginInit();
-            this.tabControl1.SuspendLayout();
-            this.pnlPlaylist2.SuspendLayout();
             this.pnlPlaylist3.SuspendLayout();
+            this.pnlPlaylist2.SuspendLayout();
+            this.tabControl1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnTest
@@ -617,126 +617,6 @@ namespace LibraryApp
             this.toolTip1.SetToolTip(this.btnB, "Navigate to the Next Logical Record Within the View");
             this.btnB.UseVisualStyleBackColor = false;
             // 
-            // btnPreviousRight
-            // 
-            this.btnPreviousRight.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(107)))), ((int)(((byte)(255)))));
-            this.btnPreviousRight.BackgroundImage = global::LibraryApp.Properties.Resources.Previous;
-            this.btnPreviousRight.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnPreviousRight.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(2)))), ((int)(((byte)(89)))));
-            this.btnPreviousRight.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnPreviousRight.Location = new System.Drawing.Point(686, 45);
-            this.btnPreviousRight.Name = "btnPreviousRight";
-            this.btnPreviousRight.Size = new System.Drawing.Size(30, 30);
-            this.btnPreviousRight.TabIndex = 7;
-            this.toolTip1.SetToolTip(this.btnPreviousRight, "Navigate to the Previous Logical Record Within the View");
-            this.btnPreviousRight.UseVisualStyleBackColor = false;
-            this.btnPreviousRight.Click += new System.EventHandler(this.btnPreviousRight_Click);
-            // 
-            // btnLastRight
-            // 
-            this.btnLastRight.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(107)))), ((int)(((byte)(255)))));
-            this.btnLastRight.BackgroundImage = global::LibraryApp.Properties.Resources.Last;
-            this.btnLastRight.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnLastRight.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(2)))), ((int)(((byte)(89)))));
-            this.btnLastRight.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnLastRight.Location = new System.Drawing.Point(715, 74);
-            this.btnLastRight.Name = "btnLastRight";
-            this.btnLastRight.Size = new System.Drawing.Size(30, 30);
-            this.btnLastRight.TabIndex = 6;
-            this.toolTip1.SetToolTip(this.btnLastRight, "Navigate to the Last Logical Record Within the View");
-            this.btnLastRight.UseVisualStyleBackColor = false;
-            this.btnLastRight.Click += new System.EventHandler(this.btnLastRight_Click);
-            // 
-            // btnNextRight
-            // 
-            this.btnNextRight.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(107)))), ((int)(((byte)(255)))));
-            this.btnNextRight.BackgroundImage = global::LibraryApp.Properties.Resources.Next;
-            this.btnNextRight.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnNextRight.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(2)))), ((int)(((byte)(89)))));
-            this.btnNextRight.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnNextRight.Location = new System.Drawing.Point(744, 45);
-            this.btnNextRight.Name = "btnNextRight";
-            this.btnNextRight.Size = new System.Drawing.Size(30, 30);
-            this.btnNextRight.TabIndex = 5;
-            this.toolTip1.SetToolTip(this.btnNextRight, "Navigate to the Next Logical Record Within the View");
-            this.btnNextRight.UseVisualStyleBackColor = false;
-            this.btnNextRight.Click += new System.EventHandler(this.btnNextRight_Click);
-            // 
-            // btnFirstRight
-            // 
-            this.btnFirstRight.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(107)))), ((int)(((byte)(255)))));
-            this.btnFirstRight.BackgroundImage = global::LibraryApp.Properties.Resources.First;
-            this.btnFirstRight.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnFirstRight.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(2)))), ((int)(((byte)(89)))));
-            this.btnFirstRight.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnFirstRight.Location = new System.Drawing.Point(715, 16);
-            this.btnFirstRight.Name = "btnFirstRight";
-            this.btnFirstRight.Size = new System.Drawing.Size(30, 30);
-            this.btnFirstRight.TabIndex = 4;
-            this.toolTip1.SetToolTip(this.btnFirstRight, "Navigate to the First Logical Record Within the View");
-            this.btnFirstRight.UseVisualStyleBackColor = false;
-            this.btnFirstRight.Click += new System.EventHandler(this.btnFirstRight_Click);
-            // 
-            // btnPreviousLeft
-            // 
-            this.btnPreviousLeft.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(107)))), ((int)(((byte)(255)))));
-            this.btnPreviousLeft.BackgroundImage = global::LibraryApp.Properties.Resources.Previous;
-            this.btnPreviousLeft.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnPreviousLeft.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(2)))), ((int)(((byte)(89)))));
-            this.btnPreviousLeft.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnPreviousLeft.Location = new System.Drawing.Point(16, 45);
-            this.btnPreviousLeft.Name = "btnPreviousLeft";
-            this.btnPreviousLeft.Size = new System.Drawing.Size(30, 30);
-            this.btnPreviousLeft.TabIndex = 3;
-            this.toolTip1.SetToolTip(this.btnPreviousLeft, "Navigate to the Previous Logical Record Within the View");
-            this.btnPreviousLeft.UseVisualStyleBackColor = false;
-            this.btnPreviousLeft.Click += new System.EventHandler(this.btnPreviousLeft_Click);
-            // 
-            // btnLastLeft
-            // 
-            this.btnLastLeft.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(107)))), ((int)(((byte)(255)))));
-            this.btnLastLeft.BackgroundImage = global::LibraryApp.Properties.Resources.Last;
-            this.btnLastLeft.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnLastLeft.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(2)))), ((int)(((byte)(89)))));
-            this.btnLastLeft.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnLastLeft.Location = new System.Drawing.Point(45, 74);
-            this.btnLastLeft.Name = "btnLastLeft";
-            this.btnLastLeft.Size = new System.Drawing.Size(30, 30);
-            this.btnLastLeft.TabIndex = 2;
-            this.toolTip1.SetToolTip(this.btnLastLeft, "Navigate to the Last Logical Record Within the View");
-            this.btnLastLeft.UseVisualStyleBackColor = false;
-            this.btnLastLeft.Click += new System.EventHandler(this.btnLastLeft_Click);
-            // 
-            // btnNextLeft
-            // 
-            this.btnNextLeft.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(107)))), ((int)(((byte)(255)))));
-            this.btnNextLeft.BackgroundImage = global::LibraryApp.Properties.Resources.Next;
-            this.btnNextLeft.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnNextLeft.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(2)))), ((int)(((byte)(89)))));
-            this.btnNextLeft.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnNextLeft.Location = new System.Drawing.Point(74, 45);
-            this.btnNextLeft.Name = "btnNextLeft";
-            this.btnNextLeft.Size = new System.Drawing.Size(30, 30);
-            this.btnNextLeft.TabIndex = 1;
-            this.toolTip1.SetToolTip(this.btnNextLeft, "Navigate to the Next Logical Record Within the View");
-            this.btnNextLeft.UseVisualStyleBackColor = false;
-            this.btnNextLeft.Click += new System.EventHandler(this.btnNextLeft_Click);
-            // 
-            // btnFirstLeft
-            // 
-            this.btnFirstLeft.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(107)))), ((int)(((byte)(255)))));
-            this.btnFirstLeft.BackgroundImage = global::LibraryApp.Properties.Resources.First;
-            this.btnFirstLeft.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnFirstLeft.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(2)))), ((int)(((byte)(89)))));
-            this.btnFirstLeft.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnFirstLeft.Location = new System.Drawing.Point(45, 16);
-            this.btnFirstLeft.Name = "btnFirstLeft";
-            this.btnFirstLeft.Size = new System.Drawing.Size(30, 30);
-            this.btnFirstLeft.TabIndex = 0;
-            this.toolTip1.SetToolTip(this.btnFirstLeft, "Navigate to the First Logical Record Within the View");
-            this.btnFirstLeft.UseVisualStyleBackColor = false;
-            this.btnFirstLeft.Click += new System.EventHandler(this.btnFirstLeft_Click);
-            // 
             // btnViewDetails1
             // 
             this.btnViewDetails1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(107)))), ((int)(((byte)(255)))));
@@ -993,6 +873,331 @@ namespace LibraryApp
             this.toolTip1.SetToolTip(this.button14, "View the Details of this Transaction");
             this.button14.UseVisualStyleBackColor = false;
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(107)))), ((int)(((byte)(255)))));
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(679, 66);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(74, 23);
+            this.button1.TabIndex = 29;
+            this.button1.Text = "Delete";
+            this.toolTip1.SetToolTip(this.button1, "Delete this Transaction");
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(107)))), ((int)(((byte)(255)))));
+            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Location = new System.Drawing.Point(606, 66);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(74, 23);
+            this.button2.TabIndex = 30;
+            this.button2.Text = "Play";
+            this.toolTip1.SetToolTip(this.button2, "View the Details of this Transaction");
+            this.button2.UseVisualStyleBackColor = false;
+            // 
+            // button15
+            // 
+            this.button15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(107)))), ((int)(((byte)(255)))));
+            this.button15.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.button15.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button15.ForeColor = System.Drawing.Color.White;
+            this.button15.Location = new System.Drawing.Point(679, 66);
+            this.button15.Name = "button15";
+            this.button15.Size = new System.Drawing.Size(74, 23);
+            this.button15.TabIndex = 29;
+            this.button15.Text = "Delete";
+            this.toolTip1.SetToolTip(this.button15, "Delete this Transaction");
+            this.button15.UseVisualStyleBackColor = false;
+            // 
+            // button16
+            // 
+            this.button16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(107)))), ((int)(((byte)(255)))));
+            this.button16.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.button16.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button16.ForeColor = System.Drawing.Color.White;
+            this.button16.Location = new System.Drawing.Point(606, 66);
+            this.button16.Name = "button16";
+            this.button16.Size = new System.Drawing.Size(74, 23);
+            this.button16.TabIndex = 30;
+            this.button16.Text = "Play";
+            this.toolTip1.SetToolTip(this.button16, "View the Details of this Transaction");
+            this.button16.UseVisualStyleBackColor = false;
+            // 
+            // button27
+            // 
+            this.button27.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(107)))), ((int)(((byte)(255)))));
+            this.button27.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.button27.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button27.ForeColor = System.Drawing.Color.White;
+            this.button27.Location = new System.Drawing.Point(679, 89);
+            this.button27.Name = "button27";
+            this.button27.Size = new System.Drawing.Size(74, 23);
+            this.button27.TabIndex = 11;
+            this.button27.Text = "Delete";
+            this.toolTip1.SetToolTip(this.button27, "Delete this Transaction");
+            this.button27.UseVisualStyleBackColor = false;
+            // 
+            // button28
+            // 
+            this.button28.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(107)))), ((int)(((byte)(255)))));
+            this.button28.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.button28.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button28.ForeColor = System.Drawing.Color.White;
+            this.button28.Location = new System.Drawing.Point(606, 89);
+            this.button28.Name = "button28";
+            this.button28.Size = new System.Drawing.Size(74, 23);
+            this.button28.TabIndex = 12;
+            this.button28.Text = "Play";
+            this.toolTip1.SetToolTip(this.button28, "View the Details of this Transaction");
+            this.button28.UseVisualStyleBackColor = false;
+            // 
+            // button29
+            // 
+            this.button29.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(107)))), ((int)(((byte)(255)))));
+            this.button29.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.button29.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button29.ForeColor = System.Drawing.Color.White;
+            this.button29.Location = new System.Drawing.Point(679, 44);
+            this.button29.Name = "button29";
+            this.button29.Size = new System.Drawing.Size(74, 23);
+            this.button29.TabIndex = 8;
+            this.button29.Text = "* Delete *";
+            this.toolTip1.SetToolTip(this.button29, "Delete this Transaction");
+            this.button29.UseVisualStyleBackColor = false;
+            // 
+            // button30
+            // 
+            this.button30.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(107)))), ((int)(((byte)(255)))));
+            this.button30.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.button30.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button30.ForeColor = System.Drawing.Color.White;
+            this.button30.Location = new System.Drawing.Point(679, 22);
+            this.button30.Name = "button30";
+            this.button30.Size = new System.Drawing.Size(74, 23);
+            this.button30.TabIndex = 7;
+            this.button30.Text = "Delete";
+            this.toolTip1.SetToolTip(this.button30, "Delete this Transaction");
+            this.button30.UseVisualStyleBackColor = false;
+            // 
+            // button31
+            // 
+            this.button31.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(107)))), ((int)(((byte)(255)))));
+            this.button31.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.button31.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button31.ForeColor = System.Drawing.Color.White;
+            this.button31.Location = new System.Drawing.Point(679, 0);
+            this.button31.Name = "button31";
+            this.button31.Size = new System.Drawing.Size(74, 23);
+            this.button31.TabIndex = 6;
+            this.button31.Text = "Delete";
+            this.toolTip1.SetToolTip(this.button31, "Delete this Transaction");
+            this.button31.UseVisualStyleBackColor = false;
+            // 
+            // button32
+            // 
+            this.button32.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(107)))), ((int)(((byte)(255)))));
+            this.button32.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.button32.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button32.ForeColor = System.Drawing.Color.White;
+            this.button32.Location = new System.Drawing.Point(606, 44);
+            this.button32.Name = "button32";
+            this.button32.Size = new System.Drawing.Size(74, 23);
+            this.button32.TabIndex = 5;
+            this.button32.Text = "* Play *";
+            this.toolTip1.SetToolTip(this.button32, "View the Details of this Transaction");
+            this.button32.UseVisualStyleBackColor = false;
+            // 
+            // button33
+            // 
+            this.button33.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(107)))), ((int)(((byte)(255)))));
+            this.button33.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.button33.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button33.ForeColor = System.Drawing.Color.White;
+            this.button33.Location = new System.Drawing.Point(606, 22);
+            this.button33.Name = "button33";
+            this.button33.Size = new System.Drawing.Size(74, 23);
+            this.button33.TabIndex = 4;
+            this.button33.Text = "Play";
+            this.toolTip1.SetToolTip(this.button33, "View the Details of this Transaction");
+            this.button33.UseVisualStyleBackColor = false;
+            // 
+            // button34
+            // 
+            this.button34.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(107)))), ((int)(((byte)(255)))));
+            this.button34.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.button34.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button34.ForeColor = System.Drawing.Color.White;
+            this.button34.Location = new System.Drawing.Point(606, 0);
+            this.button34.Name = "button34";
+            this.button34.Size = new System.Drawing.Size(74, 27);
+            this.button34.TabIndex = 3;
+            this.button34.Text = "Play";
+            this.toolTip1.SetToolTip(this.button34, "View the Details of this Transaction");
+            this.button34.UseVisualStyleBackColor = false;
+            // 
+            // button17
+            // 
+            this.button17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(107)))), ((int)(((byte)(255)))));
+            this.button17.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.button17.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button17.ForeColor = System.Drawing.Color.White;
+            this.button17.Location = new System.Drawing.Point(679, 66);
+            this.button17.Name = "button17";
+            this.button17.Size = new System.Drawing.Size(74, 23);
+            this.button17.TabIndex = 29;
+            this.button17.Text = "Delete";
+            this.toolTip1.SetToolTip(this.button17, "Delete this Transaction");
+            this.button17.UseVisualStyleBackColor = false;
+            // 
+            // button18
+            // 
+            this.button18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(107)))), ((int)(((byte)(255)))));
+            this.button18.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.button18.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button18.ForeColor = System.Drawing.Color.White;
+            this.button18.Location = new System.Drawing.Point(606, 66);
+            this.button18.Name = "button18";
+            this.button18.Size = new System.Drawing.Size(74, 23);
+            this.button18.TabIndex = 30;
+            this.button18.Text = "Play";
+            this.toolTip1.SetToolTip(this.button18, "View the Details of this Transaction");
+            this.button18.UseVisualStyleBackColor = false;
+            // 
+            // button21
+            // 
+            this.button21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(107)))), ((int)(((byte)(255)))));
+            this.button21.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.button21.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button21.ForeColor = System.Drawing.Color.White;
+            this.button21.Location = new System.Drawing.Point(679, 44);
+            this.button21.Name = "button21";
+            this.button21.Size = new System.Drawing.Size(74, 23);
+            this.button21.TabIndex = 8;
+            this.button21.Text = "* Delete *";
+            this.toolTip1.SetToolTip(this.button21, "Delete this Transaction");
+            this.button21.UseVisualStyleBackColor = false;
+            // 
+            // button22
+            // 
+            this.button22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(107)))), ((int)(((byte)(255)))));
+            this.button22.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.button22.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button22.ForeColor = System.Drawing.Color.White;
+            this.button22.Location = new System.Drawing.Point(679, 22);
+            this.button22.Name = "button22";
+            this.button22.Size = new System.Drawing.Size(74, 23);
+            this.button22.TabIndex = 7;
+            this.button22.Text = "Delete";
+            this.toolTip1.SetToolTip(this.button22, "Delete this Transaction");
+            this.button22.UseVisualStyleBackColor = false;
+            // 
+            // button23
+            // 
+            this.button23.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(107)))), ((int)(((byte)(255)))));
+            this.button23.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.button23.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button23.ForeColor = System.Drawing.Color.White;
+            this.button23.Location = new System.Drawing.Point(679, 0);
+            this.button23.Name = "button23";
+            this.button23.Size = new System.Drawing.Size(74, 23);
+            this.button23.TabIndex = 6;
+            this.button23.Text = "Delete";
+            this.toolTip1.SetToolTip(this.button23, "Delete this Transaction");
+            this.button23.UseVisualStyleBackColor = false;
+            // 
+            // button24
+            // 
+            this.button24.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(107)))), ((int)(((byte)(255)))));
+            this.button24.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.button24.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button24.ForeColor = System.Drawing.Color.White;
+            this.button24.Location = new System.Drawing.Point(606, 44);
+            this.button24.Name = "button24";
+            this.button24.Size = new System.Drawing.Size(74, 23);
+            this.button24.TabIndex = 5;
+            this.button24.Text = "* Play *";
+            this.toolTip1.SetToolTip(this.button24, "View the Details of this Transaction");
+            this.button24.UseVisualStyleBackColor = false;
+            // 
+            // button25
+            // 
+            this.button25.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(107)))), ((int)(((byte)(255)))));
+            this.button25.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.button25.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button25.ForeColor = System.Drawing.Color.White;
+            this.button25.Location = new System.Drawing.Point(606, 22);
+            this.button25.Name = "button25";
+            this.button25.Size = new System.Drawing.Size(74, 23);
+            this.button25.TabIndex = 4;
+            this.button25.Text = "Play";
+            this.toolTip1.SetToolTip(this.button25, "View the Details of this Transaction");
+            this.button25.UseVisualStyleBackColor = false;
+            // 
+            // button26
+            // 
+            this.button26.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(107)))), ((int)(((byte)(255)))));
+            this.button26.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.button26.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button26.ForeColor = System.Drawing.Color.White;
+            this.button26.Location = new System.Drawing.Point(606, 0);
+            this.button26.Name = "button26";
+            this.button26.Size = new System.Drawing.Size(74, 27);
+            this.button26.TabIndex = 3;
+            this.button26.Text = "Play";
+            this.toolTip1.SetToolTip(this.button26, "View the Details of this Transaction");
+            this.button26.UseVisualStyleBackColor = false;
+            // 
+            // button19
+            // 
+            this.button19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(107)))), ((int)(((byte)(255)))));
+            this.button19.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.button19.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button19.ForeColor = System.Drawing.Color.White;
+            this.button19.Location = new System.Drawing.Point(486, 17);
+            this.button19.Name = "button19";
+            this.button19.Size = new System.Drawing.Size(74, 23);
+            this.button19.TabIndex = 60;
+            this.button19.Text = "* Play *";
+            this.toolTip1.SetToolTip(this.button19, "View the Details of this Transaction");
+            this.button19.UseVisualStyleBackColor = false;
+            this.button19.Click += new System.EventHandler(this.button19_Click);
+            // 
+            // button20
+            // 
+            this.button20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(107)))), ((int)(((byte)(255)))));
+            this.button20.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.button20.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button20.ForeColor = System.Drawing.Color.White;
+            this.button20.Location = new System.Drawing.Point(571, 17);
+            this.button20.Name = "button20";
+            this.button20.Size = new System.Drawing.Size(74, 23);
+            this.button20.TabIndex = 61;
+            this.button20.Text = "Shuffle";
+            this.toolTip1.SetToolTip(this.button20, "View the Details of this Transaction");
+            this.button20.UseVisualStyleBackColor = false;
+            this.button20.Click += new System.EventHandler(this.button20_Click);
+            // 
+            // button35
+            // 
+            this.button35.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(107)))), ((int)(((byte)(255)))));
+            this.button35.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.button35.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button35.ForeColor = System.Drawing.Color.White;
+            this.button35.Location = new System.Drawing.Point(659, 17);
+            this.button35.Name = "button35";
+            this.button35.Size = new System.Drawing.Size(74, 23);
+            this.button35.TabIndex = 62;
+            this.button35.Text = "* Share *";
+            this.toolTip1.SetToolTip(this.button35, "View the Details of this Transaction");
+            this.button35.UseVisualStyleBackColor = false;
+            this.button35.Click += new System.EventHandler(this.button35_Click);
+            // 
             // menuStrip1
             // 
             this.menuStrip1.AllowMerge = false;
@@ -1020,8 +1225,8 @@ namespace LibraryApp
             // addToolStripMenuItem
             // 
             this.addToolStripMenuItem.Name = "addToolStripMenuItem";
-            this.addToolStripMenuItem.Size = new System.Drawing.Size(41, 20);
-            this.addToolStripMenuItem.Text = "Add";
+            this.addToolStripMenuItem.Size = new System.Drawing.Size(83, 20);
+            this.addToolStripMenuItem.Text = "New Playlist";
             this.addToolStripMenuItem.ToolTipText = "Add A New User";
             this.addToolStripMenuItem.Click += new System.EventHandler(this.AddToolStripMenuItem_Click);
             // 
@@ -1078,16 +1283,23 @@ namespace LibraryApp
             // byNameToolStripMenuItem
             // 
             this.byNameToolStripMenuItem.Name = "byNameToolStripMenuItem";
-            this.byNameToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.byNameToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
             this.byNameToolStripMenuItem.Text = "By Song Name";
             this.byNameToolStripMenuItem.Click += new System.EventHandler(this.byNameToolStripMenuItem_Click);
             // 
             // byUniversityIDToolStripMenuItem
             // 
             this.byUniversityIDToolStripMenuItem.Name = "byUniversityIDToolStripMenuItem";
-            this.byUniversityIDToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.byUniversityIDToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
             this.byUniversityIDToolStripMenuItem.Text = "By Artist Name";
             this.byUniversityIDToolStripMenuItem.Click += new System.EventHandler(this.byUniversityIDToolStripMenuItem_Click);
+            // 
+            // sendLinkToUserToolStripMenuItem
+            // 
+            this.sendLinkToUserToolStripMenuItem.Name = "sendLinkToUserToolStripMenuItem";
+            this.sendLinkToUserToolStripMenuItem.Size = new System.Drawing.Size(110, 20);
+            this.sendLinkToUserToolStripMenuItem.Text = "Send Link to User";
+            this.sendLinkToUserToolStripMenuItem.Click += new System.EventHandler(this.sendLinkToUserToolStripMenuItem_Click);
             // 
             // toolStripMenuItem1
             // 
@@ -1282,6 +1494,16 @@ namespace LibraryApp
             this.Playlist.Text = "Playlist";
             this.Playlist.Click += new System.EventHandler(this.Songs_Click);
             // 
+            // txtVisibility
+            // 
+            this.txtVisibility.AutoSize = true;
+            this.txtVisibility.Font = new System.Drawing.Font("Arial", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtVisibility.Location = new System.Drawing.Point(112, 42);
+            this.txtVisibility.Name = "txtVisibility";
+            this.txtVisibility.Size = new System.Drawing.Size(61, 18);
+            this.txtVisibility.TabIndex = 63;
+            this.txtVisibility.Text = "Private";
+            // 
             // txtPlaylistName
             // 
             this.txtPlaylistName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(208)))), ((int)(((byte)(242)))));
@@ -1324,6 +1546,16 @@ namespace LibraryApp
             this.label16.TabIndex = 56;
             this.label16.Text = "--- Songs ---";
             // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.Location = new System.Drawing.Point(35, 1);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(112, 19);
+            this.label22.TabIndex = 40;
+            this.label22.Text = "Playlist Name";
+            // 
             // pnlPlaylist1
             // 
             this.pnlPlaylist1.Controls.Add(this.textBox4);
@@ -1360,6 +1592,16 @@ namespace LibraryApp
             this.pnlPlaylist1.Name = "pnlPlaylist1";
             this.pnlPlaylist1.Size = new System.Drawing.Size(753, 245);
             this.pnlPlaylist1.TabIndex = 48;
+            // 
+            // textBox4
+            // 
+            this.textBox4.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox4.Location = new System.Drawing.Point(0, 66);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.ReadOnly = true;
+            this.textBox4.Size = new System.Drawing.Size(606, 23);
+            this.textBox4.TabIndex = 28;
+            this.textBox4.Text = "      4   Song Name                                  Artist";
             // 
             // textBox7
             // 
@@ -1466,66 +1708,6 @@ namespace LibraryApp
             this.dgAlbums.Size = new System.Drawing.Size(753, 267);
             this.dgAlbums.TabIndex = 47;
             // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.Location = new System.Drawing.Point(35, 1);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(112, 19);
-            this.label22.TabIndex = 40;
-            this.label22.Text = "Playlist Name";
-            // 
-            // tabControl1
-            // 
-            this.tabControl1.Controls.Add(this.Playlist);
-            this.tabControl1.Controls.Add(this.Notes);
-            this.tabControl1.Font = new System.Drawing.Font("Arial", 10F);
-            this.tabControl1.Location = new System.Drawing.Point(0, 24);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(790, 370);
-            this.tabControl1.TabIndex = 33;
-            this.tabControl1.Selected += new System.Windows.Forms.TabControlEventHandler(this.tabControl1_Selected);
-            // 
-            // textBox4
-            // 
-            this.textBox4.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(0, 66);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.ReadOnly = true;
-            this.textBox4.Size = new System.Drawing.Size(606, 23);
-            this.textBox4.TabIndex = 28;
-            this.textBox4.Text = "      4   Song Name                                  Artist";
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(107)))), ((int)(((byte)(255)))));
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(679, 66);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(74, 23);
-            this.button1.TabIndex = 29;
-            this.button1.Text = "Delete";
-            this.toolTip1.SetToolTip(this.button1, "Delete this Transaction");
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(107)))), ((int)(((byte)(255)))));
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(606, 66);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(74, 23);
-            this.button2.TabIndex = 30;
-            this.button2.Text = "Play";
-            this.toolTip1.SetToolTip(this.button2, "View the Details of this Transaction");
-            this.button2.UseVisualStyleBackColor = false;
-            // 
             // AlbumID
             // 
             this.AlbumID.HeaderText = "#";
@@ -1549,6 +1731,65 @@ namespace LibraryApp
             this.ViewDetails.HeaderText = "";
             this.ViewDetails.Name = "ViewDetails";
             this.ViewDetails.Width = 120;
+            // 
+            // pnlPlaylist3
+            // 
+            this.pnlPlaylist3.Controls.Add(this.textBox11);
+            this.pnlPlaylist3.Controls.Add(this.button17);
+            this.pnlPlaylist3.Controls.Add(this.button18);
+            this.pnlPlaylist3.Controls.Add(this.button21);
+            this.pnlPlaylist3.Controls.Add(this.button22);
+            this.pnlPlaylist3.Controls.Add(this.button23);
+            this.pnlPlaylist3.Controls.Add(this.button24);
+            this.pnlPlaylist3.Controls.Add(this.button25);
+            this.pnlPlaylist3.Controls.Add(this.button26);
+            this.pnlPlaylist3.Controls.Add(this.textBox13);
+            this.pnlPlaylist3.Controls.Add(this.textBox14);
+            this.pnlPlaylist3.Controls.Add(this.textBox15);
+            this.pnlPlaylist3.Location = new System.Drawing.Point(15, 85);
+            this.pnlPlaylist3.Name = "pnlPlaylist3";
+            this.pnlPlaylist3.Size = new System.Drawing.Size(753, 245);
+            this.pnlPlaylist3.TabIndex = 50;
+            // 
+            // textBox11
+            // 
+            this.textBox11.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox11.Location = new System.Drawing.Point(0, 66);
+            this.textBox11.Name = "textBox11";
+            this.textBox11.ReadOnly = true;
+            this.textBox11.Size = new System.Drawing.Size(606, 23);
+            this.textBox11.TabIndex = 28;
+            this.textBox11.Text = "      1   Song Name                                  Artist";
+            // 
+            // textBox13
+            // 
+            this.textBox13.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox13.Location = new System.Drawing.Point(0, 44);
+            this.textBox13.Name = "textBox13";
+            this.textBox13.ReadOnly = true;
+            this.textBox13.Size = new System.Drawing.Size(606, 23);
+            this.textBox13.TabIndex = 2;
+            this.textBox13.Text = "      1   Song Name                                  Artist";
+            // 
+            // textBox14
+            // 
+            this.textBox14.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox14.Location = new System.Drawing.Point(0, 22);
+            this.textBox14.Name = "textBox14";
+            this.textBox14.ReadOnly = true;
+            this.textBox14.Size = new System.Drawing.Size(606, 23);
+            this.textBox14.TabIndex = 1;
+            this.textBox14.Text = "      1   Song Name                                  Artist";
+            // 
+            // textBox15
+            // 
+            this.textBox15.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox15.Location = new System.Drawing.Point(0, 0);
+            this.textBox15.Name = "textBox15";
+            this.textBox15.ReadOnly = true;
+            this.textBox15.Size = new System.Drawing.Size(606, 23);
+            this.textBox15.TabIndex = 0;
+            this.textBox15.Text = "      1   Song Name                                  Artist";
             // 
             // pnlPlaylist2
             // 
@@ -1582,34 +1823,6 @@ namespace LibraryApp
             this.textBox10.TabIndex = 28;
             this.textBox10.Text = "      1   Song Name                                  Artist";
             // 
-            // button15
-            // 
-            this.button15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(107)))), ((int)(((byte)(255)))));
-            this.button15.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.button15.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button15.ForeColor = System.Drawing.Color.White;
-            this.button15.Location = new System.Drawing.Point(679, 66);
-            this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(74, 23);
-            this.button15.TabIndex = 29;
-            this.button15.Text = "Delete";
-            this.toolTip1.SetToolTip(this.button15, "Delete this Transaction");
-            this.button15.UseVisualStyleBackColor = false;
-            // 
-            // button16
-            // 
-            this.button16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(107)))), ((int)(((byte)(255)))));
-            this.button16.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.button16.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button16.ForeColor = System.Drawing.Color.White;
-            this.button16.Location = new System.Drawing.Point(606, 66);
-            this.button16.Name = "button16";
-            this.button16.Size = new System.Drawing.Size(74, 23);
-            this.button16.TabIndex = 30;
-            this.button16.Text = "Play";
-            this.toolTip1.SetToolTip(this.button16, "View the Details of this Transaction");
-            this.button16.UseVisualStyleBackColor = false;
-            // 
             // textBox16
             // 
             this.textBox16.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1619,118 +1832,6 @@ namespace LibraryApp
             this.textBox16.Size = new System.Drawing.Size(606, 23);
             this.textBox16.TabIndex = 10;
             this.textBox16.Text = "      1   Song Name                                  Artist";
-            // 
-            // button27
-            // 
-            this.button27.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(107)))), ((int)(((byte)(255)))));
-            this.button27.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.button27.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button27.ForeColor = System.Drawing.Color.White;
-            this.button27.Location = new System.Drawing.Point(679, 89);
-            this.button27.Name = "button27";
-            this.button27.Size = new System.Drawing.Size(74, 23);
-            this.button27.TabIndex = 11;
-            this.button27.Text = "Delete";
-            this.toolTip1.SetToolTip(this.button27, "Delete this Transaction");
-            this.button27.UseVisualStyleBackColor = false;
-            // 
-            // button28
-            // 
-            this.button28.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(107)))), ((int)(((byte)(255)))));
-            this.button28.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.button28.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button28.ForeColor = System.Drawing.Color.White;
-            this.button28.Location = new System.Drawing.Point(606, 89);
-            this.button28.Name = "button28";
-            this.button28.Size = new System.Drawing.Size(74, 23);
-            this.button28.TabIndex = 12;
-            this.button28.Text = "Play";
-            this.toolTip1.SetToolTip(this.button28, "View the Details of this Transaction");
-            this.button28.UseVisualStyleBackColor = false;
-            // 
-            // button29
-            // 
-            this.button29.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(107)))), ((int)(((byte)(255)))));
-            this.button29.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.button29.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button29.ForeColor = System.Drawing.Color.White;
-            this.button29.Location = new System.Drawing.Point(679, 44);
-            this.button29.Name = "button29";
-            this.button29.Size = new System.Drawing.Size(74, 23);
-            this.button29.TabIndex = 8;
-            this.button29.Text = "* Delete *";
-            this.toolTip1.SetToolTip(this.button29, "Delete this Transaction");
-            this.button29.UseVisualStyleBackColor = false;
-            // 
-            // button30
-            // 
-            this.button30.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(107)))), ((int)(((byte)(255)))));
-            this.button30.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.button30.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button30.ForeColor = System.Drawing.Color.White;
-            this.button30.Location = new System.Drawing.Point(679, 22);
-            this.button30.Name = "button30";
-            this.button30.Size = new System.Drawing.Size(74, 23);
-            this.button30.TabIndex = 7;
-            this.button30.Text = "Delete";
-            this.toolTip1.SetToolTip(this.button30, "Delete this Transaction");
-            this.button30.UseVisualStyleBackColor = false;
-            // 
-            // button31
-            // 
-            this.button31.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(107)))), ((int)(((byte)(255)))));
-            this.button31.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.button31.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button31.ForeColor = System.Drawing.Color.White;
-            this.button31.Location = new System.Drawing.Point(679, 0);
-            this.button31.Name = "button31";
-            this.button31.Size = new System.Drawing.Size(74, 23);
-            this.button31.TabIndex = 6;
-            this.button31.Text = "Delete";
-            this.toolTip1.SetToolTip(this.button31, "Delete this Transaction");
-            this.button31.UseVisualStyleBackColor = false;
-            // 
-            // button32
-            // 
-            this.button32.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(107)))), ((int)(((byte)(255)))));
-            this.button32.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.button32.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button32.ForeColor = System.Drawing.Color.White;
-            this.button32.Location = new System.Drawing.Point(606, 44);
-            this.button32.Name = "button32";
-            this.button32.Size = new System.Drawing.Size(74, 23);
-            this.button32.TabIndex = 5;
-            this.button32.Text = "* Play *";
-            this.toolTip1.SetToolTip(this.button32, "View the Details of this Transaction");
-            this.button32.UseVisualStyleBackColor = false;
-            // 
-            // button33
-            // 
-            this.button33.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(107)))), ((int)(((byte)(255)))));
-            this.button33.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.button33.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button33.ForeColor = System.Drawing.Color.White;
-            this.button33.Location = new System.Drawing.Point(606, 22);
-            this.button33.Name = "button33";
-            this.button33.Size = new System.Drawing.Size(74, 23);
-            this.button33.TabIndex = 4;
-            this.button33.Text = "Play";
-            this.toolTip1.SetToolTip(this.button33, "View the Details of this Transaction");
-            this.button33.UseVisualStyleBackColor = false;
-            // 
-            // button34
-            // 
-            this.button34.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(107)))), ((int)(((byte)(255)))));
-            this.button34.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.button34.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button34.ForeColor = System.Drawing.Color.White;
-            this.button34.Location = new System.Drawing.Point(606, 0);
-            this.button34.Name = "button34";
-            this.button34.Size = new System.Drawing.Size(74, 27);
-            this.button34.TabIndex = 3;
-            this.button34.Text = "Play";
-            this.toolTip1.SetToolTip(this.button34, "View the Details of this Transaction");
-            this.button34.UseVisualStyleBackColor = false;
             // 
             // textBox17
             // 
@@ -1762,245 +1863,144 @@ namespace LibraryApp
             this.textBox19.TabIndex = 0;
             this.textBox19.Text = "      1   Song Name                                  Artist";
             // 
-            // pnlPlaylist3
+            // tabControl1
             // 
-            this.pnlPlaylist3.Controls.Add(this.textBox11);
-            this.pnlPlaylist3.Controls.Add(this.button17);
-            this.pnlPlaylist3.Controls.Add(this.button18);
-            this.pnlPlaylist3.Controls.Add(this.button21);
-            this.pnlPlaylist3.Controls.Add(this.button22);
-            this.pnlPlaylist3.Controls.Add(this.button23);
-            this.pnlPlaylist3.Controls.Add(this.button24);
-            this.pnlPlaylist3.Controls.Add(this.button25);
-            this.pnlPlaylist3.Controls.Add(this.button26);
-            this.pnlPlaylist3.Controls.Add(this.textBox13);
-            this.pnlPlaylist3.Controls.Add(this.textBox14);
-            this.pnlPlaylist3.Controls.Add(this.textBox15);
-            this.pnlPlaylist3.Location = new System.Drawing.Point(15, 85);
-            this.pnlPlaylist3.Name = "pnlPlaylist3";
-            this.pnlPlaylist3.Size = new System.Drawing.Size(753, 245);
-            this.pnlPlaylist3.TabIndex = 50;
+            this.tabControl1.Controls.Add(this.Playlist);
+            this.tabControl1.Controls.Add(this.Notes);
+            this.tabControl1.Font = new System.Drawing.Font("Arial", 10F);
+            this.tabControl1.Location = new System.Drawing.Point(0, 24);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(790, 370);
+            this.tabControl1.TabIndex = 33;
+            this.tabControl1.Selected += new System.Windows.Forms.TabControlEventHandler(this.tabControl1_Selected);
             // 
-            // textBox11
+            // btnPreviousRight
             // 
-            this.textBox11.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox11.Location = new System.Drawing.Point(0, 66);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.ReadOnly = true;
-            this.textBox11.Size = new System.Drawing.Size(606, 23);
-            this.textBox11.TabIndex = 28;
-            this.textBox11.Text = "      1   Song Name                                  Artist";
+            this.btnPreviousRight.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(107)))), ((int)(((byte)(255)))));
+            this.btnPreviousRight.BackgroundImage = global::LibraryApp.Properties.Resources.Previous;
+            this.btnPreviousRight.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnPreviousRight.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(2)))), ((int)(((byte)(89)))));
+            this.btnPreviousRight.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnPreviousRight.Location = new System.Drawing.Point(686, 45);
+            this.btnPreviousRight.Name = "btnPreviousRight";
+            this.btnPreviousRight.Size = new System.Drawing.Size(30, 30);
+            this.btnPreviousRight.TabIndex = 7;
+            this.toolTip1.SetToolTip(this.btnPreviousRight, "Navigate to the Previous Logical Record Within the View");
+            this.btnPreviousRight.UseVisualStyleBackColor = false;
+            this.btnPreviousRight.Click += new System.EventHandler(this.btnPreviousRight_Click);
             // 
-            // button17
+            // btnLastRight
             // 
-            this.button17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(107)))), ((int)(((byte)(255)))));
-            this.button17.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.button17.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button17.ForeColor = System.Drawing.Color.White;
-            this.button17.Location = new System.Drawing.Point(679, 66);
-            this.button17.Name = "button17";
-            this.button17.Size = new System.Drawing.Size(74, 23);
-            this.button17.TabIndex = 29;
-            this.button17.Text = "Delete";
-            this.toolTip1.SetToolTip(this.button17, "Delete this Transaction");
-            this.button17.UseVisualStyleBackColor = false;
+            this.btnLastRight.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(107)))), ((int)(((byte)(255)))));
+            this.btnLastRight.BackgroundImage = global::LibraryApp.Properties.Resources.Last;
+            this.btnLastRight.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnLastRight.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(2)))), ((int)(((byte)(89)))));
+            this.btnLastRight.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnLastRight.Location = new System.Drawing.Point(715, 74);
+            this.btnLastRight.Name = "btnLastRight";
+            this.btnLastRight.Size = new System.Drawing.Size(30, 30);
+            this.btnLastRight.TabIndex = 6;
+            this.toolTip1.SetToolTip(this.btnLastRight, "Navigate to the Last Logical Record Within the View");
+            this.btnLastRight.UseVisualStyleBackColor = false;
+            this.btnLastRight.Click += new System.EventHandler(this.btnLastRight_Click);
             // 
-            // button18
+            // btnNextRight
             // 
-            this.button18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(107)))), ((int)(((byte)(255)))));
-            this.button18.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.button18.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button18.ForeColor = System.Drawing.Color.White;
-            this.button18.Location = new System.Drawing.Point(606, 66);
-            this.button18.Name = "button18";
-            this.button18.Size = new System.Drawing.Size(74, 23);
-            this.button18.TabIndex = 30;
-            this.button18.Text = "Play";
-            this.toolTip1.SetToolTip(this.button18, "View the Details of this Transaction");
-            this.button18.UseVisualStyleBackColor = false;
+            this.btnNextRight.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(107)))), ((int)(((byte)(255)))));
+            this.btnNextRight.BackgroundImage = global::LibraryApp.Properties.Resources.Next;
+            this.btnNextRight.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnNextRight.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(2)))), ((int)(((byte)(89)))));
+            this.btnNextRight.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnNextRight.Location = new System.Drawing.Point(744, 45);
+            this.btnNextRight.Name = "btnNextRight";
+            this.btnNextRight.Size = new System.Drawing.Size(30, 30);
+            this.btnNextRight.TabIndex = 5;
+            this.toolTip1.SetToolTip(this.btnNextRight, "Navigate to the Next Logical Record Within the View");
+            this.btnNextRight.UseVisualStyleBackColor = false;
+            this.btnNextRight.Click += new System.EventHandler(this.btnNextRight_Click);
             // 
-            // button21
+            // btnFirstRight
             // 
-            this.button21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(107)))), ((int)(((byte)(255)))));
-            this.button21.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.button21.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button21.ForeColor = System.Drawing.Color.White;
-            this.button21.Location = new System.Drawing.Point(679, 44);
-            this.button21.Name = "button21";
-            this.button21.Size = new System.Drawing.Size(74, 23);
-            this.button21.TabIndex = 8;
-            this.button21.Text = "* Delete *";
-            this.toolTip1.SetToolTip(this.button21, "Delete this Transaction");
-            this.button21.UseVisualStyleBackColor = false;
+            this.btnFirstRight.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(107)))), ((int)(((byte)(255)))));
+            this.btnFirstRight.BackgroundImage = global::LibraryApp.Properties.Resources.First;
+            this.btnFirstRight.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnFirstRight.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(2)))), ((int)(((byte)(89)))));
+            this.btnFirstRight.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnFirstRight.Location = new System.Drawing.Point(715, 16);
+            this.btnFirstRight.Name = "btnFirstRight";
+            this.btnFirstRight.Size = new System.Drawing.Size(30, 30);
+            this.btnFirstRight.TabIndex = 4;
+            this.toolTip1.SetToolTip(this.btnFirstRight, "Navigate to the First Logical Record Within the View");
+            this.btnFirstRight.UseVisualStyleBackColor = false;
+            this.btnFirstRight.Click += new System.EventHandler(this.btnFirstRight_Click);
             // 
-            // button22
+            // btnPreviousLeft
             // 
-            this.button22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(107)))), ((int)(((byte)(255)))));
-            this.button22.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.button22.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button22.ForeColor = System.Drawing.Color.White;
-            this.button22.Location = new System.Drawing.Point(679, 22);
-            this.button22.Name = "button22";
-            this.button22.Size = new System.Drawing.Size(74, 23);
-            this.button22.TabIndex = 7;
-            this.button22.Text = "Delete";
-            this.toolTip1.SetToolTip(this.button22, "Delete this Transaction");
-            this.button22.UseVisualStyleBackColor = false;
+            this.btnPreviousLeft.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(107)))), ((int)(((byte)(255)))));
+            this.btnPreviousLeft.BackgroundImage = global::LibraryApp.Properties.Resources.Previous;
+            this.btnPreviousLeft.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnPreviousLeft.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(2)))), ((int)(((byte)(89)))));
+            this.btnPreviousLeft.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnPreviousLeft.Location = new System.Drawing.Point(16, 45);
+            this.btnPreviousLeft.Name = "btnPreviousLeft";
+            this.btnPreviousLeft.Size = new System.Drawing.Size(30, 30);
+            this.btnPreviousLeft.TabIndex = 3;
+            this.toolTip1.SetToolTip(this.btnPreviousLeft, "Navigate to the Previous Logical Record Within the View");
+            this.btnPreviousLeft.UseVisualStyleBackColor = false;
+            this.btnPreviousLeft.Click += new System.EventHandler(this.btnPreviousLeft_Click);
             // 
-            // button23
+            // btnLastLeft
             // 
-            this.button23.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(107)))), ((int)(((byte)(255)))));
-            this.button23.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.button23.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button23.ForeColor = System.Drawing.Color.White;
-            this.button23.Location = new System.Drawing.Point(679, 0);
-            this.button23.Name = "button23";
-            this.button23.Size = new System.Drawing.Size(74, 23);
-            this.button23.TabIndex = 6;
-            this.button23.Text = "Delete";
-            this.toolTip1.SetToolTip(this.button23, "Delete this Transaction");
-            this.button23.UseVisualStyleBackColor = false;
+            this.btnLastLeft.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(107)))), ((int)(((byte)(255)))));
+            this.btnLastLeft.BackgroundImage = global::LibraryApp.Properties.Resources.Last;
+            this.btnLastLeft.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnLastLeft.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(2)))), ((int)(((byte)(89)))));
+            this.btnLastLeft.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnLastLeft.Location = new System.Drawing.Point(45, 74);
+            this.btnLastLeft.Name = "btnLastLeft";
+            this.btnLastLeft.Size = new System.Drawing.Size(30, 30);
+            this.btnLastLeft.TabIndex = 2;
+            this.toolTip1.SetToolTip(this.btnLastLeft, "Navigate to the Last Logical Record Within the View");
+            this.btnLastLeft.UseVisualStyleBackColor = false;
+            this.btnLastLeft.Click += new System.EventHandler(this.btnLastLeft_Click);
             // 
-            // button24
+            // btnNextLeft
             // 
-            this.button24.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(107)))), ((int)(((byte)(255)))));
-            this.button24.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.button24.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button24.ForeColor = System.Drawing.Color.White;
-            this.button24.Location = new System.Drawing.Point(606, 44);
-            this.button24.Name = "button24";
-            this.button24.Size = new System.Drawing.Size(74, 23);
-            this.button24.TabIndex = 5;
-            this.button24.Text = "* Play *";
-            this.toolTip1.SetToolTip(this.button24, "View the Details of this Transaction");
-            this.button24.UseVisualStyleBackColor = false;
+            this.btnNextLeft.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(107)))), ((int)(((byte)(255)))));
+            this.btnNextLeft.BackgroundImage = global::LibraryApp.Properties.Resources.Next;
+            this.btnNextLeft.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnNextLeft.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(2)))), ((int)(((byte)(89)))));
+            this.btnNextLeft.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnNextLeft.Location = new System.Drawing.Point(74, 45);
+            this.btnNextLeft.Name = "btnNextLeft";
+            this.btnNextLeft.Size = new System.Drawing.Size(30, 30);
+            this.btnNextLeft.TabIndex = 1;
+            this.toolTip1.SetToolTip(this.btnNextLeft, "Navigate to the Next Logical Record Within the View");
+            this.btnNextLeft.UseVisualStyleBackColor = false;
+            this.btnNextLeft.Click += new System.EventHandler(this.btnNextLeft_Click);
             // 
-            // button25
+            // btnFirstLeft
             // 
-            this.button25.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(107)))), ((int)(((byte)(255)))));
-            this.button25.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.button25.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button25.ForeColor = System.Drawing.Color.White;
-            this.button25.Location = new System.Drawing.Point(606, 22);
-            this.button25.Name = "button25";
-            this.button25.Size = new System.Drawing.Size(74, 23);
-            this.button25.TabIndex = 4;
-            this.button25.Text = "Play";
-            this.toolTip1.SetToolTip(this.button25, "View the Details of this Transaction");
-            this.button25.UseVisualStyleBackColor = false;
-            // 
-            // button26
-            // 
-            this.button26.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(107)))), ((int)(((byte)(255)))));
-            this.button26.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.button26.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button26.ForeColor = System.Drawing.Color.White;
-            this.button26.Location = new System.Drawing.Point(606, 0);
-            this.button26.Name = "button26";
-            this.button26.Size = new System.Drawing.Size(74, 27);
-            this.button26.TabIndex = 3;
-            this.button26.Text = "Play";
-            this.toolTip1.SetToolTip(this.button26, "View the Details of this Transaction");
-            this.button26.UseVisualStyleBackColor = false;
-            // 
-            // textBox13
-            // 
-            this.textBox13.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox13.Location = new System.Drawing.Point(0, 44);
-            this.textBox13.Name = "textBox13";
-            this.textBox13.ReadOnly = true;
-            this.textBox13.Size = new System.Drawing.Size(606, 23);
-            this.textBox13.TabIndex = 2;
-            this.textBox13.Text = "      1   Song Name                                  Artist";
-            // 
-            // textBox14
-            // 
-            this.textBox14.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox14.Location = new System.Drawing.Point(0, 22);
-            this.textBox14.Name = "textBox14";
-            this.textBox14.ReadOnly = true;
-            this.textBox14.Size = new System.Drawing.Size(606, 23);
-            this.textBox14.TabIndex = 1;
-            this.textBox14.Text = "      1   Song Name                                  Artist";
-            // 
-            // textBox15
-            // 
-            this.textBox15.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox15.Location = new System.Drawing.Point(0, 0);
-            this.textBox15.Name = "textBox15";
-            this.textBox15.ReadOnly = true;
-            this.textBox15.Size = new System.Drawing.Size(606, 23);
-            this.textBox15.TabIndex = 0;
-            this.textBox15.Text = "      1   Song Name                                  Artist";
-            // 
-            // button19
-            // 
-            this.button19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(107)))), ((int)(((byte)(255)))));
-            this.button19.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.button19.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button19.ForeColor = System.Drawing.Color.White;
-            this.button19.Location = new System.Drawing.Point(486, 17);
-            this.button19.Name = "button19";
-            this.button19.Size = new System.Drawing.Size(74, 23);
-            this.button19.TabIndex = 60;
-            this.button19.Text = "* Play *";
-            this.toolTip1.SetToolTip(this.button19, "View the Details of this Transaction");
-            this.button19.UseVisualStyleBackColor = false;
-            this.button19.Click += new System.EventHandler(this.button19_Click);
-            // 
-            // button20
-            // 
-            this.button20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(107)))), ((int)(((byte)(255)))));
-            this.button20.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.button20.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button20.ForeColor = System.Drawing.Color.White;
-            this.button20.Location = new System.Drawing.Point(571, 17);
-            this.button20.Name = "button20";
-            this.button20.Size = new System.Drawing.Size(74, 23);
-            this.button20.TabIndex = 61;
-            this.button20.Text = "Shuffle";
-            this.toolTip1.SetToolTip(this.button20, "View the Details of this Transaction");
-            this.button20.UseVisualStyleBackColor = false;
-            this.button20.Click += new System.EventHandler(this.button20_Click);
-            // 
-            // button35
-            // 
-            this.button35.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(107)))), ((int)(((byte)(255)))));
-            this.button35.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.button35.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button35.ForeColor = System.Drawing.Color.White;
-            this.button35.Location = new System.Drawing.Point(659, 17);
-            this.button35.Name = "button35";
-            this.button35.Size = new System.Drawing.Size(74, 23);
-            this.button35.TabIndex = 62;
-            this.button35.Text = "* Share *";
-            this.toolTip1.SetToolTip(this.button35, "View the Details of this Transaction");
-            this.button35.UseVisualStyleBackColor = false;
-            this.button35.Click += new System.EventHandler(this.button35_Click);
-            // 
-            // txtVisibility
-            // 
-            this.txtVisibility.AutoSize = true;
-            this.txtVisibility.Font = new System.Drawing.Font("Arial", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtVisibility.Location = new System.Drawing.Point(112, 42);
-            this.txtVisibility.Name = "txtVisibility";
-            this.txtVisibility.Size = new System.Drawing.Size(61, 18);
-            this.txtVisibility.TabIndex = 63;
-            this.txtVisibility.Text = "Private";
-            // 
-            // sendLinkToUserToolStripMenuItem
-            // 
-            this.sendLinkToUserToolStripMenuItem.Name = "sendLinkToUserToolStripMenuItem";
-            this.sendLinkToUserToolStripMenuItem.Size = new System.Drawing.Size(110, 20);
-            this.sendLinkToUserToolStripMenuItem.Text = "Send Link to User";
-            this.sendLinkToUserToolStripMenuItem.Click += new System.EventHandler(this.sendLinkToUserToolStripMenuItem_Click);
+            this.btnFirstLeft.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(107)))), ((int)(((byte)(255)))));
+            this.btnFirstLeft.BackgroundImage = global::LibraryApp.Properties.Resources.First;
+            this.btnFirstLeft.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnFirstLeft.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(2)))), ((int)(((byte)(89)))));
+            this.btnFirstLeft.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnFirstLeft.Location = new System.Drawing.Point(45, 16);
+            this.btnFirstLeft.Name = "btnFirstLeft";
+            this.btnFirstLeft.Size = new System.Drawing.Size(30, 30);
+            this.btnFirstLeft.TabIndex = 0;
+            this.toolTip1.SetToolTip(this.btnFirstLeft, "Navigate to the First Logical Record Within the View");
+            this.btnFirstLeft.UseVisualStyleBackColor = false;
+            this.btnFirstLeft.Click += new System.EventHandler(this.btnFirstLeft_Click);
             // 
             // UserPlaylists
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(208)))), ((int)(((byte)(242)))));
-            this.ClientSize = new System.Drawing.Size(795, 589);
+            this.ClientSize = new System.Drawing.Size(795, 606);
             this.Controls.Add(this.lbTrace);
             this.Controls.Add(this.pnlNavigation);
             this.Controls.Add(this.tabControl1);
@@ -2027,11 +2027,11 @@ namespace LibraryApp
             this.pnlPlaylist1.ResumeLayout(false);
             this.pnlPlaylist1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgAlbums)).EndInit();
-            this.tabControl1.ResumeLayout(false);
-            this.pnlPlaylist2.ResumeLayout(false);
-            this.pnlPlaylist2.PerformLayout();
             this.pnlPlaylist3.ResumeLayout(false);
             this.pnlPlaylist3.PerformLayout();
+            this.pnlPlaylist2.ResumeLayout(false);
+            this.pnlPlaylist2.PerformLayout();
+            this.tabControl1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
