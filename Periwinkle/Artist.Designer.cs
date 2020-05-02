@@ -74,8 +74,6 @@ namespace LibraryApp
             this.btnDelete1 = new System.Windows.Forms.Button();
             this.btnDelete2 = new System.Windows.Forms.Button();
             this.btnDelete3 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.button18 = new System.Windows.Forms.Button();
             this.button17 = new System.Windows.Forms.Button();
             this.button16 = new System.Windows.Forms.Button();
@@ -119,9 +117,6 @@ namespace LibraryApp
             this.allUsersWhoOweMoneyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.allUsersWhoHaveBooksOverdueToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.administrativeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.departmentsAddEditDeleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.userTypesAddEditDeleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.closeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dATAToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pnlNavigation = new System.Windows.Forms.Panel();
@@ -164,7 +159,6 @@ namespace LibraryApp
             this.dataGridViewButtonColumn5 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.dataGridViewButtonColumn6 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Albums = new System.Windows.Forms.TabPage();
-            this.textBox4 = new System.Windows.Forms.TextBox();
             this.pnlSongs = new System.Windows.Forms.Panel();
             this.textBox10 = new System.Windows.Forms.TextBox();
             this.textBox11 = new System.Windows.Forms.TextBox();
@@ -206,6 +200,9 @@ namespace LibraryApp
             this.label2 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.pnlNavigation.SuspendLayout();
             this.Notes.SuspendLayout();
@@ -864,34 +861,6 @@ namespace LibraryApp
             this.btnDelete3.UseVisualStyleBackColor = false;
             this.btnDelete3.Click += new System.EventHandler(this.btnDelete3_Click);
             // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(107)))), ((int)(((byte)(255)))));
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(507, 151);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(120, 23);
-            this.button1.TabIndex = 9;
-            this.button1.Text = "View Album";
-            this.toolTip1.SetToolTip(this.button1, "View the Details of this Transaction");
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(107)))), ((int)(((byte)(255)))));
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(626, 151);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(120, 23);
-            this.button2.TabIndex = 9;
-            this.button2.Text = "Delete";
-            this.toolTip1.SetToolTip(this.button2, "Delete this Transaction");
-            this.button2.UseVisualStyleBackColor = false;
-            // 
             // button18
             // 
             this.button18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(107)))), ((int)(((byte)(255)))));
@@ -1146,7 +1115,6 @@ namespace LibraryApp
             this.searchToolStripMenuItem,
             this.reportsToolStripMenuItem,
             this.toolStripMenuItem1,
-            this.administrativeToolStripMenuItem,
             this.closeToolStripMenuItem,
             this.dATAToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
@@ -1218,29 +1186,29 @@ namespace LibraryApp
             // byNameToolStripMenuItem
             // 
             this.byNameToolStripMenuItem.Name = "byNameToolStripMenuItem";
-            this.byNameToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
-            this.byNameToolStripMenuItem.Text = "By Name";
+            this.byNameToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
+            this.byNameToolStripMenuItem.Text = "* By Name *";
             this.byNameToolStripMenuItem.Click += new System.EventHandler(this.byNameToolStripMenuItem_Click);
             // 
             // byIDToolStripMenuItem
             // 
             this.byIDToolStripMenuItem.Name = "byIDToolStripMenuItem";
-            this.byIDToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
-            this.byIDToolStripMenuItem.Text = "By ID";
+            this.byIDToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
+            this.byIDToolStripMenuItem.Text = "By Genre";
             this.byIDToolStripMenuItem.Click += new System.EventHandler(this.byIDToolStripMenuItem_Click);
             // 
             // byUniversityIDToolStripMenuItem
             // 
             this.byUniversityIDToolStripMenuItem.Name = "byUniversityIDToolStripMenuItem";
-            this.byUniversityIDToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
-            this.byUniversityIDToolStripMenuItem.Text = "By University ID";
+            this.byUniversityIDToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
+            this.byUniversityIDToolStripMenuItem.Text = "By Est Date";
             this.byUniversityIDToolStripMenuItem.Click += new System.EventHandler(this.byUniversityIDToolStripMenuItem_Click);
             // 
             // byPhoneToolStripMenuItem
             // 
             this.byPhoneToolStripMenuItem.Name = "byPhoneToolStripMenuItem";
-            this.byPhoneToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
-            this.byPhoneToolStripMenuItem.Text = "By Phone";
+            this.byPhoneToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
+            this.byPhoneToolStripMenuItem.Text = "By Songs";
             this.byPhoneToolStripMenuItem.Click += new System.EventHandler(this.byPhoneToolStripMenuItem_Click);
             // 
             // reportsToolStripMenuItem
@@ -1344,30 +1312,6 @@ namespace LibraryApp
             this.toolStripMenuItem1.Text = "============";
             this.toolStripMenuItem1.ToolTipText = "This is not a button : - )";
             // 
-            // administrativeToolStripMenuItem
-            // 
-            this.administrativeToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.departmentsAddEditDeleteToolStripMenuItem,
-            this.userTypesAddEditDeleteToolStripMenuItem});
-            this.administrativeToolStripMenuItem.Name = "administrativeToolStripMenuItem";
-            this.administrativeToolStripMenuItem.Size = new System.Drawing.Size(96, 20);
-            this.administrativeToolStripMenuItem.Text = "Administrative";
-            this.administrativeToolStripMenuItem.ToolTipText = "Administrative Tools";
-            // 
-            // departmentsAddEditDeleteToolStripMenuItem
-            // 
-            this.departmentsAddEditDeleteToolStripMenuItem.Name = "departmentsAddEditDeleteToolStripMenuItem";
-            this.departmentsAddEditDeleteToolStripMenuItem.Size = new System.Drawing.Size(253, 22);
-            this.departmentsAddEditDeleteToolStripMenuItem.Text = "Departments --> Add, Edit, Delete";
-            this.departmentsAddEditDeleteToolStripMenuItem.Click += new System.EventHandler(this.departmentsAddEditDeleteToolStripMenuItem_Click);
-            // 
-            // userTypesAddEditDeleteToolStripMenuItem
-            // 
-            this.userTypesAddEditDeleteToolStripMenuItem.Name = "userTypesAddEditDeleteToolStripMenuItem";
-            this.userTypesAddEditDeleteToolStripMenuItem.Size = new System.Drawing.Size(253, 22);
-            this.userTypesAddEditDeleteToolStripMenuItem.Text = "User Types --> Add, Edit, Delete";
-            this.userTypesAddEditDeleteToolStripMenuItem.Click += new System.EventHandler(this.userTypesAddEditDeleteToolStripMenuItem_Click);
-            // 
             // closeToolStripMenuItem
             // 
             this.closeToolStripMenuItem.Name = "closeToolStripMenuItem";
@@ -1457,11 +1401,9 @@ namespace LibraryApp
             // 
             this.cbSelect.FormattingEnabled = true;
             this.cbSelect.Items.AddRange(new object[] {
-            "All Artist",
-            "Administrators",
-            "Non-Administrators",
-            "Males",
-            "Females"});
+            "Genre",
+            "Band/Group",
+            "Lowest Est Date"});
             this.cbSelect.Location = new System.Drawing.Point(212, 118);
             this.cbSelect.Name = "cbSelect";
             this.cbSelect.Size = new System.Drawing.Size(170, 27);
@@ -1637,6 +1579,7 @@ namespace LibraryApp
             this.textBox7.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox7.Location = new System.Drawing.Point(0, 44);
             this.textBox7.Name = "textBox7";
+            this.textBox7.ReadOnly = true;
             this.textBox7.Size = new System.Drawing.Size(492, 23);
             this.textBox7.TabIndex = 2;
             this.textBox7.Text = "                        10            04/01/1980        Brian Johnson";
@@ -1646,6 +1589,7 @@ namespace LibraryApp
             this.textBox8.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox8.Location = new System.Drawing.Point(0, 22);
             this.textBox8.Name = "textBox8";
+            this.textBox8.ReadOnly = true;
             this.textBox8.Size = new System.Drawing.Size(492, 23);
             this.textBox8.TabIndex = 1;
             this.textBox8.Text = "                        25            ??/??/1975           Mark Evans";
@@ -1655,6 +1599,7 @@ namespace LibraryApp
             this.textBox13.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox13.Location = new System.Drawing.Point(0, 0);
             this.textBox13.Name = "textBox13";
+            this.textBox13.ReadOnly = true;
             this.textBox13.Size = new System.Drawing.Size(492, 23);
             this.textBox13.TabIndex = 0;
             this.textBox13.Text = "                        10            ??/??/1975            Phil Rudd";
@@ -1742,6 +1687,7 @@ namespace LibraryApp
             this.textBox15.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox15.Location = new System.Drawing.Point(0, 22);
             this.textBox15.Name = "textBox15";
+            this.textBox15.ReadOnly = true;
             this.textBox15.Size = new System.Drawing.Size(492, 23);
             this.textBox15.TabIndex = 1;
             this.textBox15.Text = "                        10            01/01/1973                AC/DC";
@@ -1751,6 +1697,7 @@ namespace LibraryApp
             this.textBox16.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox16.Location = new System.Drawing.Point(0, 0);
             this.textBox16.Name = "textBox16";
+            this.textBox16.ReadOnly = true;
             this.textBox16.Size = new System.Drawing.Size(492, 23);
             this.textBox16.TabIndex = 0;
             // 
@@ -1802,12 +1749,9 @@ namespace LibraryApp
             // Albums
             // 
             this.Albums.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(208)))), ((int)(((byte)(242)))));
-            this.Albums.Controls.Add(this.textBox4);
             this.Albums.Controls.Add(this.pnlSongs);
             this.Albums.Controls.Add(this.dgSongs);
             this.Albums.Controls.Add(this.label16);
-            this.Albums.Controls.Add(this.button2);
-            this.Albums.Controls.Add(this.button1);
             this.Albums.Controls.Add(this.lblSongs);
             this.Albums.Controls.Add(this.pnlAlbums);
             this.Albums.Controls.Add(this.dgAlbums);
@@ -1820,15 +1764,6 @@ namespace LibraryApp
             this.Albums.TabIndex = 2;
             this.Albums.Text = "Albums";
             this.Albums.Click += new System.EventHandler(this.Songs_Click);
-            // 
-            // textBox4
-            // 
-            this.textBox4.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(15, 151);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(492, 23);
-            this.textBox4.TabIndex = 9;
-            this.textBox4.Text = "                         9           02/28/2000       Stiff Upper Lip";
             // 
             // pnlSongs
             // 
@@ -1851,6 +1786,7 @@ namespace LibraryApp
             this.textBox10.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox10.Location = new System.Drawing.Point(0, 44);
             this.textBox10.Name = "textBox10";
+            this.textBox10.ReadOnly = true;
             this.textBox10.Size = new System.Drawing.Size(492, 23);
             this.textBox10.TabIndex = 2;
             this.textBox10.Text = "                        12            07/25/1980        Back in Black";
@@ -1860,6 +1796,7 @@ namespace LibraryApp
             this.textBox11.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox11.Location = new System.Drawing.Point(0, 22);
             this.textBox11.Name = "textBox11";
+            this.textBox11.ReadOnly = true;
             this.textBox11.Size = new System.Drawing.Size(492, 23);
             this.textBox11.TabIndex = 1;
             this.textBox11.Text = "                        12            07/25/1980      Shoot to Thrill";
@@ -1869,6 +1806,7 @@ namespace LibraryApp
             this.textBox12.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox12.Location = new System.Drawing.Point(0, 0);
             this.textBox12.Name = "textBox12";
+            this.textBox12.ReadOnly = true;
             this.textBox12.Size = new System.Drawing.Size(492, 23);
             this.textBox12.TabIndex = 0;
             this.textBox12.Text = "                        10            07/25/1980         Hell\'s Bells";
@@ -1940,6 +1878,9 @@ namespace LibraryApp
             // 
             // pnlAlbums
             // 
+            this.pnlAlbums.Controls.Add(this.textBox4);
+            this.pnlAlbums.Controls.Add(this.button2);
+            this.pnlAlbums.Controls.Add(this.button1);
             this.pnlAlbums.Controls.Add(this.btnDelete3);
             this.pnlAlbums.Controls.Add(this.btnDelete2);
             this.pnlAlbums.Controls.Add(this.btnDelete1);
@@ -1959,6 +1900,7 @@ namespace LibraryApp
             this.txtCheckOut3.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCheckOut3.Location = new System.Drawing.Point(0, 44);
             this.txtCheckOut3.Name = "txtCheckOut3";
+            this.txtCheckOut3.ReadOnly = true;
             this.txtCheckOut3.Size = new System.Drawing.Size(492, 23);
             this.txtCheckOut3.TabIndex = 2;
             this.txtCheckOut3.Text = "                         5           07/25/1980         Back In Black";
@@ -1968,6 +1910,7 @@ namespace LibraryApp
             this.textBox2.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox2.Location = new System.Drawing.Point(0, 22);
             this.textBox2.Name = "textBox2";
+            this.textBox2.ReadOnly = true;
             this.textBox2.Size = new System.Drawing.Size(492, 23);
             this.textBox2.TabIndex = 1;
             this.textBox2.Text = "                         6           07/27/1979       Highway to Hell";
@@ -1977,6 +1920,7 @@ namespace LibraryApp
             this.textBox1.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.Location = new System.Drawing.Point(0, 0);
             this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
             this.textBox1.Size = new System.Drawing.Size(492, 23);
             this.textBox1.TabIndex = 0;
             this.textBox1.Text = "                         2           04/30/1976          High Voltage";
@@ -2229,6 +2173,44 @@ namespace LibraryApp
             this.tabControl1.TabIndex = 33;
             this.tabControl1.Selected += new System.Windows.Forms.TabControlEventHandler(this.tabControl1_Selected);
             // 
+            // textBox4
+            // 
+            this.textBox4.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox4.Location = new System.Drawing.Point(0, 66);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.ReadOnly = true;
+            this.textBox4.Size = new System.Drawing.Size(492, 23);
+            this.textBox4.TabIndex = 10;
+            this.textBox4.Text = "                         9           02/28/2000       Stiff Upper Lip";
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(107)))), ((int)(((byte)(255)))));
+            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Location = new System.Drawing.Point(611, 66);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(120, 23);
+            this.button2.TabIndex = 11;
+            this.button2.Text = "Delete";
+            this.toolTip1.SetToolTip(this.button2, "Delete this Transaction");
+            this.button2.UseVisualStyleBackColor = false;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(107)))), ((int)(((byte)(255)))));
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(492, 66);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(120, 23);
+            this.button1.TabIndex = 12;
+            this.button1.Text = "View Album";
+            this.toolTip1.SetToolTip(this.button1, "View the Details of this Transaction");
+            this.button1.UseVisualStyleBackColor = false;
+            // 
             // Artist
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -2247,7 +2229,7 @@ namespace LibraryApp
             this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "Artist";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
-            this.Text = "User Sub-System | Written By Tom Lauerman";
+            this.Text = "Artist Sub-System | Written By Tom Lauerman";
             this.Load += new System.EventHandler(this.User_Load);
             this.VisibleChanged += new System.EventHandler(this.User_VisibleChanged);
             this.menuStrip1.ResumeLayout(false);
@@ -2295,7 +2277,6 @@ namespace LibraryApp
         private System.Windows.Forms.ToolStripMenuItem byPhoneToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem reportsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem administrativeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem closeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem dATAToolStripMenuItem;
         private System.Windows.Forms.Button btnTest;
@@ -2340,8 +2321,6 @@ namespace LibraryApp
         private System.Windows.Forms.ComboBox cbOrderBy;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.ImageList imageList1;
-        private ToolStripMenuItem departmentsAddEditDeleteToolStripMenuItem;
-        private ToolStripMenuItem userTypesAddEditDeleteToolStripMenuItem;
         private ToolStripMenuItem printAllInfoForToolStripMenuItem;
         private ToolStripMenuItem thisUserToolStripMenuItem;
         private ToolStripMenuItem allUsersInViewToolStripMenuItem;
@@ -2381,7 +2360,6 @@ namespace LibraryApp
         private TextBox textBox16;
         private DataGridView dgBands;
         private TabPage Albums;
-        private TextBox textBox4;
         private Panel pnlSongs;
         private Button button13;
         private Button button14;
@@ -2399,8 +2377,6 @@ namespace LibraryApp
         private DataGridViewButtonColumn dataGridViewButtonColumn3;
         private DataGridViewButtonColumn dataGridViewButtonColumn4;
         private Label label16;
-        private Button button2;
-        private Button button1;
         private Label lblSongs;
         private Panel pnlAlbums;
         private Button btnDelete3;
@@ -2454,6 +2430,9 @@ namespace LibraryApp
         private Label txtID3;
         private Label txtArtistName3;
         private Label label17;
+        private TextBox textBox4;
+        private Button button2;
+        private Button button1;
     }
 }
 

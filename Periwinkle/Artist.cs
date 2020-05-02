@@ -541,12 +541,29 @@ namespace LibraryApp
             cancelToolStripMenuItem.Visible = false;
             searchToolStripMenuItem.Visible = true;
             reportsToolStripMenuItem.Visible = true;
-            administrativeToolStripMenuItem.Visible = true;
+            //administrativeToolStripMenuItem.Visible = true;
             closeToolStripMenuItem.Visible = true;
             dATAToolStripMenuItem.Visible = true;
 
             // ------ Must Change FlatStyle Property From Standard To Flat -------
             // ------------------------- CoboBoxes ------------------------------- 
+            textBox1.ReadOnly = true;
+            textBox2.ReadOnly = true;
+            txtCheckOut3.ReadOnly = true;
+            textBox4.ReadOnly = true;
+            textBox12.ReadOnly = true;
+            textBox11.ReadOnly = true;
+            textBox10.ReadOnly = true;
+            textBox16.ReadOnly = true;
+            textBox15.ReadOnly = true;
+            textBox13.ReadOnly = true;
+            textBox8.ReadOnly = true;
+            textBox7.ReadOnly = true;
+
+            pnlAlbums.Show();
+            pnlBands.Show();
+            pnlMembers.Show();
+            pnlSongs.Show();
 
             foreach (Control cntrl in editFields)
             {
@@ -645,13 +662,25 @@ namespace LibraryApp
             undeleteToolStripMenuItem.Visible = false;
             searchToolStripMenuItem.Visible = false;
             reportsToolStripMenuItem.Visible = false;
-            administrativeToolStripMenuItem.Visible = false;
+            //administrativeToolStripMenuItem.Visible = false;
             closeToolStripMenuItem.Visible = false;
             dATAToolStripMenuItem.Visible = false;
             txtProfile.Visible = true;
 
             // ------------ Make All TextBoxes Available To Edit ----------------
             // ---------------- Change Background To EditColor -----------------
+            textBox1.ReadOnly = false;
+            textBox2.ReadOnly = false;
+            txtCheckOut3.ReadOnly = false;
+            textBox4.ReadOnly = false;
+            textBox12.ReadOnly = false;
+            textBox11.ReadOnly = false;
+            textBox10.ReadOnly = false;
+            textBox16.ReadOnly = false;
+            textBox15.ReadOnly = false;
+            textBox13.ReadOnly = false;
+            textBox8.ReadOnly = false;
+            textBox7.ReadOnly = false;
 
             // ------ Must Change FlatStyle Property From Standard To Flat -------
             // ------------------------- CoboBoxes ------------------------------- 
@@ -664,19 +693,6 @@ namespace LibraryApp
 
                 cntrl.BackColor = Color.FromArgb(227, 220, 184);
             }
-
-            //rbMale.BackColor = Color.FromArgb(227, 220, 184);
-            //rbFemale.BackColor = Color.FromArgb(227, 220, 184);
-            //rbMale.ForeColor = Color.Black;
-            //rbFemale.ForeColor = Color.Black;
-
-            //chAdministrator.BackColor = Color.FromArgb(227, 220, 184);
-
-            // --------------------- Hide The Phone Buttons ----------------------
-            //btnHomePhone.Hide();
-            //btnCellPhone.Hide();
-
-            // ----------------- Hide The Data Transfer Buttons ------------------
 
             // ---------------------- Navigation Controls -------------------------
             pnlNavigation.Hide();
@@ -704,6 +720,10 @@ namespace LibraryApp
         {
             pf.UserInAddMode = true;
             FillFormBlank();
+            pnlAlbums.Hide();
+            pnlBands.Hide();
+            pnlMembers.Hide();
+            pnlSongs.Hide();
             EditMode();
         }
         //===========================================================================//
@@ -722,7 +742,7 @@ namespace LibraryApp
         {
             // String Query = "UPDATE User SET Deleted = 'T' WHERE ID = '" + CurrentID.ToString() + "';";
             //ViewFirstRecord = !ViewFirstRecord;
-            FillFormVariables();
+            FillFormBlank();
         }
         //===========================================================================//
         //== Save ==//
@@ -997,7 +1017,7 @@ namespace LibraryApp
 
         private void undeleteToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            pf.LaunchUndeleteWindow("Undelete Users", "User Name", "Adams Joe", "Caloway, Sandy", "Danielson, Roger", "Fairway, Ann", "Hicks, Tom");
+            pf.LaunchUndeleteWindow("Undelete Users", "User Name", "Ateez", "Yasunori Nishiki", "Blue Oyster Cult", "Fairway, Ann", "Angus Young");
         }
 
         private void searchToolStripMenuItem_Click(object sender, EventArgs e)
