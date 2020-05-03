@@ -192,6 +192,14 @@ namespace LibraryApp
             this.button44 = new System.Windows.Forms.Button();
             this.button45 = new System.Windows.Forms.Button();
             this.button46 = new System.Windows.Forms.Button();
+            this.txtID = new System.Windows.Forms.Label();
+            this.txtVisibility = new System.Windows.Forms.Label();
+            this.playlistsThatIOwnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.playlistsThatOthersOwnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.publicPlaylistsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.privatePlaylistsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.unlistedPlaylistsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.txtID2 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.pnlNavigation.SuspendLayout();
             this.Notes.SuspendLayout();
@@ -651,7 +659,7 @@ namespace LibraryApp
             this.btnViewDetails1.Size = new System.Drawing.Size(74, 27);
             this.btnViewDetails1.TabIndex = 3;
             this.btnViewDetails1.Text = "Play";
-            this.toolTip1.SetToolTip(this.btnViewDetails1, "View the Details of this Transaction");
+            this.toolTip1.SetToolTip(this.btnViewDetails1, "Play the Selected Song");
             this.btnViewDetails1.UseVisualStyleBackColor = false;
             // 
             // btnViewDetails2
@@ -665,7 +673,7 @@ namespace LibraryApp
             this.btnViewDetails2.Size = new System.Drawing.Size(74, 23);
             this.btnViewDetails2.TabIndex = 4;
             this.btnViewDetails2.Text = "Play";
-            this.toolTip1.SetToolTip(this.btnViewDetails2, "View the Details of this Transaction");
+            this.toolTip1.SetToolTip(this.btnViewDetails2, "Play the Selected Song");
             this.btnViewDetails2.UseVisualStyleBackColor = false;
             // 
             // btnViewDetails3
@@ -679,7 +687,7 @@ namespace LibraryApp
             this.btnViewDetails3.Size = new System.Drawing.Size(74, 23);
             this.btnViewDetails3.TabIndex = 5;
             this.btnViewDetails3.Text = "* Play *";
-            this.toolTip1.SetToolTip(this.btnViewDetails3, "View the Details of this Transaction");
+            this.toolTip1.SetToolTip(this.btnViewDetails3, "Play the Selected Song");
             this.btnViewDetails3.UseVisualStyleBackColor = false;
             this.btnViewDetails3.Click += new System.EventHandler(this.btnViewDetails3_Click);
             // 
@@ -751,7 +759,7 @@ namespace LibraryApp
             this.button4.Size = new System.Drawing.Size(74, 23);
             this.button4.TabIndex = 12;
             this.button4.Text = "Play";
-            this.toolTip1.SetToolTip(this.button4, "View the Details of this Transaction");
+            this.toolTip1.SetToolTip(this.button4, "Play the Selected Song");
             this.button4.UseVisualStyleBackColor = false;
             // 
             // button5
@@ -779,7 +787,7 @@ namespace LibraryApp
             this.button6.Size = new System.Drawing.Size(74, 23);
             this.button6.TabIndex = 15;
             this.button6.Text = "Play";
-            this.toolTip1.SetToolTip(this.button6, "View the Details of this Transaction");
+            this.toolTip1.SetToolTip(this.button6, "Play the Selected Song");
             this.button6.UseVisualStyleBackColor = false;
             // 
             // button7
@@ -807,7 +815,7 @@ namespace LibraryApp
             this.button8.Size = new System.Drawing.Size(74, 23);
             this.button8.TabIndex = 18;
             this.button8.Text = "Play";
-            this.toolTip1.SetToolTip(this.button8, "View the Details of this Transaction");
+            this.toolTip1.SetToolTip(this.button8, "Play the Selected Song");
             this.button8.UseVisualStyleBackColor = false;
             // 
             // button9
@@ -836,9 +844,10 @@ namespace LibraryApp
             this.button10.Size = new System.Drawing.Size(74, 23);
             this.button10.TabIndex = 24;
             this.button10.Text = "Play";
-            this.toolTip1.SetToolTip(this.button10, "View the Details of this Transaction");
+            this.toolTip1.SetToolTip(this.button10, "Play the Selected Song");
             this.button10.UseVisualStyleBackColor = false;
             this.button10.Visible = false;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
             // button11
             // 
@@ -865,7 +874,7 @@ namespace LibraryApp
             this.button12.Size = new System.Drawing.Size(74, 23);
             this.button12.TabIndex = 27;
             this.button12.Text = "Play";
-            this.toolTip1.SetToolTip(this.button12, "View the Details of this Transaction");
+            this.toolTip1.SetToolTip(this.button12, "Play the Selected Song");
             this.button12.UseVisualStyleBackColor = false;
             // 
             // button13
@@ -893,7 +902,7 @@ namespace LibraryApp
             this.button14.Size = new System.Drawing.Size(74, 23);
             this.button14.TabIndex = 21;
             this.button14.Text = "Play";
-            this.toolTip1.SetToolTip(this.button14, "View the Details of this Transaction");
+            this.toolTip1.SetToolTip(this.button14, "Play the Selected Song");
             this.button14.UseVisualStyleBackColor = false;
             // 
             // button1
@@ -921,7 +930,7 @@ namespace LibraryApp
             this.button2.Size = new System.Drawing.Size(74, 23);
             this.button2.TabIndex = 30;
             this.button2.Text = "Play";
-            this.toolTip1.SetToolTip(this.button2, "View the Details of this Transaction");
+            this.toolTip1.SetToolTip(this.button2, "Play the Selected Song");
             this.button2.UseVisualStyleBackColor = false;
             // 
             // button15
@@ -1187,7 +1196,7 @@ namespace LibraryApp
             this.button19.Size = new System.Drawing.Size(74, 23);
             this.button19.TabIndex = 60;
             this.button19.Text = "* Play *";
-            this.toolTip1.SetToolTip(this.button19, "View the Details of this Transaction");
+            this.toolTip1.SetToolTip(this.button19, "Play this playlist in the order shown");
             this.button19.UseVisualStyleBackColor = false;
             this.button19.Click += new System.EventHandler(this.button19_Click);
             // 
@@ -1202,7 +1211,7 @@ namespace LibraryApp
             this.button20.Size = new System.Drawing.Size(74, 23);
             this.button20.TabIndex = 61;
             this.button20.Text = "*Shuffle*";
-            this.toolTip1.SetToolTip(this.button20, "View the Details of this Transaction");
+            this.toolTip1.SetToolTip(this.button20, "Play the music in this playlist in random order");
             this.button20.UseVisualStyleBackColor = false;
             this.button20.Click += new System.EventHandler(this.button20_Click);
             // 
@@ -1216,8 +1225,8 @@ namespace LibraryApp
             this.button35.Name = "button35";
             this.button35.Size = new System.Drawing.Size(74, 23);
             this.button35.TabIndex = 62;
-            this.button35.Text = "* Share *";
-            this.toolTip1.SetToolTip(this.button35, "View the Details of this Transaction");
+            this.button35.Text = "*Share*";
+            this.toolTip1.SetToolTip(this.button35, "Share this playlist DIRECTLY to a user");
             this.button35.UseVisualStyleBackColor = false;
             this.button35.Click += new System.EventHandler(this.button35_Click);
             // 
@@ -1347,12 +1356,12 @@ namespace LibraryApp
             this.button36.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.button36.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button36.ForeColor = System.Drawing.Color.White;
-            this.button36.Location = new System.Drawing.Point(331, 17);
+            this.button36.Location = new System.Drawing.Point(376, 17);
             this.button36.Name = "button36";
-            this.button36.Size = new System.Drawing.Size(144, 23);
+            this.button36.Size = new System.Drawing.Size(99, 23);
             this.button36.TabIndex = 66;
-            this.button36.Text = "* Go to User Profile*";
-            this.toolTip1.SetToolTip(this.button36, "View the Details of this Transaction");
+            this.button36.Text = "*User Profile*";
+            this.toolTip1.SetToolTip(this.button36, "View other playlists of the user, compare music tastes, and much more!");
             this.button36.UseVisualStyleBackColor = false;
             this.button36.Click += new System.EventHandler(this.button36_Click);
             // 
@@ -1384,15 +1393,15 @@ namespace LibraryApp
             // addToolStripMenuItem
             // 
             this.addToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.popularPlaylistsToolStripMenuItem,
             this.personalPlaylistToolStripMenuItem,
+            this.popularPlaylistsToolStripMenuItem,
             this.fromALinkToolStripMenuItem,
             this.fromPlaylistNameToolStripMenuItem,
             this.sentFromUserToolStripMenuItem});
             this.addToolStripMenuItem.Name = "addToolStripMenuItem";
             this.addToolStripMenuItem.Size = new System.Drawing.Size(83, 20);
             this.addToolStripMenuItem.Text = "New Playlist";
-            this.addToolStripMenuItem.ToolTipText = "Add A New User";
+            this.addToolStripMenuItem.ToolTipText = "Add a new playlist to your collection";
             this.addToolStripMenuItem.Click += new System.EventHandler(this.AddToolStripMenuItem_Click);
             // 
             // popularPlaylistsToolStripMenuItem
@@ -1421,7 +1430,7 @@ namespace LibraryApp
             this.editToolStripMenuItem.Name = "editToolStripMenuItem";
             this.editToolStripMenuItem.Size = new System.Drawing.Size(39, 20);
             this.editToolStripMenuItem.Text = "Edit";
-            this.editToolStripMenuItem.ToolTipText = "Edit This User";
+            this.editToolStripMenuItem.ToolTipText = "Edit Playlist Name, Visibility, and Notes";
             this.editToolStripMenuItem.Click += new System.EventHandler(this.EditToolStripMenuItem_Click);
             // 
             // deleteToolStripMenuItem
@@ -1429,7 +1438,7 @@ namespace LibraryApp
             this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
             this.deleteToolStripMenuItem.Size = new System.Drawing.Size(52, 20);
             this.deleteToolStripMenuItem.Text = "Delete";
-            this.deleteToolStripMenuItem.ToolTipText = "Delete This User";
+            this.deleteToolStripMenuItem.ToolTipText = "Delete this Playlist";
             this.deleteToolStripMenuItem.Click += new System.EventHandler(this.DeleteToolStripMenuItem_Click);
             // 
             // undeleteToolStripMenuItem
@@ -1437,7 +1446,7 @@ namespace LibraryApp
             this.undeleteToolStripMenuItem.Name = "undeleteToolStripMenuItem";
             this.undeleteToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
             this.undeleteToolStripMenuItem.Text = "Undelete";
-            this.undeleteToolStripMenuItem.ToolTipText = "UnDelete This User";
+            this.undeleteToolStripMenuItem.ToolTipText = "UnDelete a Previously Deleted Playlist";
             this.undeleteToolStripMenuItem.Click += new System.EventHandler(this.undeleteToolStripMenuItem_Click);
             // 
             // saveToolStripMenuItem
@@ -1445,7 +1454,7 @@ namespace LibraryApp
             this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
             this.saveToolStripMenuItem.Size = new System.Drawing.Size(43, 20);
             this.saveToolStripMenuItem.Text = "Save";
-            this.saveToolStripMenuItem.ToolTipText = "Save Changes Made to This User";
+            this.saveToolStripMenuItem.ToolTipText = "Save Changes Made to This Playlist";
             this.saveToolStripMenuItem.Click += new System.EventHandler(this.SaveToolStripMenuItem_Click);
             // 
             // cancelToolStripMenuItem
@@ -1453,7 +1462,7 @@ namespace LibraryApp
             this.cancelToolStripMenuItem.Name = "cancelToolStripMenuItem";
             this.cancelToolStripMenuItem.Size = new System.Drawing.Size(55, 20);
             this.cancelToolStripMenuItem.Text = "Cancel";
-            this.cancelToolStripMenuItem.ToolTipText = "Cancel Changes Made to This User";
+            this.cancelToolStripMenuItem.ToolTipText = "Cancel Changes Made to This Playlist";
             this.cancelToolStripMenuItem.Click += new System.EventHandler(this.CancelToolStripMenuItem_Click);
             // 
             // searchToolStripMenuItem
@@ -1464,8 +1473,9 @@ namespace LibraryApp
             this.byAlbumNameToolStripMenuItem,
             this.addAllSongsFromSelectedAlbumToolStripMenuItem});
             this.searchToolStripMenuItem.Name = "searchToolStripMenuItem";
-            this.searchToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
-            this.searchToolStripMenuItem.Text = "Add Song";
+            this.searchToolStripMenuItem.Size = new System.Drawing.Size(84, 20);
+            this.searchToolStripMenuItem.Text = "Add Song(s)";
+            this.searchToolStripMenuItem.ToolTipText = "Quickly add Song(s) to the current playlist by  choosing one of the options";
             this.searchToolStripMenuItem.Click += new System.EventHandler(this.searchToolStripMenuItem_Click_1);
             // 
             // byNameToolStripMenuItem
@@ -1487,21 +1497,29 @@ namespace LibraryApp
             this.sendLinkToUserToolStripMenuItem.Name = "sendLinkToUserToolStripMenuItem";
             this.sendLinkToUserToolStripMenuItem.Size = new System.Drawing.Size(110, 20);
             this.sendLinkToUserToolStripMenuItem.Text = "Send Link to User";
+            this.sendLinkToUserToolStripMenuItem.ToolTipText = "Easily share this playlist to another user";
             this.sendLinkToUserToolStripMenuItem.Click += new System.EventHandler(this.sendLinkToUserToolStripMenuItem_Click);
             // 
             // reportsToolStripMenuItem
             // 
             this.reportsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.addReportsToolStripMenuItem});
+            this.addReportsToolStripMenuItem,
+            this.playlistsThatIOwnToolStripMenuItem,
+            this.playlistsThatOthersOwnToolStripMenuItem,
+            this.publicPlaylistsToolStripMenuItem,
+            this.privatePlaylistsToolStripMenuItem,
+            this.unlistedPlaylistsToolStripMenuItem});
             this.reportsToolStripMenuItem.Name = "reportsToolStripMenuItem";
             this.reportsToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
             this.reportsToolStripMenuItem.Text = "Reports";
+            this.reportsToolStripMenuItem.ToolTipText = "Quickly see a summary of playlist information";
             // 
             // addReportsToolStripMenuItem
             // 
             this.addReportsToolStripMenuItem.Name = "addReportsToolStripMenuItem";
-            this.addReportsToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
-            this.addReportsToolStripMenuItem.Text = "Add Reports!!!";
+            this.addReportsToolStripMenuItem.Size = new System.Drawing.Size(208, 22);
+            this.addReportsToolStripMenuItem.Text = "All Playlists";
+            this.addReportsToolStripMenuItem.Click += new System.EventHandler(this.addReportsToolStripMenuItem_Click);
             // 
             // toolStripMenuItem1
             // 
@@ -1576,14 +1594,18 @@ namespace LibraryApp
             // 
             this.cbSelect.FormattingEnabled = true;
             this.cbSelect.Items.AddRange(new object[] {
-            "Genre",
-            "Band/Group",
-            "Lowest Est Date"});
+            "Playlist Name",
+            "Owner Name",
+            "Date Created",
+            "Date Modified",
+            "Public",
+            "Private",
+            "Unlisted"});
             this.cbSelect.Location = new System.Drawing.Point(216, 113);
             this.cbSelect.Name = "cbSelect";
             this.cbSelect.Size = new System.Drawing.Size(170, 27);
             this.cbSelect.TabIndex = 39;
-            this.cbSelect.Text = "All Users";
+            this.cbSelect.Text = "All Playlists";
             // 
             // label10
             // 
@@ -1600,7 +1622,10 @@ namespace LibraryApp
             this.cbOrderBy.Items.AddRange(new object[] {
             "Playlist Name",
             "Owner Name",
-            "Visibility"});
+            "Visibility",
+            "Songs Listened",
+            "Minutes Listened",
+            "ID"});
             this.cbOrderBy.Location = new System.Drawing.Point(495, 112);
             this.cbOrderBy.Name = "cbOrderBy";
             this.cbOrderBy.Size = new System.Drawing.Size(170, 27);
@@ -1636,6 +1661,7 @@ namespace LibraryApp
             // Notes
             // 
             this.Notes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(208)))), ((int)(((byte)(242)))));
+            this.Notes.Controls.Add(this.txtID2);
             this.Notes.Controls.Add(this.txtPlaylistName2);
             this.Notes.Controls.Add(this.label13);
             this.Notes.Controls.Add(this.label15);
@@ -1652,11 +1678,12 @@ namespace LibraryApp
             // 
             this.txtPlaylistName2.AutoSize = true;
             this.txtPlaylistName2.Font = new System.Drawing.Font("Arial", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPlaylistName2.Location = new System.Drawing.Point(416, 16);
+            this.txtPlaylistName2.Location = new System.Drawing.Point(417, 14);
             this.txtPlaylistName2.Name = "txtPlaylistName2";
             this.txtPlaylistName2.Size = new System.Drawing.Size(41, 18);
             this.txtPlaylistName2.TabIndex = 52;
             this.txtPlaylistName2.Text = "Tom";
+            this.txtPlaylistName2.Click += new System.EventHandler(this.txtPlaylistName2_Click);
             // 
             // label13
             // 
@@ -1700,6 +1727,8 @@ namespace LibraryApp
             // Playlist
             // 
             this.Playlist.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(208)))), ((int)(((byte)(242)))));
+            this.Playlist.Controls.Add(this.txtVisibility);
+            this.Playlist.Controls.Add(this.txtID);
             this.Playlist.Controls.Add(this.button36);
             this.Playlist.Controls.Add(this.cbVisibility);
             this.Playlist.Controls.Add(this.label1);
@@ -1725,14 +1754,16 @@ namespace LibraryApp
             // cbVisibility
             // 
             this.cbVisibility.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(208)))), ((int)(((byte)(242)))));
+            this.cbVisibility.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbVisibility.Font = new System.Drawing.Font("Arial", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbVisibility.FormattingEnabled = true;
             this.cbVisibility.Items.AddRange(new object[] {
             "Private",
             "Public",
             "Unlisted"});
-            this.cbVisibility.Location = new System.Drawing.Point(152, 42);
+            this.cbVisibility.Location = new System.Drawing.Point(150, 42);
             this.cbVisibility.Name = "cbVisibility";
-            this.cbVisibility.Size = new System.Drawing.Size(121, 24);
+            this.cbVisibility.Size = new System.Drawing.Size(121, 26);
             this.cbVisibility.TabIndex = 65;
             // 
             // label1
@@ -1753,7 +1784,7 @@ namespace LibraryApp
             this.txtPlaylistName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(2)))), ((int)(((byte)(89)))));
             this.txtPlaylistName.Location = new System.Drawing.Point(152, 2);
             this.txtPlaylistName.Name = "txtPlaylistName";
-            this.txtPlaylistName.Size = new System.Drawing.Size(185, 19);
+            this.txtPlaylistName.Size = new System.Drawing.Size(218, 19);
             this.txtPlaylistName.TabIndex = 59;
             this.txtPlaylistName.Text = "Rock";
             this.txtPlaylistName.TextChanged += new System.EventHandler(this.txtPlaylistName_TextChanged);
@@ -2126,6 +2157,7 @@ namespace LibraryApp
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(790, 370);
             this.tabControl1.TabIndex = 33;
+            this.toolTip1.SetToolTip(this.tabControl1, "View the name, owner, visibility, notes and songs in a playlist.");
             this.tabControl1.Selected += new System.Windows.Forms.TabControlEventHandler(this.tabControl1_Selected);
             // 
             // fromPlaylistNameToolStripMenuItem
@@ -2165,7 +2197,7 @@ namespace LibraryApp
             this.button37.Size = new System.Drawing.Size(74, 23);
             this.button37.TabIndex = 40;
             this.button37.Text = "Details";
-            this.toolTip1.SetToolTip(this.button37, "View the Details of this Transaction");
+            this.toolTip1.SetToolTip(this.button37, "View the Details of Selected Song");
             this.button37.UseVisualStyleBackColor = false;
             // 
             // button38
@@ -2179,7 +2211,7 @@ namespace LibraryApp
             this.button38.Size = new System.Drawing.Size(74, 23);
             this.button38.TabIndex = 38;
             this.button38.Text = "Details";
-            this.toolTip1.SetToolTip(this.button38, "View the Details of this Transaction");
+            this.toolTip1.SetToolTip(this.button38, "View the Details of Selected Song");
             this.button38.UseVisualStyleBackColor = false;
             this.button38.Visible = false;
             // 
@@ -2194,7 +2226,7 @@ namespace LibraryApp
             this.button39.Size = new System.Drawing.Size(74, 23);
             this.button39.TabIndex = 39;
             this.button39.Text = "Details";
-            this.toolTip1.SetToolTip(this.button39, "View the Details of this Transaction");
+            this.toolTip1.SetToolTip(this.button39, "View the Details of Selected Song");
             this.button39.UseVisualStyleBackColor = false;
             // 
             // button40
@@ -2208,7 +2240,7 @@ namespace LibraryApp
             this.button40.Size = new System.Drawing.Size(74, 23);
             this.button40.TabIndex = 37;
             this.button40.Text = "Details";
-            this.toolTip1.SetToolTip(this.button40, "View the Details of this Transaction");
+            this.toolTip1.SetToolTip(this.button40, "View the Details of Selected Song");
             this.button40.UseVisualStyleBackColor = false;
             // 
             // button41
@@ -2222,7 +2254,7 @@ namespace LibraryApp
             this.button41.Size = new System.Drawing.Size(74, 23);
             this.button41.TabIndex = 35;
             this.button41.Text = "Details";
-            this.toolTip1.SetToolTip(this.button41, "View the Details of this Transaction");
+            this.toolTip1.SetToolTip(this.button41, "View the Details of Selected Song");
             this.button41.UseVisualStyleBackColor = false;
             // 
             // button42
@@ -2236,7 +2268,7 @@ namespace LibraryApp
             this.button42.Size = new System.Drawing.Size(74, 23);
             this.button42.TabIndex = 36;
             this.button42.Text = "Details";
-            this.toolTip1.SetToolTip(this.button42, "View the Details of this Transaction");
+            this.toolTip1.SetToolTip(this.button42, "View the Details of Selected Song");
             this.button42.UseVisualStyleBackColor = false;
             // 
             // button43
@@ -2250,7 +2282,7 @@ namespace LibraryApp
             this.button43.Size = new System.Drawing.Size(74, 23);
             this.button43.TabIndex = 34;
             this.button43.Text = "Details";
-            this.toolTip1.SetToolTip(this.button43, "View the Details of this Transaction");
+            this.toolTip1.SetToolTip(this.button43, "View the Details of Selected Song");
             this.button43.UseVisualStyleBackColor = false;
             // 
             // button44
@@ -2264,7 +2296,7 @@ namespace LibraryApp
             this.button44.Size = new System.Drawing.Size(74, 23);
             this.button44.TabIndex = 33;
             this.button44.Text = "*Details*";
-            this.toolTip1.SetToolTip(this.button44, "View the Details of this Transaction");
+            this.toolTip1.SetToolTip(this.button44, "View the Details of Selected Song");
             this.button44.UseVisualStyleBackColor = false;
             this.button44.Click += new System.EventHandler(this.button44_Click);
             // 
@@ -2279,7 +2311,7 @@ namespace LibraryApp
             this.button45.Size = new System.Drawing.Size(74, 23);
             this.button45.TabIndex = 32;
             this.button45.Text = "Details";
-            this.toolTip1.SetToolTip(this.button45, "View the Details of this Transaction");
+            this.toolTip1.SetToolTip(this.button45, "View the Details of Selected Song");
             this.button45.UseVisualStyleBackColor = false;
             // 
             // button46
@@ -2293,8 +2325,66 @@ namespace LibraryApp
             this.button46.Size = new System.Drawing.Size(74, 27);
             this.button46.TabIndex = 31;
             this.button46.Text = "Details";
-            this.toolTip1.SetToolTip(this.button46, "View the Details of this Transaction");
+            this.toolTip1.SetToolTip(this.button46, "View the Details of Selected Song");
             this.button46.UseVisualStyleBackColor = false;
+            // 
+            // txtID
+            // 
+            this.txtID.AutoSize = true;
+            this.txtID.Location = new System.Drawing.Point(708, 50);
+            this.txtID.Name = "txtID";
+            this.txtID.Size = new System.Drawing.Size(57, 16);
+            this.txtID.TabIndex = 67;
+            this.txtID.Text = "ID 1234";
+            // 
+            // txtVisibility
+            // 
+            this.txtVisibility.AutoSize = true;
+            this.txtVisibility.Font = new System.Drawing.Font("Arial", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtVisibility.Location = new System.Drawing.Point(151, 45);
+            this.txtVisibility.Name = "txtVisibility";
+            this.txtVisibility.Size = new System.Drawing.Size(61, 18);
+            this.txtVisibility.TabIndex = 68;
+            this.txtVisibility.Text = "Private";
+            // 
+            // playlistsThatIOwnToolStripMenuItem
+            // 
+            this.playlistsThatIOwnToolStripMenuItem.Name = "playlistsThatIOwnToolStripMenuItem";
+            this.playlistsThatIOwnToolStripMenuItem.Size = new System.Drawing.Size(208, 22);
+            this.playlistsThatIOwnToolStripMenuItem.Text = "Playlists That I Own";
+            // 
+            // playlistsThatOthersOwnToolStripMenuItem
+            // 
+            this.playlistsThatOthersOwnToolStripMenuItem.Name = "playlistsThatOthersOwnToolStripMenuItem";
+            this.playlistsThatOthersOwnToolStripMenuItem.Size = new System.Drawing.Size(208, 22);
+            this.playlistsThatOthersOwnToolStripMenuItem.Text = "Playlists That Others Own";
+            // 
+            // publicPlaylistsToolStripMenuItem
+            // 
+            this.publicPlaylistsToolStripMenuItem.Name = "publicPlaylistsToolStripMenuItem";
+            this.publicPlaylistsToolStripMenuItem.Size = new System.Drawing.Size(208, 22);
+            this.publicPlaylistsToolStripMenuItem.Text = "Public Playlists";
+            // 
+            // privatePlaylistsToolStripMenuItem
+            // 
+            this.privatePlaylistsToolStripMenuItem.Name = "privatePlaylistsToolStripMenuItem";
+            this.privatePlaylistsToolStripMenuItem.Size = new System.Drawing.Size(208, 22);
+            this.privatePlaylistsToolStripMenuItem.Text = "Private Playlists";
+            // 
+            // unlistedPlaylistsToolStripMenuItem
+            // 
+            this.unlistedPlaylistsToolStripMenuItem.Name = "unlistedPlaylistsToolStripMenuItem";
+            this.unlistedPlaylistsToolStripMenuItem.Size = new System.Drawing.Size(208, 22);
+            this.unlistedPlaylistsToolStripMenuItem.Text = "Unlisted Playlists";
+            // 
+            // txtID2
+            // 
+            this.txtID2.AutoSize = true;
+            this.txtID2.Location = new System.Drawing.Point(655, 34);
+            this.txtID2.Name = "txtID2";
+            this.txtID2.Size = new System.Drawing.Size(57, 16);
+            this.txtID2.TabIndex = 68;
+            this.txtID2.Text = "ID 1234";
             // 
             // UserPlaylists
             // 
@@ -2314,7 +2404,7 @@ namespace LibraryApp
             this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "UserPlaylists";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
-            this.Text = "UserPlaylists Sub-System | Written By Tom Lauerman";
+            this.Text = "UserPlaylists Sub-System";
             this.Load += new System.EventHandler(this.User_Load);
             this.VisibleChanged += new System.EventHandler(this.User_VisibleChanged);
             this.menuStrip1.ResumeLayout(false);
@@ -2498,6 +2588,14 @@ namespace LibraryApp
         private Button button44;
         private Button button45;
         private Button button46;
+        private Label txtID;
+        private Label txtVisibility;
+        private ToolStripMenuItem playlistsThatIOwnToolStripMenuItem;
+        private ToolStripMenuItem playlistsThatOthersOwnToolStripMenuItem;
+        private ToolStripMenuItem publicPlaylistsToolStripMenuItem;
+        private ToolStripMenuItem privatePlaylistsToolStripMenuItem;
+        private ToolStripMenuItem unlistedPlaylistsToolStripMenuItem;
+        private Label txtID2;
     }
 }
 

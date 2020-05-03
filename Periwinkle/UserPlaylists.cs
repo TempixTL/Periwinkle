@@ -158,22 +158,30 @@ namespace LibraryApp
                 pnlPlaylist1.Show();
                 pnlPlaylist2.Hide();
                 pnlPlaylist3.Hide();
-                txtPlaylistName.Text = "Rock n' Roll";
-                txtPlaylistName2.Text = "Rock n' Roll";
+                txtPlaylistName.Text = "Classical and Rock n' Roll";
+                txtPlaylistName2.Text = "Classical and Rock n' Roll";
+                txtID.Text = "ID:1";
+                txtID2.Text = txtID.Text;
                 txtPlaylistOwner.Text = "Tom";
                 txtNotes.Text = "Playlist of rock music";
-                cbVisibility.Text = "Private";
+                txtVisibility.Text = "Private";
+                if (cbVisibility.Text.Length != 0){
+                    txtVisibility.Text = cbVisibility.Text;
+                }
             }
-            else if (ViewFirstRecord == 1)
+            else if (ViewFirstRecord == 2)
             {
                 pnlPlaylist1.Hide();
                 pnlPlaylist2.Show();
                 pnlPlaylist3.Hide();
-                txtPlaylistName.Text = "Chill";
-                txtPlaylistName2.Text = "Chill";
+                txtPlaylistName.Text = "Rap";
+                txtPlaylistName2.Text = "Rap";
+                txtID.Text = "ID:2";
+                txtID2.Text = txtID.Text;
                 txtPlaylistOwner.Text = "Tom";
-                txtNotes.Text = "Playlist of mellow songs";
-                cbVisibility.Text = "Public";
+                txtNotes.Text = "Playlist of rap songs";
+                txtVisibility.Text = "Public";
+
             }
             else
             {
@@ -182,9 +190,12 @@ namespace LibraryApp
                 pnlPlaylist3.Show();
                 txtPlaylistName.Text = "My Music";
                 txtPlaylistName2.Text = "My Music";
+                txtID.Text = "ID:3";
+                txtID2.Text = txtID.Text;
                 txtPlaylistOwner.Text = "Joseph";
                 txtNotes.Text = "Playlist of songs I like";
-                cbVisibility.Text = "Public";
+                txtVisibility.Text = "Public";
+
             }
 
             SynchronizeCommonFields();
@@ -208,6 +219,7 @@ namespace LibraryApp
             txtPlaylistOwner.Text = "";
             cbVisibility.Text = "--- Select Visibility ---";
             txtNotes.Text = "";
+            txtID.Text = "ID:";
             
 
             SynchronizeCommonFields();
@@ -546,12 +558,20 @@ namespace LibraryApp
             cancelToolStripMenuItem.Visible = false;
             searchToolStripMenuItem.Visible = true;
             reportsToolStripMenuItem.Visible = true;
+            sendLinkToUserToolStripMenuItem.Visible = true;
             //administrativeToolStripMenuItem.Visible = true;
             closeToolStripMenuItem.Visible = true;
             dATAToolStripMenuItem.Visible = true;
 
             // ------ Must Change FlatStyle Property From Standard To Flat -------
             // ------------------------- CoboBoxes ------------------------------- 
+
+
+            cbVisibility.BackColor = Color.FromArgb(242, 208, 242);
+            txtVisibility.Text = cbVisibility.Text;
+            cbVisibility.Visible = false;
+
+            txtVisibility.Visible = true;
 
             txtPlaylistName.ReadOnly = true;
             txtPlaylistName.BackColor = Color.FromArgb(242, 208, 242);
@@ -656,10 +676,20 @@ namespace LibraryApp
 
                 cntrl.BackColor = Color.FromArgb(227, 220, 184);
             }
+
+            txtPlaylistName.Text = txtPlaylistName.Text;
+            cbVisibility.BackColor = Color.FromArgb(227, 220, 184);
+            cbVisibility.Text = txtVisibility.Text;
+            cbVisibility.Visible = true;
+            txtVisibility.Visible = false;
+            
+
+
             txtPlaylistName.ReadOnly = false;
             txtPlaylistName.BackColor = Color.FromArgb(227, 220, 184);
             txtNotes.ReadOnly = false;
             txtNotes.BackColor = Color.FromArgb(227, 220, 184);
+            txtNotes.Text = txtNotes.Text; 
 
             // ---------------------- Navigation Controls -------------------------
             pnlNavigation.Hide();
@@ -931,7 +961,7 @@ namespace LibraryApp
 
         private void btnViewDetails3_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Now Playing");
+            MessageBox.Show("Now Playing", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             /*dgSongs.Show();
             pnlSongs.Show();
@@ -942,6 +972,7 @@ namespace LibraryApp
 
         private void btnDelete3_Click(object sender, EventArgs e)
         {
+            button44.Hide();
             btnDelete3.Hide();
             btnViewDetails3.Hide();
             txtCheckOut3.Hide();
@@ -998,6 +1029,7 @@ namespace LibraryApp
             textBox8.Show();
             button10.Show();
             button9.Show();
+            button38.Show();
         }
 
         private void byIDToolStripMenuItem_Click(object sender, EventArgs e)
@@ -1027,7 +1059,8 @@ namespace LibraryApp
 
         private void btnR_Click(object sender, EventArgs e)
         {
-            LoadFirstLetterRecord('R');
+            ViewFirstRecord = 2;
+            FillFormVariables();
         }
 
         private void btnY_Click(object sender, EventArgs e)
@@ -1058,7 +1091,7 @@ namespace LibraryApp
 
         private void button16_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Links to the Music subsystem");
+            MessageBox.Show("Links to the Music subsystem", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -1080,25 +1113,32 @@ namespace LibraryApp
 
         private void btnC_Click(object sender, EventArgs e)
         {
-            LoadFirstLetterRecord('C');
+            ViewFirstRecord = 0;
+            FillFormVariables();
         }
 
         private void btnM_Click(object sender, EventArgs e)
         {
-            LoadFirstLetterRecord('M');
+            ViewFirstRecord = 1;
+            FillFormVariables();
         }
 
         private void button35_Click(object sender, EventArgs e)
         {
-            if (cbVisibility.Text == "Pubic" || cbVisibility.Text == "Pubic")
+            if (txtVisibility.Text == "Public" || txtVisibility.Text == "Unlisted")
             {
-                MessageBox.Show("Playlist is now available to anyone with a link \n\n Here is your link: \n PeriwinkleMusic.cs/Playlist?=TomRocknRoll");
-            } else
+                MessageBox.Show("Playlist is now available to anyone with a link \nThe link has been copied to your clipboard.\n\n Here is your link: \n PeriwinkleMusic.cs/Playlist?=TomRocknRoll", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Clipboard.SetText("PeriwinkleMusic.cs/Playlist?=TomRocknRoll");
+
+            }
+            else
             {
                 if (MessageBox.Show("To share playlists, visibility must be public or unlisted. Would you like to change the visibility to Public?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     cbVisibility.Text = "Pubic";
-                    MessageBox.Show("Playlist is now available to anyone with a link \n\n Here is your link: \n PeriwinkleMusic.cs/Playlist?=TomRocknRoll");
+                    txtVisibility.Text = "Public";
+                    MessageBox.Show("Playlist is now available to anyone with a link. \n The link has been copied to your clipboard.\n\n Here is your link: \n PeriwinkleMusic.cs/Playlist?=TomRocknRoll");
+                    Clipboard.SetText("PeriwinkleMusic.cs/Playlist?=TomRocknRoll");
 
                 }
                 else
@@ -1106,12 +1146,15 @@ namespace LibraryApp
                     if (MessageBox.Show("To share playlists, visibility must be public or unlisted. Would you like to change the visibility to Unlisted?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     {
                         cbVisibility.Text = "Pubic";
-                        MessageBox.Show("Playlist is now available to anyone with a link \n\n Here is your link: \n PeriwinkleMusic.cs/Playlist?=TomRocknRoll");
+                        txtVisibility.Text = "Public";
+                        MessageBox.Show("Playlist is now available to anyone with a link \nThe link has been copied to your clipboard.\n\n Here is your link: \n PeriwinkleMusic.cs/Playlist?=TomRocknRoll");
+                        Clipboard.SetText("PeriwinkleMusic.cs/Playlist?=TomRocknRoll");
 
 
-                    } else
+                    }
+                    else
                     {
-                        MessageBox.Show("Link can not be shared. Consider changing visbility by using edit and the visibility combobox." );
+                        MessageBox.Show("Link can not be shared. Consider changing visbility by using edit and the visibility combobox.", "", MessageBoxButtons.OK, MessageBoxIcon.Hand);
 
                     }
 
@@ -1121,22 +1164,28 @@ namespace LibraryApp
 
         private void cbOrderBy_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            MessageBox.Show("Now Playing From Start");
         }
 
         private void sendLinkToUserToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            LaunchSearchWindow("Send playlist link to a user", "Enter Username", "Send", "");
+            if (txtVisibility.Text == "Private")
+            {
+                MessageBox.Show("Change visbility to Not Listed or Public to share", "Playlist is Private", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+            } else
+            {
+                LaunchSearchWindow("Send playlist link to a user", "Enter Username", "Send", "");
+            }
         }
 
         private void button19_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Now Playing From Start");
+            MessageBox.Show("Now Playing From Start", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void button20_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Now Playing In Random Order");
+            MessageBox.Show("Now Playing In Random Order","", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void txtPlaylistName_TextChanged(object sender, EventArgs e)
@@ -1151,7 +1200,7 @@ namespace LibraryApp
 
         private void button36_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Going to User Subsystem");
+            MessageBox.Show("Going to User Subsystem", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void popularPlaylistsToolStripMenuItem_Click(object sender, EventArgs e)
@@ -1188,7 +1237,22 @@ namespace LibraryApp
 
         private void button44_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Opens Music Subsystem to view genre, album it is in, release date, notes, song art, and more.");
+            MessageBox.Show("Opens Music Subsystem to view genre, album it is in, release date, notes, song art, and more.", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtPlaylistName2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void addReportsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
 
         }
     }
