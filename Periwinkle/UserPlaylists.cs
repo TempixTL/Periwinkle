@@ -558,8 +558,10 @@ namespace LibraryApp
             deleteToolStripMenuItem.Visible = true;
             undeleteToolStripMenuItem.Visible = true;
             saveToolStripMenuItem.Visible = false;
+            
             cancelToolStripMenuItem.Visible = false;
             searchToolStripMenuItem.Visible = true;
+            searchYourPlaylistsToolStripMenuItem.Visible = true;
             reportsToolStripMenuItem.Visible = true;
             sendLinkToUserToolStripMenuItem.Visible = true;
             //administrativeToolStripMenuItem.Visible = true;
@@ -660,6 +662,7 @@ namespace LibraryApp
             searchToolStripMenuItem.Visible = false;
             reportsToolStripMenuItem.Visible = false;
             sendLinkToUserToolStripMenuItem.Visible = false;
+            searchYourPlaylistsToolStripMenuItem.Visible = false;
             //administrativeToolStripMenuItem.Visible = false;
             closeToolStripMenuItem.Visible = false;
             dATAToolStripMenuItem.Visible = false;
@@ -880,7 +883,8 @@ namespace LibraryApp
 
         private void DeleteToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Delete();
+            ViewFirstRecord = 2;
+            FillFormVariables();
         }
 
         private void User_VisibleChanged(object sender, EventArgs e)
@@ -1167,18 +1171,12 @@ namespace LibraryApp
 
         private void cbOrderBy_SelectedIndexChanged(object sender, EventArgs e)
         {
-            MessageBox.Show("Now Playing From Start");
+            MessageBox.Show("Your Playlists Have Been Updated.", "Update Complete", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void sendLinkToUserToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (txtVisibility.Text == "Private")
-            {
-                MessageBox.Show("Change visbility to Not Listed or Public to share", "Playlist is Private", MessageBoxButtons.OK, MessageBoxIcon.Hand);
-            } else
-            {
-                LaunchSearchWindow("Send playlist link to a user", "Enter Username", "Send", "");
-            }
+
         }
 
         private void button19_Click(object sender, EventArgs e)
@@ -1266,6 +1264,107 @@ namespace LibraryApp
         }
 
         private void addAllSongsFromSelectedAlbumToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbSelect_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            MessageBox.Show("Your Playlists Have Been Updated.", "Update Complete", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+        }
+
+        private void searchByIDToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            pf.LaunchSearchWindow("Search Your 3 Playlist By ID", "Enter ID", "1", "Push the View Button to Go to Your playlist", "ID5:Playlist 5", "ID2:Playlist 2", "ID3:Playlist 3", "ID4Playlist 4", "ID1:Classical and Rock n' Roll");
+
+        }
+
+        private void searchByOwnerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            pf.LaunchSearchWindow("Search Your 3 Playlist By Owner", "Enter Owner", "1", "Push the View Button to Go to Your playlist", "", "", "", "", "Tom: Classical and Rock n' Roll");
+
+        }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void shareToUserToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (txtVisibility.Text == "Private")
+            {
+                MessageBox.Show("Change visbility to Not Listed or Public to share", "Playlist is Private", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+            }
+            else
+            {
+                LaunchSearchWindow("Send playlist link to a user", "Enter Username", "Send", "");
+            }
+
+        }
+
+        private void shareWithLinkToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (txtVisibility.Text == "Public" || txtVisibility.Text == "Unlisted")
+            {
+                MessageBox.Show("Playlist is now available to anyone with a link \nThe link has been copied to your clipboard.\n\n Here is your link: \n PeriwinkleMusic.cs/Playlist?=TomRocknRoll", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Clipboard.SetText("PeriwinkleMusic.cs/Playlist?=TomRocknRoll");
+
+            }
+            else
+            {
+                if (MessageBox.Show("To share playlists, visibility must be public or unlisted. Would you like to change the visibility to Public?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    cbVisibility.Text = "Pubic";
+                    txtVisibility.Text = "Public";
+                    MessageBox.Show("Playlist is now available to anyone with a link. \n The link has been copied to your clipboard.\n\n Here is your link: \n PeriwinkleMusic.cs/Playlist?=TomRocknRoll");
+                    Clipboard.SetText("PeriwinkleMusic.cs/Playlist?=TomRocknRoll");
+
+                }
+                else
+                {
+                    if (MessageBox.Show("To share playlists, visibility must be public or unlisted. Would you like to change the visibility to Unlisted?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    {
+                        cbVisibility.Text = "Pubic";
+                        txtVisibility.Text = "Public";
+                        MessageBox.Show("Playlist is now available to anyone with a link \nThe link has been copied to your clipboard.\n\n Here is your link: \n PeriwinkleMusic.cs/Playlist?=TomRocknRoll");
+                        Clipboard.SetText("PeriwinkleMusic.cs/Playlist?=TomRocknRoll");
+
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("Link can not be shared. Consider changing visbility by using edit and the visibility combobox.", "", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+
+                    }
+
+                }
+            }
+
+        }
+
+        private void shareOnSocialMediaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            pf.LaunchSearchSelect("Share this playlist on social media", "Choose Your Prefereed Medium", "Facebook", "Twitter", "Instagram", "Reddit", "TikTok");
+
+
+
+        }
+
+        private void amministrationAddEditDeleteSocialsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            pf.LaunchSupportingClassWindow("Add - Edit - Delete Social Media for Sharing", "Social Media", "Facebook", "Twitter", "Instagram", "Reddit", "TikTok");
+
+        }
+
+        private void searchByCommentsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            pf.LaunchSearchWindow("Search Your Playlists By Comment. Only partial match needed.", "Enter Comment", "classical", "Push the View Button to Go to Your playlist", "", "", "", "", "*Classic*al and Rock n' Roll");
+
+        }
+
+        private void searchByVisibilityToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
         }
