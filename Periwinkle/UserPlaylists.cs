@@ -162,7 +162,7 @@ namespace LibraryApp
                 txtPlaylistName2.Text = "Rock n' Roll";
                 txtPlaylistOwner.Text = "Tom";
                 txtNotes.Text = "Playlist of rock music";
-                txtVisibility.Text = "Private";
+                cbVisibility.Text = "Private";
             }
             else if (ViewFirstRecord == 1)
             {
@@ -173,7 +173,7 @@ namespace LibraryApp
                 txtPlaylistName2.Text = "Chill";
                 txtPlaylistOwner.Text = "Tom";
                 txtNotes.Text = "Playlist of mellow songs";
-                txtVisibility.Text = "Public";
+                cbVisibility.Text = "Public";
             }
             else
             {
@@ -184,7 +184,7 @@ namespace LibraryApp
                 txtPlaylistName2.Text = "My Music";
                 txtPlaylistOwner.Text = "Joseph";
                 txtNotes.Text = "Playlist of songs I like";
-                txtVisibility.Text = "Public";
+                cbVisibility.Text = "Public";
             }
 
             SynchronizeCommonFields();
@@ -206,6 +206,7 @@ namespace LibraryApp
             txtPlaylistName.Text = "";
             txtPlaylistName2.Text = "";
             txtPlaylistOwner.Text = "";
+            cbVisibility.Text = "--- Select Visibility ---";
             txtNotes.Text = "";
             
 
@@ -544,7 +545,7 @@ namespace LibraryApp
             saveToolStripMenuItem.Visible = false;
             cancelToolStripMenuItem.Visible = false;
             searchToolStripMenuItem.Visible = true;
-            //reportsToolStripMenuItem.Visible = true;
+            reportsToolStripMenuItem.Visible = true;
             //administrativeToolStripMenuItem.Visible = true;
             closeToolStripMenuItem.Visible = true;
             dATAToolStripMenuItem.Visible = true;
@@ -554,6 +555,10 @@ namespace LibraryApp
 
             txtPlaylistName.ReadOnly = true;
             txtPlaylistName.BackColor = Color.FromArgb(242, 208, 242);
+            
+
+
+
             txtNotes.ReadOnly = true;
             txtNotes.BackColor = Color.FromArgb(255, 255, 255);
 
@@ -566,8 +571,8 @@ namespace LibraryApp
             {
                 lbTrace.Hide();
                 btnTest.Hide();
-                this.Width = 806;
-                this.Height = 593;
+                this.Width = 810;
+                this.Height = 600;
             }
             if (Testing == true)
             {
@@ -630,7 +635,8 @@ namespace LibraryApp
             deleteToolStripMenuItem.Visible = false;
             undeleteToolStripMenuItem.Visible = false;
             searchToolStripMenuItem.Visible = false;
-            //reportsToolStripMenuItem.Visible = false;
+            reportsToolStripMenuItem.Visible = false;
+            sendLinkToUserToolStripMenuItem.Visible = false;
             //administrativeToolStripMenuItem.Visible = false;
             closeToolStripMenuItem.Visible = false;
             dATAToolStripMenuItem.Visible = false;
@@ -826,7 +832,7 @@ namespace LibraryApp
 
         private void AddToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            LaunchSupportingClassWindow("New Playlist", "Add", "");
+            
         }
 
         private void SaveToolStripMenuItem_Click(object sender, EventArgs e)
@@ -925,6 +931,8 @@ namespace LibraryApp
 
         private void btnViewDetails3_Click(object sender, EventArgs e)
         {
+            MessageBox.Show("Now Playing");
+
             /*dgSongs.Show();
             pnlSongs.Show();
             lblSongs.Show();
@@ -976,7 +984,7 @@ namespace LibraryApp
 
         private void undeleteToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            pf.LaunchUndeleteWindow("Undelete Users", "User Name", "Rock", "70s", "Blues", "Classical", "K-Pop");
+            pf.LaunchUndeleteWindow("Undelete Playlists", "Playlists", "Fun Songs!", "Songs That Make My Mom Go Crazy", "Edgy Songs for Edgy Teens", "My Study Music", "Rock n' Roll");
         }
 
         private void searchToolStripMenuItem_Click(object sender, EventArgs e)
@@ -986,7 +994,7 @@ namespace LibraryApp
 
         private void byNameToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            pf.LaunchSearchWindow("Search Song By Name", "Enter Name", "Renegade", "Push the View Button to Add the song", "", "", "", "", "Renegade, Styx");
+            pf.LaunchSearchWindow("Search Song By Name", "Enter Name", "Renegade", "Push the View Button to Add the song", "Renegade, Momo", "Renegade, Bobo", "Renegade, CiCi", "Renegade, Grande", "Renegade, Styx");
             textBox8.Show();
             button10.Show();
             button9.Show();
@@ -1082,8 +1090,33 @@ namespace LibraryApp
 
         private void button35_Click(object sender, EventArgs e)
         {
-            txtVisibility.Text = "Pubic";
-            MessageBox.Show("Playlist is now available to anyone with a link \n\n Here is your link: \n PeriwinkleMusic.cs/Playlist?=TomRocknRoll");
+            if (cbVisibility.Text == "Pubic" || cbVisibility.Text == "Pubic")
+            {
+                MessageBox.Show("Playlist is now available to anyone with a link \n\n Here is your link: \n PeriwinkleMusic.cs/Playlist?=TomRocknRoll");
+            } else
+            {
+                if (MessageBox.Show("To share playlists, visibility must be public or unlisted. Would you like to change the visibility to Public?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    cbVisibility.Text = "Pubic";
+                    MessageBox.Show("Playlist is now available to anyone with a link \n\n Here is your link: \n PeriwinkleMusic.cs/Playlist?=TomRocknRoll");
+
+                }
+                else
+                {
+                    if (MessageBox.Show("To share playlists, visibility must be public or unlisted. Would you like to change the visibility to Unlisted?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    {
+                        cbVisibility.Text = "Pubic";
+                        MessageBox.Show("Playlist is now available to anyone with a link \n\n Here is your link: \n PeriwinkleMusic.cs/Playlist?=TomRocknRoll");
+
+
+                    } else
+                    {
+                        MessageBox.Show("Link can not be shared. Consider changing visbility by using edit and the visibility combobox." );
+
+                    }
+
+                }
+            }
         }
 
         private void cbOrderBy_SelectedIndexChanged(object sender, EventArgs e)
@@ -1104,6 +1137,59 @@ namespace LibraryApp
         private void button20_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Now Playing In Random Order");
+        }
+
+        private void txtPlaylistName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtVisibility_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button36_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Going to User Subsystem");
+        }
+
+        private void popularPlaylistsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            pf.LaunchSearchSelect("The most listened to playlists on Periwinkle", "The most listened to playlists on Periwinkle", "Cool Girls", "Hot Chicks", "Mixed Artists", "Mexican Artists", "He Be Hitting Different");
+        }
+
+        private void fromALinkToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            LaunchSearchWindow("Enter the playlist link to add to your playlist library.", "Paste the Link", "Add Playlist", "");
+        }
+
+        private void personalPlaylistToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            LaunchSupportingClassWindow("New Playlist", "Add", "");
+        }
+
+        private void fromPlaylistNameToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            pf.LaunchSearchWindow("Add Playlist By Name", "Enter Name", "Chill", "Push the View Button to Add the playlist", "Chill Beats", "Music for Chilly Days", "Chill Boy Bands", "Chill Rappers", "Chill");
+
+        }
+
+        private void sentFromUserToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            pf.LaunchSearchSelect("Playlists Sent By Other Users", "Playlists Sent By Other Users", "One (user: Tom)", "Two (user: Tom)", "Three (User: Tom)", "Four (User:Tom)", "Five (User:Tom)");
+
+        }
+
+        private void dgAlbums_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void button44_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Opens Music Subsystem to view genre, album it is in, release date, notes, song art, and more.");
+
         }
     }
 }

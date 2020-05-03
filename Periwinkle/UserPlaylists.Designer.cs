@@ -101,8 +101,20 @@ namespace LibraryApp
             this.button19 = new System.Windows.Forms.Button();
             this.button20 = new System.Windows.Forms.Button();
             this.button35 = new System.Windows.Forms.Button();
+            this.btnPreviousRight = new System.Windows.Forms.Button();
+            this.btnLastRight = new System.Windows.Forms.Button();
+            this.btnNextRight = new System.Windows.Forms.Button();
+            this.btnFirstRight = new System.Windows.Forms.Button();
+            this.btnPreviousLeft = new System.Windows.Forms.Button();
+            this.btnLastLeft = new System.Windows.Forms.Button();
+            this.btnNextLeft = new System.Windows.Forms.Button();
+            this.btnFirstLeft = new System.Windows.Forms.Button();
+            this.button36 = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.addToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.popularPlaylistsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.personalPlaylistToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.fromALinkToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.undeleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -112,10 +124,14 @@ namespace LibraryApp
             this.byNameToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.byUniversityIDToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sendLinkToUserToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reportsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.addReportsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.closeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dATAToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pnlNavigation = new System.Windows.Forms.Panel();
+            this.cbSelect = new System.Windows.Forms.ComboBox();
+            this.label10 = new System.Windows.Forms.Label();
             this.cbOrderBy = new System.Windows.Forms.ComboBox();
             this.label12 = new System.Windows.Forms.Label();
             this.lbTrace = new System.Windows.Forms.ListBox();
@@ -127,7 +143,8 @@ namespace LibraryApp
             this.txtNotes = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.Playlist = new System.Windows.Forms.TabPage();
-            this.txtVisibility = new System.Windows.Forms.Label();
+            this.cbVisibility = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.txtPlaylistName = new System.Windows.Forms.TextBox();
             this.txtPlaylistOwner = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -161,14 +178,20 @@ namespace LibraryApp
             this.textBox18 = new System.Windows.Forms.TextBox();
             this.textBox19 = new System.Windows.Forms.TextBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.btnPreviousRight = new System.Windows.Forms.Button();
-            this.btnLastRight = new System.Windows.Forms.Button();
-            this.btnNextRight = new System.Windows.Forms.Button();
-            this.btnFirstRight = new System.Windows.Forms.Button();
-            this.btnPreviousLeft = new System.Windows.Forms.Button();
-            this.btnLastLeft = new System.Windows.Forms.Button();
-            this.btnNextLeft = new System.Windows.Forms.Button();
-            this.btnFirstLeft = new System.Windows.Forms.Button();
+            this.fromPlaylistNameToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sentFromUserToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.addAllSongsFromSelectedAlbumToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.byAlbumNameToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.button37 = new System.Windows.Forms.Button();
+            this.button38 = new System.Windows.Forms.Button();
+            this.button39 = new System.Windows.Forms.Button();
+            this.button40 = new System.Windows.Forms.Button();
+            this.button41 = new System.Windows.Forms.Button();
+            this.button42 = new System.Windows.Forms.Button();
+            this.button43 = new System.Windows.Forms.Button();
+            this.button44 = new System.Windows.Forms.Button();
+            this.button45 = new System.Windows.Forms.Button();
+            this.button46 = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.pnlNavigation.SuspendLayout();
             this.Notes.SuspendLayout();
@@ -1178,7 +1201,7 @@ namespace LibraryApp
             this.button20.Name = "button20";
             this.button20.Size = new System.Drawing.Size(74, 23);
             this.button20.TabIndex = 61;
-            this.button20.Text = "Shuffle";
+            this.button20.Text = "*Shuffle*";
             this.toolTip1.SetToolTip(this.button20, "View the Details of this Transaction");
             this.button20.UseVisualStyleBackColor = false;
             this.button20.Click += new System.EventHandler(this.button20_Click);
@@ -1197,683 +1220,6 @@ namespace LibraryApp
             this.toolTip1.SetToolTip(this.button35, "View the Details of this Transaction");
             this.button35.UseVisualStyleBackColor = false;
             this.button35.Click += new System.EventHandler(this.button35_Click);
-            // 
-            // menuStrip1
-            // 
-            this.menuStrip1.AllowMerge = false;
-            this.menuStrip1.AutoSize = false;
-            this.menuStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(159)))), ((int)(((byte)(226)))));
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.addToolStripMenuItem,
-            this.editToolStripMenuItem,
-            this.deleteToolStripMenuItem,
-            this.undeleteToolStripMenuItem,
-            this.saveToolStripMenuItem,
-            this.cancelToolStripMenuItem,
-            this.searchToolStripMenuItem,
-            this.sendLinkToUserToolStripMenuItem,
-            this.toolStripMenuItem1,
-            this.closeToolStripMenuItem,
-            this.dATAToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.ShowItemToolTips = true;
-            this.menuStrip1.Size = new System.Drawing.Size(1150, 24);
-            this.menuStrip1.TabIndex = 34;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
-            // addToolStripMenuItem
-            // 
-            this.addToolStripMenuItem.Name = "addToolStripMenuItem";
-            this.addToolStripMenuItem.Size = new System.Drawing.Size(83, 20);
-            this.addToolStripMenuItem.Text = "New Playlist";
-            this.addToolStripMenuItem.ToolTipText = "Add A New User";
-            this.addToolStripMenuItem.Click += new System.EventHandler(this.AddToolStripMenuItem_Click);
-            // 
-            // editToolStripMenuItem
-            // 
-            this.editToolStripMenuItem.Name = "editToolStripMenuItem";
-            this.editToolStripMenuItem.Size = new System.Drawing.Size(39, 20);
-            this.editToolStripMenuItem.Text = "Edit";
-            this.editToolStripMenuItem.ToolTipText = "Edit This User";
-            this.editToolStripMenuItem.Click += new System.EventHandler(this.EditToolStripMenuItem_Click);
-            // 
-            // deleteToolStripMenuItem
-            // 
-            this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
-            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(52, 20);
-            this.deleteToolStripMenuItem.Text = "Delete";
-            this.deleteToolStripMenuItem.ToolTipText = "Delete This User";
-            this.deleteToolStripMenuItem.Click += new System.EventHandler(this.DeleteToolStripMenuItem_Click);
-            // 
-            // undeleteToolStripMenuItem
-            // 
-            this.undeleteToolStripMenuItem.Name = "undeleteToolStripMenuItem";
-            this.undeleteToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
-            this.undeleteToolStripMenuItem.Text = "Undelete";
-            this.undeleteToolStripMenuItem.ToolTipText = "UnDelete This User";
-            this.undeleteToolStripMenuItem.Click += new System.EventHandler(this.undeleteToolStripMenuItem_Click);
-            // 
-            // saveToolStripMenuItem
-            // 
-            this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
-            this.saveToolStripMenuItem.Size = new System.Drawing.Size(43, 20);
-            this.saveToolStripMenuItem.Text = "Save";
-            this.saveToolStripMenuItem.ToolTipText = "Save Changes Made to This User";
-            this.saveToolStripMenuItem.Click += new System.EventHandler(this.SaveToolStripMenuItem_Click);
-            // 
-            // cancelToolStripMenuItem
-            // 
-            this.cancelToolStripMenuItem.Name = "cancelToolStripMenuItem";
-            this.cancelToolStripMenuItem.Size = new System.Drawing.Size(55, 20);
-            this.cancelToolStripMenuItem.Text = "Cancel";
-            this.cancelToolStripMenuItem.ToolTipText = "Cancel Changes Made to This User";
-            this.cancelToolStripMenuItem.Click += new System.EventHandler(this.CancelToolStripMenuItem_Click);
-            // 
-            // searchToolStripMenuItem
-            // 
-            this.searchToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.byNameToolStripMenuItem,
-            this.byUniversityIDToolStripMenuItem});
-            this.searchToolStripMenuItem.Name = "searchToolStripMenuItem";
-            this.searchToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
-            this.searchToolStripMenuItem.Text = "Add Song";
-            this.searchToolStripMenuItem.Click += new System.EventHandler(this.searchToolStripMenuItem_Click_1);
-            // 
-            // byNameToolStripMenuItem
-            // 
-            this.byNameToolStripMenuItem.Name = "byNameToolStripMenuItem";
-            this.byNameToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
-            this.byNameToolStripMenuItem.Text = "By Song Name";
-            this.byNameToolStripMenuItem.Click += new System.EventHandler(this.byNameToolStripMenuItem_Click);
-            // 
-            // byUniversityIDToolStripMenuItem
-            // 
-            this.byUniversityIDToolStripMenuItem.Name = "byUniversityIDToolStripMenuItem";
-            this.byUniversityIDToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
-            this.byUniversityIDToolStripMenuItem.Text = "By Artist Name";
-            this.byUniversityIDToolStripMenuItem.Click += new System.EventHandler(this.byUniversityIDToolStripMenuItem_Click);
-            // 
-            // sendLinkToUserToolStripMenuItem
-            // 
-            this.sendLinkToUserToolStripMenuItem.Name = "sendLinkToUserToolStripMenuItem";
-            this.sendLinkToUserToolStripMenuItem.Size = new System.Drawing.Size(110, 20);
-            this.sendLinkToUserToolStripMenuItem.Text = "Send Link to User";
-            this.sendLinkToUserToolStripMenuItem.Click += new System.EventHandler(this.sendLinkToUserToolStripMenuItem_Click);
-            // 
-            // toolStripMenuItem1
-            // 
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(115, 20);
-            this.toolStripMenuItem1.Text = "============";
-            this.toolStripMenuItem1.ToolTipText = "This is not a button : - )";
-            // 
-            // closeToolStripMenuItem
-            // 
-            this.closeToolStripMenuItem.Name = "closeToolStripMenuItem";
-            this.closeToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
-            this.closeToolStripMenuItem.Text = "Close";
-            this.closeToolStripMenuItem.ToolTipText = "Close This Form";
-            this.closeToolStripMenuItem.Click += new System.EventHandler(this.closeToolStripMenuItem_Click);
-            // 
-            // dATAToolStripMenuItem
-            // 
-            this.dATAToolStripMenuItem.Name = "dATAToolStripMenuItem";
-            this.dATAToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
-            this.dATAToolStripMenuItem.Text = "DATA";
-            this.dATAToolStripMenuItem.ToolTipText = "Toggle Dummy Data in the Form";
-            this.dATAToolStripMenuItem.Click += new System.EventHandler(this.DataToolStripMenuItem_Click);
-            // 
-            // pnlNavigation
-            // 
-            this.pnlNavigation.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(208)))), ((int)(((byte)(242)))));
-            this.pnlNavigation.Controls.Add(this.cbOrderBy);
-            this.pnlNavigation.Controls.Add(this.label12);
-            this.pnlNavigation.Controls.Add(this.btnB);
-            this.pnlNavigation.Controls.Add(this.btnV);
-            this.pnlNavigation.Controls.Add(this.btnW);
-            this.pnlNavigation.Controls.Add(this.btnX);
-            this.pnlNavigation.Controls.Add(this.btnY);
-            this.pnlNavigation.Controls.Add(this.btnS);
-            this.pnlNavigation.Controls.Add(this.btnT);
-            this.pnlNavigation.Controls.Add(this.btnU);
-            this.pnlNavigation.Controls.Add(this.btnZ);
-            this.pnlNavigation.Controls.Add(this.btnQ);
-            this.pnlNavigation.Controls.Add(this.btnR);
-            this.pnlNavigation.Controls.Add(this.btnO);
-            this.pnlNavigation.Controls.Add(this.btnP);
-            this.pnlNavigation.Controls.Add(this.btnC);
-            this.pnlNavigation.Controls.Add(this.btnM);
-            this.pnlNavigation.Controls.Add(this.btnN);
-            this.pnlNavigation.Controls.Add(this.btnL);
-            this.pnlNavigation.Controls.Add(this.btnK);
-            this.pnlNavigation.Controls.Add(this.btnJ);
-            this.pnlNavigation.Controls.Add(this.btnI);
-            this.pnlNavigation.Controls.Add(this.btnG);
-            this.pnlNavigation.Controls.Add(this.btnH);
-            this.pnlNavigation.Controls.Add(this.btnF);
-            this.pnlNavigation.Controls.Add(this.btnD);
-            this.pnlNavigation.Controls.Add(this.btnE);
-            this.pnlNavigation.Controls.Add(this.btnA);
-            this.pnlNavigation.Controls.Add(this.btnPreviousRight);
-            this.pnlNavigation.Controls.Add(this.btnLastRight);
-            this.pnlNavigation.Controls.Add(this.btnNextRight);
-            this.pnlNavigation.Controls.Add(this.btnFirstRight);
-            this.pnlNavigation.Controls.Add(this.btnPreviousLeft);
-            this.pnlNavigation.Controls.Add(this.btnLastLeft);
-            this.pnlNavigation.Controls.Add(this.btnNextLeft);
-            this.pnlNavigation.Controls.Add(this.btnFirstLeft);
-            this.pnlNavigation.Location = new System.Drawing.Point(0, 395);
-            this.pnlNavigation.Name = "pnlNavigation";
-            this.pnlNavigation.Size = new System.Drawing.Size(790, 160);
-            this.pnlNavigation.TabIndex = 35;
-            // 
-            // cbOrderBy
-            // 
-            this.cbOrderBy.FormattingEnabled = true;
-            this.cbOrderBy.Items.AddRange(new object[] {
-            "Playlist Name",
-            "Owner Name",
-            "Visibility"});
-            this.cbOrderBy.Location = new System.Drawing.Point(364, 112);
-            this.cbOrderBy.Name = "cbOrderBy";
-            this.cbOrderBy.Size = new System.Drawing.Size(170, 27);
-            this.cbOrderBy.TabIndex = 37;
-            this.cbOrderBy.Text = "Name";
-            this.cbOrderBy.SelectedIndexChanged += new System.EventHandler(this.cbOrderBy_SelectedIndexChanged);
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(281, 115);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(77, 19);
-            this.label12.TabIndex = 36;
-            this.label12.Text = "Order By";
-            // 
-            // lbTrace
-            // 
-            this.lbTrace.Font = new System.Drawing.Font("Courier New", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTrace.FormattingEnabled = true;
-            this.lbTrace.ItemHeight = 14;
-            this.lbTrace.Location = new System.Drawing.Point(804, 48);
-            this.lbTrace.Name = "lbTrace";
-            this.lbTrace.Size = new System.Drawing.Size(346, 466);
-            this.lbTrace.TabIndex = 36;
-            // 
-            // imageList1
-            // 
-            this.imageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
-            this.imageList1.ImageSize = new System.Drawing.Size(16, 16);
-            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
-            // 
-            // Notes
-            // 
-            this.Notes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(208)))), ((int)(((byte)(242)))));
-            this.Notes.Controls.Add(this.txtPlaylistName2);
-            this.Notes.Controls.Add(this.label13);
-            this.Notes.Controls.Add(this.label15);
-            this.Notes.Controls.Add(this.txtNotes);
-            this.Notes.Controls.Add(this.label8);
-            this.Notes.Location = new System.Drawing.Point(4, 25);
-            this.Notes.Name = "Notes";
-            this.Notes.Padding = new System.Windows.Forms.Padding(3);
-            this.Notes.Size = new System.Drawing.Size(782, 341);
-            this.Notes.TabIndex = 1;
-            this.Notes.Text = "Notes";
-            // 
-            // txtPlaylistName2
-            // 
-            this.txtPlaylistName2.AutoSize = true;
-            this.txtPlaylistName2.Font = new System.Drawing.Font("Arial", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPlaylistName2.Location = new System.Drawing.Point(416, 16);
-            this.txtPlaylistName2.Name = "txtPlaylistName2";
-            this.txtPlaylistName2.Size = new System.Drawing.Size(41, 18);
-            this.txtPlaylistName2.TabIndex = 52;
-            this.txtPlaylistName2.Text = "Tom";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(306, 15);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(112, 19);
-            this.label13.TabIndex = 51;
-            this.label13.Text = "Playlist Name";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(312, 39);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(146, 14);
-            this.label15.TabIndex = 50;
-            this.label15.Text = "--- Place Your Notes Here ---";
-            // 
-            // txtNotes
-            // 
-            this.txtNotes.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNotes.Location = new System.Drawing.Point(79, 53);
-            this.txtNotes.Multiline = true;
-            this.txtNotes.Name = "txtNotes";
-            this.txtNotes.Size = new System.Drawing.Size(636, 275);
-            this.txtNotes.TabIndex = 12;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(16, 53);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(54, 19);
-            this.label8.TabIndex = 32;
-            this.label8.Text = "Notes";
-            // 
-            // Playlist
-            // 
-            this.Playlist.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(208)))), ((int)(((byte)(242)))));
-            this.Playlist.Controls.Add(this.txtVisibility);
-            this.Playlist.Controls.Add(this.button35);
-            this.Playlist.Controls.Add(this.button20);
-            this.Playlist.Controls.Add(this.button19);
-            this.Playlist.Controls.Add(this.txtPlaylistName);
-            this.Playlist.Controls.Add(this.txtPlaylistOwner);
-            this.Playlist.Controls.Add(this.label2);
-            this.Playlist.Controls.Add(this.label16);
-            this.Playlist.Controls.Add(this.label22);
-            this.Playlist.Controls.Add(this.pnlPlaylist1);
-            this.Playlist.Controls.Add(this.dgAlbums);
-            this.Playlist.Controls.Add(this.pnlPlaylist3);
-            this.Playlist.Controls.Add(this.pnlPlaylist2);
-            this.Playlist.Location = new System.Drawing.Point(4, 25);
-            this.Playlist.Name = "Playlist";
-            this.Playlist.Size = new System.Drawing.Size(782, 341);
-            this.Playlist.TabIndex = 2;
-            this.Playlist.Text = "Playlist";
-            this.Playlist.Click += new System.EventHandler(this.Songs_Click);
-            // 
-            // txtVisibility
-            // 
-            this.txtVisibility.AutoSize = true;
-            this.txtVisibility.Font = new System.Drawing.Font("Arial", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtVisibility.Location = new System.Drawing.Point(112, 42);
-            this.txtVisibility.Name = "txtVisibility";
-            this.txtVisibility.Size = new System.Drawing.Size(61, 18);
-            this.txtVisibility.TabIndex = 63;
-            this.txtVisibility.Text = "Private";
-            // 
-            // txtPlaylistName
-            // 
-            this.txtPlaylistName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(208)))), ((int)(((byte)(242)))));
-            this.txtPlaylistName.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtPlaylistName.Font = new System.Drawing.Font("Arial", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPlaylistName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(2)))), ((int)(((byte)(89)))));
-            this.txtPlaylistName.Location = new System.Drawing.Point(152, 2);
-            this.txtPlaylistName.Name = "txtPlaylistName";
-            this.txtPlaylistName.Size = new System.Drawing.Size(105, 19);
-            this.txtPlaylistName.TabIndex = 59;
-            this.txtPlaylistName.Text = "Rock";
-            // 
-            // txtPlaylistOwner
-            // 
-            this.txtPlaylistOwner.AutoSize = true;
-            this.txtPlaylistOwner.Font = new System.Drawing.Font("Arial", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPlaylistOwner.Location = new System.Drawing.Point(149, 23);
-            this.txtPlaylistOwner.Name = "txtPlaylistOwner";
-            this.txtPlaylistOwner.Size = new System.Drawing.Size(41, 18);
-            this.txtPlaylistOwner.TabIndex = 58;
-            this.txtPlaylistOwner.Text = "Tom";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(86, 22);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(59, 19);
-            this.label2.TabIndex = 57;
-            this.label2.Text = "Owner";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(340, 43);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(68, 14);
-            this.label16.TabIndex = 56;
-            this.label16.Text = "--- Songs ---";
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.Location = new System.Drawing.Point(35, 1);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(112, 19);
-            this.label22.TabIndex = 40;
-            this.label22.Text = "Playlist Name";
-            // 
-            // pnlPlaylist1
-            // 
-            this.pnlPlaylist1.Controls.Add(this.textBox4);
-            this.pnlPlaylist1.Controls.Add(this.button1);
-            this.pnlPlaylist1.Controls.Add(this.button2);
-            this.pnlPlaylist1.Controls.Add(this.textBox7);
-            this.pnlPlaylist1.Controls.Add(this.textBox8);
-            this.pnlPlaylist1.Controls.Add(this.button9);
-            this.pnlPlaylist1.Controls.Add(this.button10);
-            this.pnlPlaylist1.Controls.Add(this.button11);
-            this.pnlPlaylist1.Controls.Add(this.button12);
-            this.pnlPlaylist1.Controls.Add(this.textBox9);
-            this.pnlPlaylist1.Controls.Add(this.button13);
-            this.pnlPlaylist1.Controls.Add(this.button14);
-            this.pnlPlaylist1.Controls.Add(this.textBox5);
-            this.pnlPlaylist1.Controls.Add(this.textBox6);
-            this.pnlPlaylist1.Controls.Add(this.button5);
-            this.pnlPlaylist1.Controls.Add(this.button6);
-            this.pnlPlaylist1.Controls.Add(this.button7);
-            this.pnlPlaylist1.Controls.Add(this.button8);
-            this.pnlPlaylist1.Controls.Add(this.textBox3);
-            this.pnlPlaylist1.Controls.Add(this.button3);
-            this.pnlPlaylist1.Controls.Add(this.button4);
-            this.pnlPlaylist1.Controls.Add(this.btnDelete3);
-            this.pnlPlaylist1.Controls.Add(this.btnDelete2);
-            this.pnlPlaylist1.Controls.Add(this.btnDelete1);
-            this.pnlPlaylist1.Controls.Add(this.btnViewDetails3);
-            this.pnlPlaylist1.Controls.Add(this.btnViewDetails2);
-            this.pnlPlaylist1.Controls.Add(this.btnViewDetails1);
-            this.pnlPlaylist1.Controls.Add(this.txtCheckOut3);
-            this.pnlPlaylist1.Controls.Add(this.textBox2);
-            this.pnlPlaylist1.Controls.Add(this.textBox1);
-            this.pnlPlaylist1.Location = new System.Drawing.Point(15, 85);
-            this.pnlPlaylist1.Name = "pnlPlaylist1";
-            this.pnlPlaylist1.Size = new System.Drawing.Size(753, 245);
-            this.pnlPlaylist1.TabIndex = 48;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(0, 66);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.ReadOnly = true;
-            this.textBox4.Size = new System.Drawing.Size(606, 23);
-            this.textBox4.TabIndex = 28;
-            this.textBox4.Text = "      4   Song Name                                  Artist";
-            // 
-            // textBox7
-            // 
-            this.textBox7.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.Location = new System.Drawing.Point(0, 181);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.ReadOnly = true;
-            this.textBox7.Size = new System.Drawing.Size(606, 23);
-            this.textBox7.TabIndex = 25;
-            this.textBox7.Text = "      9   Song Name                                  Artist";
-            // 
-            // textBox8
-            // 
-            this.textBox8.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox8.Location = new System.Drawing.Point(0, 204);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.ReadOnly = true;
-            this.textBox8.Size = new System.Drawing.Size(606, 23);
-            this.textBox8.TabIndex = 22;
-            this.textBox8.Text = "      10  Renegade                                   Styx";
-            this.textBox8.Visible = false;
-            // 
-            // textBox9
-            // 
-            this.textBox9.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox9.Location = new System.Drawing.Point(0, 158);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.ReadOnly = true;
-            this.textBox9.Size = new System.Drawing.Size(606, 23);
-            this.textBox9.TabIndex = 19;
-            this.textBox9.Text = "      8   Song Name                                  Artist";
-            // 
-            // textBox5
-            // 
-            this.textBox5.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(0, 112);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.ReadOnly = true;
-            this.textBox5.Size = new System.Drawing.Size(606, 23);
-            this.textBox5.TabIndex = 16;
-            this.textBox5.Text = "      6   Song Name                                  Artist";
-            // 
-            // textBox6
-            // 
-            this.textBox6.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(0, 135);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.ReadOnly = true;
-            this.textBox6.Size = new System.Drawing.Size(606, 23);
-            this.textBox6.TabIndex = 13;
-            this.textBox6.Text = "      7   Song Name                                  Artist";
-            // 
-            // textBox3
-            // 
-            this.textBox3.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(0, 89);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.ReadOnly = true;
-            this.textBox3.Size = new System.Drawing.Size(606, 23);
-            this.textBox3.TabIndex = 10;
-            this.textBox3.Text = "      5   Song Name                                  Artist";
-            // 
-            // txtCheckOut3
-            // 
-            this.txtCheckOut3.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCheckOut3.Location = new System.Drawing.Point(0, 44);
-            this.txtCheckOut3.Name = "txtCheckOut3";
-            this.txtCheckOut3.ReadOnly = true;
-            this.txtCheckOut3.Size = new System.Drawing.Size(606, 23);
-            this.txtCheckOut3.TabIndex = 2;
-            this.txtCheckOut3.Text = "      3   Song Name                                  Artist";
-            // 
-            // textBox2
-            // 
-            this.textBox2.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(0, 22);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(606, 23);
-            this.textBox2.TabIndex = 1;
-            this.textBox2.Text = "      2   Song Name                                  Artist";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(0, 0);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(606, 23);
-            this.textBox1.TabIndex = 0;
-            this.textBox1.Text = "      1   Song Name                                  Artist";
-            // 
-            // dgAlbums
-            // 
-            this.dgAlbums.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(208)))), ((int)(((byte)(242)))));
-            this.dgAlbums.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgAlbums.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.AlbumID,
-            this.TDate,
-            this.AlbumTitle,
-            this.ViewDetails});
-            this.dgAlbums.Location = new System.Drawing.Point(15, 60);
-            this.dgAlbums.Name = "dgAlbums";
-            this.dgAlbums.Size = new System.Drawing.Size(753, 267);
-            this.dgAlbums.TabIndex = 47;
-            // 
-            // AlbumID
-            // 
-            this.AlbumID.HeaderText = "#";
-            this.AlbumID.Name = "AlbumID";
-            this.AlbumID.Width = 25;
-            // 
-            // TDate
-            // 
-            this.TDate.HeaderText = "Song Name";
-            this.TDate.Name = "TDate";
-            this.TDate.Width = 300;
-            // 
-            // AlbumTitle
-            // 
-            this.AlbumTitle.HeaderText = "Artist";
-            this.AlbumTitle.Name = "AlbumTitle";
-            this.AlbumTitle.Width = 240;
-            // 
-            // ViewDetails
-            // 
-            this.ViewDetails.HeaderText = "";
-            this.ViewDetails.Name = "ViewDetails";
-            this.ViewDetails.Width = 120;
-            // 
-            // pnlPlaylist3
-            // 
-            this.pnlPlaylist3.Controls.Add(this.textBox11);
-            this.pnlPlaylist3.Controls.Add(this.button17);
-            this.pnlPlaylist3.Controls.Add(this.button18);
-            this.pnlPlaylist3.Controls.Add(this.button21);
-            this.pnlPlaylist3.Controls.Add(this.button22);
-            this.pnlPlaylist3.Controls.Add(this.button23);
-            this.pnlPlaylist3.Controls.Add(this.button24);
-            this.pnlPlaylist3.Controls.Add(this.button25);
-            this.pnlPlaylist3.Controls.Add(this.button26);
-            this.pnlPlaylist3.Controls.Add(this.textBox13);
-            this.pnlPlaylist3.Controls.Add(this.textBox14);
-            this.pnlPlaylist3.Controls.Add(this.textBox15);
-            this.pnlPlaylist3.Location = new System.Drawing.Point(15, 85);
-            this.pnlPlaylist3.Name = "pnlPlaylist3";
-            this.pnlPlaylist3.Size = new System.Drawing.Size(753, 245);
-            this.pnlPlaylist3.TabIndex = 50;
-            // 
-            // textBox11
-            // 
-            this.textBox11.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox11.Location = new System.Drawing.Point(0, 66);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.ReadOnly = true;
-            this.textBox11.Size = new System.Drawing.Size(606, 23);
-            this.textBox11.TabIndex = 28;
-            this.textBox11.Text = "      1   Song Name                                  Artist";
-            // 
-            // textBox13
-            // 
-            this.textBox13.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox13.Location = new System.Drawing.Point(0, 44);
-            this.textBox13.Name = "textBox13";
-            this.textBox13.ReadOnly = true;
-            this.textBox13.Size = new System.Drawing.Size(606, 23);
-            this.textBox13.TabIndex = 2;
-            this.textBox13.Text = "      1   Song Name                                  Artist";
-            // 
-            // textBox14
-            // 
-            this.textBox14.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox14.Location = new System.Drawing.Point(0, 22);
-            this.textBox14.Name = "textBox14";
-            this.textBox14.ReadOnly = true;
-            this.textBox14.Size = new System.Drawing.Size(606, 23);
-            this.textBox14.TabIndex = 1;
-            this.textBox14.Text = "      1   Song Name                                  Artist";
-            // 
-            // textBox15
-            // 
-            this.textBox15.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox15.Location = new System.Drawing.Point(0, 0);
-            this.textBox15.Name = "textBox15";
-            this.textBox15.ReadOnly = true;
-            this.textBox15.Size = new System.Drawing.Size(606, 23);
-            this.textBox15.TabIndex = 0;
-            this.textBox15.Text = "      1   Song Name                                  Artist";
-            // 
-            // pnlPlaylist2
-            // 
-            this.pnlPlaylist2.Controls.Add(this.textBox10);
-            this.pnlPlaylist2.Controls.Add(this.button15);
-            this.pnlPlaylist2.Controls.Add(this.button16);
-            this.pnlPlaylist2.Controls.Add(this.textBox16);
-            this.pnlPlaylist2.Controls.Add(this.button27);
-            this.pnlPlaylist2.Controls.Add(this.button28);
-            this.pnlPlaylist2.Controls.Add(this.button29);
-            this.pnlPlaylist2.Controls.Add(this.button30);
-            this.pnlPlaylist2.Controls.Add(this.button31);
-            this.pnlPlaylist2.Controls.Add(this.button32);
-            this.pnlPlaylist2.Controls.Add(this.button33);
-            this.pnlPlaylist2.Controls.Add(this.button34);
-            this.pnlPlaylist2.Controls.Add(this.textBox17);
-            this.pnlPlaylist2.Controls.Add(this.textBox18);
-            this.pnlPlaylist2.Controls.Add(this.textBox19);
-            this.pnlPlaylist2.Location = new System.Drawing.Point(15, 85);
-            this.pnlPlaylist2.Name = "pnlPlaylist2";
-            this.pnlPlaylist2.Size = new System.Drawing.Size(753, 245);
-            this.pnlPlaylist2.TabIndex = 49;
-            // 
-            // textBox10
-            // 
-            this.textBox10.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox10.Location = new System.Drawing.Point(0, 66);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.ReadOnly = true;
-            this.textBox10.Size = new System.Drawing.Size(606, 23);
-            this.textBox10.TabIndex = 28;
-            this.textBox10.Text = "      1   Song Name                                  Artist";
-            // 
-            // textBox16
-            // 
-            this.textBox16.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox16.Location = new System.Drawing.Point(0, 89);
-            this.textBox16.Name = "textBox16";
-            this.textBox16.ReadOnly = true;
-            this.textBox16.Size = new System.Drawing.Size(606, 23);
-            this.textBox16.TabIndex = 10;
-            this.textBox16.Text = "      1   Song Name                                  Artist";
-            // 
-            // textBox17
-            // 
-            this.textBox17.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox17.Location = new System.Drawing.Point(0, 44);
-            this.textBox17.Name = "textBox17";
-            this.textBox17.ReadOnly = true;
-            this.textBox17.Size = new System.Drawing.Size(606, 23);
-            this.textBox17.TabIndex = 2;
-            this.textBox17.Text = "      1   Song Name                                  Artist";
-            // 
-            // textBox18
-            // 
-            this.textBox18.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox18.Location = new System.Drawing.Point(0, 22);
-            this.textBox18.Name = "textBox18";
-            this.textBox18.ReadOnly = true;
-            this.textBox18.Size = new System.Drawing.Size(606, 23);
-            this.textBox18.TabIndex = 1;
-            this.textBox18.Text = "      1   Song Name                                  Artist";
-            // 
-            // textBox19
-            // 
-            this.textBox19.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox19.Location = new System.Drawing.Point(0, 0);
-            this.textBox19.Name = "textBox19";
-            this.textBox19.ReadOnly = true;
-            this.textBox19.Size = new System.Drawing.Size(606, 23);
-            this.textBox19.TabIndex = 0;
-            this.textBox19.Text = "      1   Song Name                                  Artist";
-            // 
-            // tabControl1
-            // 
-            this.tabControl1.Controls.Add(this.Playlist);
-            this.tabControl1.Controls.Add(this.Notes);
-            this.tabControl1.Font = new System.Drawing.Font("Arial", 10F);
-            this.tabControl1.Location = new System.Drawing.Point(0, 24);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(790, 370);
-            this.tabControl1.TabIndex = 33;
-            this.tabControl1.Selected += new System.Windows.Forms.TabControlEventHandler(this.tabControl1_Selected);
             // 
             // btnPreviousRight
             // 
@@ -1995,12 +1341,967 @@ namespace LibraryApp
             this.btnFirstLeft.UseVisualStyleBackColor = false;
             this.btnFirstLeft.Click += new System.EventHandler(this.btnFirstLeft_Click);
             // 
+            // button36
+            // 
+            this.button36.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(107)))), ((int)(((byte)(255)))));
+            this.button36.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.button36.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button36.ForeColor = System.Drawing.Color.White;
+            this.button36.Location = new System.Drawing.Point(331, 17);
+            this.button36.Name = "button36";
+            this.button36.Size = new System.Drawing.Size(144, 23);
+            this.button36.TabIndex = 66;
+            this.button36.Text = "* Go to User Profile*";
+            this.toolTip1.SetToolTip(this.button36, "View the Details of this Transaction");
+            this.button36.UseVisualStyleBackColor = false;
+            this.button36.Click += new System.EventHandler(this.button36_Click);
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.AllowMerge = false;
+            this.menuStrip1.AutoSize = false;
+            this.menuStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(159)))), ((int)(((byte)(226)))));
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.addToolStripMenuItem,
+            this.editToolStripMenuItem,
+            this.deleteToolStripMenuItem,
+            this.undeleteToolStripMenuItem,
+            this.saveToolStripMenuItem,
+            this.cancelToolStripMenuItem,
+            this.searchToolStripMenuItem,
+            this.sendLinkToUserToolStripMenuItem,
+            this.reportsToolStripMenuItem,
+            this.toolStripMenuItem1,
+            this.closeToolStripMenuItem,
+            this.dATAToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.ShowItemToolTips = true;
+            this.menuStrip1.Size = new System.Drawing.Size(1150, 24);
+            this.menuStrip1.TabIndex = 34;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // addToolStripMenuItem
+            // 
+            this.addToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.popularPlaylistsToolStripMenuItem,
+            this.personalPlaylistToolStripMenuItem,
+            this.fromALinkToolStripMenuItem,
+            this.fromPlaylistNameToolStripMenuItem,
+            this.sentFromUserToolStripMenuItem});
+            this.addToolStripMenuItem.Name = "addToolStripMenuItem";
+            this.addToolStripMenuItem.Size = new System.Drawing.Size(83, 20);
+            this.addToolStripMenuItem.Text = "New Playlist";
+            this.addToolStripMenuItem.ToolTipText = "Add A New User";
+            this.addToolStripMenuItem.Click += new System.EventHandler(this.AddToolStripMenuItem_Click);
+            // 
+            // popularPlaylistsToolStripMenuItem
+            // 
+            this.popularPlaylistsToolStripMenuItem.Name = "popularPlaylistsToolStripMenuItem";
+            this.popularPlaylistsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.popularPlaylistsToolStripMenuItem.Text = "Popular Playlists";
+            this.popularPlaylistsToolStripMenuItem.Click += new System.EventHandler(this.popularPlaylistsToolStripMenuItem_Click);
+            // 
+            // personalPlaylistToolStripMenuItem
+            // 
+            this.personalPlaylistToolStripMenuItem.Name = "personalPlaylistToolStripMenuItem";
+            this.personalPlaylistToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.personalPlaylistToolStripMenuItem.Text = "Personal Playlist";
+            this.personalPlaylistToolStripMenuItem.Click += new System.EventHandler(this.personalPlaylistToolStripMenuItem_Click);
+            // 
+            // fromALinkToolStripMenuItem
+            // 
+            this.fromALinkToolStripMenuItem.Name = "fromALinkToolStripMenuItem";
+            this.fromALinkToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.fromALinkToolStripMenuItem.Text = "From a Link";
+            this.fromALinkToolStripMenuItem.Click += new System.EventHandler(this.fromALinkToolStripMenuItem_Click);
+            // 
+            // editToolStripMenuItem
+            // 
+            this.editToolStripMenuItem.Name = "editToolStripMenuItem";
+            this.editToolStripMenuItem.Size = new System.Drawing.Size(39, 20);
+            this.editToolStripMenuItem.Text = "Edit";
+            this.editToolStripMenuItem.ToolTipText = "Edit This User";
+            this.editToolStripMenuItem.Click += new System.EventHandler(this.EditToolStripMenuItem_Click);
+            // 
+            // deleteToolStripMenuItem
+            // 
+            this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
+            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(52, 20);
+            this.deleteToolStripMenuItem.Text = "Delete";
+            this.deleteToolStripMenuItem.ToolTipText = "Delete This User";
+            this.deleteToolStripMenuItem.Click += new System.EventHandler(this.DeleteToolStripMenuItem_Click);
+            // 
+            // undeleteToolStripMenuItem
+            // 
+            this.undeleteToolStripMenuItem.Name = "undeleteToolStripMenuItem";
+            this.undeleteToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
+            this.undeleteToolStripMenuItem.Text = "Undelete";
+            this.undeleteToolStripMenuItem.ToolTipText = "UnDelete This User";
+            this.undeleteToolStripMenuItem.Click += new System.EventHandler(this.undeleteToolStripMenuItem_Click);
+            // 
+            // saveToolStripMenuItem
+            // 
+            this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(43, 20);
+            this.saveToolStripMenuItem.Text = "Save";
+            this.saveToolStripMenuItem.ToolTipText = "Save Changes Made to This User";
+            this.saveToolStripMenuItem.Click += new System.EventHandler(this.SaveToolStripMenuItem_Click);
+            // 
+            // cancelToolStripMenuItem
+            // 
+            this.cancelToolStripMenuItem.Name = "cancelToolStripMenuItem";
+            this.cancelToolStripMenuItem.Size = new System.Drawing.Size(55, 20);
+            this.cancelToolStripMenuItem.Text = "Cancel";
+            this.cancelToolStripMenuItem.ToolTipText = "Cancel Changes Made to This User";
+            this.cancelToolStripMenuItem.Click += new System.EventHandler(this.CancelToolStripMenuItem_Click);
+            // 
+            // searchToolStripMenuItem
+            // 
+            this.searchToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.byNameToolStripMenuItem,
+            this.byUniversityIDToolStripMenuItem,
+            this.byAlbumNameToolStripMenuItem,
+            this.addAllSongsFromSelectedAlbumToolStripMenuItem});
+            this.searchToolStripMenuItem.Name = "searchToolStripMenuItem";
+            this.searchToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
+            this.searchToolStripMenuItem.Text = "Add Song";
+            this.searchToolStripMenuItem.Click += new System.EventHandler(this.searchToolStripMenuItem_Click_1);
+            // 
+            // byNameToolStripMenuItem
+            // 
+            this.byNameToolStripMenuItem.Name = "byNameToolStripMenuItem";
+            this.byNameToolStripMenuItem.Size = new System.Drawing.Size(265, 22);
+            this.byNameToolStripMenuItem.Text = "By Song Name";
+            this.byNameToolStripMenuItem.Click += new System.EventHandler(this.byNameToolStripMenuItem_Click);
+            // 
+            // byUniversityIDToolStripMenuItem
+            // 
+            this.byUniversityIDToolStripMenuItem.Name = "byUniversityIDToolStripMenuItem";
+            this.byUniversityIDToolStripMenuItem.Size = new System.Drawing.Size(265, 22);
+            this.byUniversityIDToolStripMenuItem.Text = "By Artist Name";
+            this.byUniversityIDToolStripMenuItem.Click += new System.EventHandler(this.byUniversityIDToolStripMenuItem_Click);
+            // 
+            // sendLinkToUserToolStripMenuItem
+            // 
+            this.sendLinkToUserToolStripMenuItem.Name = "sendLinkToUserToolStripMenuItem";
+            this.sendLinkToUserToolStripMenuItem.Size = new System.Drawing.Size(110, 20);
+            this.sendLinkToUserToolStripMenuItem.Text = "Send Link to User";
+            this.sendLinkToUserToolStripMenuItem.Click += new System.EventHandler(this.sendLinkToUserToolStripMenuItem_Click);
+            // 
+            // reportsToolStripMenuItem
+            // 
+            this.reportsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.addReportsToolStripMenuItem});
+            this.reportsToolStripMenuItem.Name = "reportsToolStripMenuItem";
+            this.reportsToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
+            this.reportsToolStripMenuItem.Text = "Reports";
+            // 
+            // addReportsToolStripMenuItem
+            // 
+            this.addReportsToolStripMenuItem.Name = "addReportsToolStripMenuItem";
+            this.addReportsToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+            this.addReportsToolStripMenuItem.Text = "Add Reports!!!";
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(43, 20);
+            this.toolStripMenuItem1.Text = "===";
+            this.toolStripMenuItem1.ToolTipText = "This is not a button : - )";
+            // 
+            // closeToolStripMenuItem
+            // 
+            this.closeToolStripMenuItem.Name = "closeToolStripMenuItem";
+            this.closeToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
+            this.closeToolStripMenuItem.Text = "Close";
+            this.closeToolStripMenuItem.ToolTipText = "Close This Form";
+            this.closeToolStripMenuItem.Click += new System.EventHandler(this.closeToolStripMenuItem_Click);
+            // 
+            // dATAToolStripMenuItem
+            // 
+            this.dATAToolStripMenuItem.Name = "dATAToolStripMenuItem";
+            this.dATAToolStripMenuItem.Size = new System.Drawing.Size(47, 20);
+            this.dATAToolStripMenuItem.Text = "DATA";
+            this.dATAToolStripMenuItem.ToolTipText = "Toggle Dummy Data in the Form";
+            this.dATAToolStripMenuItem.Click += new System.EventHandler(this.DataToolStripMenuItem_Click);
+            // 
+            // pnlNavigation
+            // 
+            this.pnlNavigation.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(208)))), ((int)(((byte)(242)))));
+            this.pnlNavigation.Controls.Add(this.cbSelect);
+            this.pnlNavigation.Controls.Add(this.label10);
+            this.pnlNavigation.Controls.Add(this.cbOrderBy);
+            this.pnlNavigation.Controls.Add(this.label12);
+            this.pnlNavigation.Controls.Add(this.btnB);
+            this.pnlNavigation.Controls.Add(this.btnV);
+            this.pnlNavigation.Controls.Add(this.btnW);
+            this.pnlNavigation.Controls.Add(this.btnX);
+            this.pnlNavigation.Controls.Add(this.btnY);
+            this.pnlNavigation.Controls.Add(this.btnS);
+            this.pnlNavigation.Controls.Add(this.btnT);
+            this.pnlNavigation.Controls.Add(this.btnU);
+            this.pnlNavigation.Controls.Add(this.btnZ);
+            this.pnlNavigation.Controls.Add(this.btnQ);
+            this.pnlNavigation.Controls.Add(this.btnR);
+            this.pnlNavigation.Controls.Add(this.btnO);
+            this.pnlNavigation.Controls.Add(this.btnP);
+            this.pnlNavigation.Controls.Add(this.btnC);
+            this.pnlNavigation.Controls.Add(this.btnM);
+            this.pnlNavigation.Controls.Add(this.btnN);
+            this.pnlNavigation.Controls.Add(this.btnL);
+            this.pnlNavigation.Controls.Add(this.btnK);
+            this.pnlNavigation.Controls.Add(this.btnJ);
+            this.pnlNavigation.Controls.Add(this.btnI);
+            this.pnlNavigation.Controls.Add(this.btnG);
+            this.pnlNavigation.Controls.Add(this.btnH);
+            this.pnlNavigation.Controls.Add(this.btnF);
+            this.pnlNavigation.Controls.Add(this.btnD);
+            this.pnlNavigation.Controls.Add(this.btnE);
+            this.pnlNavigation.Controls.Add(this.btnA);
+            this.pnlNavigation.Controls.Add(this.btnPreviousRight);
+            this.pnlNavigation.Controls.Add(this.btnLastRight);
+            this.pnlNavigation.Controls.Add(this.btnNextRight);
+            this.pnlNavigation.Controls.Add(this.btnFirstRight);
+            this.pnlNavigation.Controls.Add(this.btnPreviousLeft);
+            this.pnlNavigation.Controls.Add(this.btnLastLeft);
+            this.pnlNavigation.Controls.Add(this.btnNextLeft);
+            this.pnlNavigation.Controls.Add(this.btnFirstLeft);
+            this.pnlNavigation.Location = new System.Drawing.Point(0, 395);
+            this.pnlNavigation.Name = "pnlNavigation";
+            this.pnlNavigation.Size = new System.Drawing.Size(790, 160);
+            this.pnlNavigation.TabIndex = 35;
+            // 
+            // cbSelect
+            // 
+            this.cbSelect.FormattingEnabled = true;
+            this.cbSelect.Items.AddRange(new object[] {
+            "Genre",
+            "Band/Group",
+            "Lowest Est Date"});
+            this.cbSelect.Location = new System.Drawing.Point(216, 113);
+            this.cbSelect.Name = "cbSelect";
+            this.cbSelect.Size = new System.Drawing.Size(170, 27);
+            this.cbSelect.TabIndex = 39;
+            this.cbSelect.Text = "All Users";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(154, 116);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(56, 19);
+            this.label10.TabIndex = 38;
+            this.label10.Text = "Select";
+            // 
+            // cbOrderBy
+            // 
+            this.cbOrderBy.FormattingEnabled = true;
+            this.cbOrderBy.Items.AddRange(new object[] {
+            "Playlist Name",
+            "Owner Name",
+            "Visibility"});
+            this.cbOrderBy.Location = new System.Drawing.Point(495, 112);
+            this.cbOrderBy.Name = "cbOrderBy";
+            this.cbOrderBy.Size = new System.Drawing.Size(170, 27);
+            this.cbOrderBy.TabIndex = 37;
+            this.cbOrderBy.Text = "Name";
+            this.cbOrderBy.SelectedIndexChanged += new System.EventHandler(this.cbOrderBy_SelectedIndexChanged);
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(412, 115);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(77, 19);
+            this.label12.TabIndex = 36;
+            this.label12.Text = "Order By";
+            // 
+            // lbTrace
+            // 
+            this.lbTrace.Font = new System.Drawing.Font("Courier New", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTrace.FormattingEnabled = true;
+            this.lbTrace.ItemHeight = 14;
+            this.lbTrace.Location = new System.Drawing.Point(804, 48);
+            this.lbTrace.Name = "lbTrace";
+            this.lbTrace.Size = new System.Drawing.Size(346, 466);
+            this.lbTrace.TabIndex = 36;
+            // 
+            // imageList1
+            // 
+            this.imageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
+            this.imageList1.ImageSize = new System.Drawing.Size(16, 16);
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            // 
+            // Notes
+            // 
+            this.Notes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(208)))), ((int)(((byte)(242)))));
+            this.Notes.Controls.Add(this.txtPlaylistName2);
+            this.Notes.Controls.Add(this.label13);
+            this.Notes.Controls.Add(this.label15);
+            this.Notes.Controls.Add(this.txtNotes);
+            this.Notes.Controls.Add(this.label8);
+            this.Notes.Location = new System.Drawing.Point(4, 25);
+            this.Notes.Name = "Notes";
+            this.Notes.Padding = new System.Windows.Forms.Padding(3);
+            this.Notes.Size = new System.Drawing.Size(782, 341);
+            this.Notes.TabIndex = 1;
+            this.Notes.Text = "Notes";
+            // 
+            // txtPlaylistName2
+            // 
+            this.txtPlaylistName2.AutoSize = true;
+            this.txtPlaylistName2.Font = new System.Drawing.Font("Arial", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPlaylistName2.Location = new System.Drawing.Point(416, 16);
+            this.txtPlaylistName2.Name = "txtPlaylistName2";
+            this.txtPlaylistName2.Size = new System.Drawing.Size(41, 18);
+            this.txtPlaylistName2.TabIndex = 52;
+            this.txtPlaylistName2.Text = "Tom";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(306, 15);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(112, 19);
+            this.label13.TabIndex = 51;
+            this.label13.Text = "Playlist Name";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(312, 39);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(146, 14);
+            this.label15.TabIndex = 50;
+            this.label15.Text = "--- Place Your Notes Here ---";
+            // 
+            // txtNotes
+            // 
+            this.txtNotes.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNotes.Location = new System.Drawing.Point(79, 53);
+            this.txtNotes.Multiline = true;
+            this.txtNotes.Name = "txtNotes";
+            this.txtNotes.Size = new System.Drawing.Size(636, 275);
+            this.txtNotes.TabIndex = 12;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(16, 53);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(54, 19);
+            this.label8.TabIndex = 32;
+            this.label8.Text = "Notes";
+            // 
+            // Playlist
+            // 
+            this.Playlist.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(208)))), ((int)(((byte)(242)))));
+            this.Playlist.Controls.Add(this.button36);
+            this.Playlist.Controls.Add(this.cbVisibility);
+            this.Playlist.Controls.Add(this.label1);
+            this.Playlist.Controls.Add(this.button35);
+            this.Playlist.Controls.Add(this.button20);
+            this.Playlist.Controls.Add(this.button19);
+            this.Playlist.Controls.Add(this.txtPlaylistName);
+            this.Playlist.Controls.Add(this.txtPlaylistOwner);
+            this.Playlist.Controls.Add(this.label2);
+            this.Playlist.Controls.Add(this.label16);
+            this.Playlist.Controls.Add(this.label22);
+            this.Playlist.Controls.Add(this.pnlPlaylist1);
+            this.Playlist.Controls.Add(this.dgAlbums);
+            this.Playlist.Controls.Add(this.pnlPlaylist3);
+            this.Playlist.Controls.Add(this.pnlPlaylist2);
+            this.Playlist.Location = new System.Drawing.Point(4, 25);
+            this.Playlist.Name = "Playlist";
+            this.Playlist.Size = new System.Drawing.Size(782, 341);
+            this.Playlist.TabIndex = 2;
+            this.Playlist.Text = "Playlist";
+            this.Playlist.Click += new System.EventHandler(this.Songs_Click);
+            // 
+            // cbVisibility
+            // 
+            this.cbVisibility.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(208)))), ((int)(((byte)(242)))));
+            this.cbVisibility.FormattingEnabled = true;
+            this.cbVisibility.Items.AddRange(new object[] {
+            "Private",
+            "Public",
+            "Unlisted"});
+            this.cbVisibility.Location = new System.Drawing.Point(152, 42);
+            this.cbVisibility.Name = "cbVisibility";
+            this.cbVisibility.Size = new System.Drawing.Size(121, 24);
+            this.cbVisibility.TabIndex = 65;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(73, 44);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(73, 19);
+            this.label1.TabIndex = 64;
+            this.label1.Text = "Visibility";
+            // 
+            // txtPlaylistName
+            // 
+            this.txtPlaylistName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(208)))), ((int)(((byte)(242)))));
+            this.txtPlaylistName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtPlaylistName.Font = new System.Drawing.Font("Arial", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPlaylistName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(2)))), ((int)(((byte)(89)))));
+            this.txtPlaylistName.Location = new System.Drawing.Point(152, 2);
+            this.txtPlaylistName.Name = "txtPlaylistName";
+            this.txtPlaylistName.Size = new System.Drawing.Size(185, 19);
+            this.txtPlaylistName.TabIndex = 59;
+            this.txtPlaylistName.Text = "Rock";
+            this.txtPlaylistName.TextChanged += new System.EventHandler(this.txtPlaylistName_TextChanged);
+            // 
+            // txtPlaylistOwner
+            // 
+            this.txtPlaylistOwner.AutoSize = true;
+            this.txtPlaylistOwner.Font = new System.Drawing.Font("Arial", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPlaylistOwner.Location = new System.Drawing.Point(149, 22);
+            this.txtPlaylistOwner.Name = "txtPlaylistOwner";
+            this.txtPlaylistOwner.Size = new System.Drawing.Size(41, 18);
+            this.txtPlaylistOwner.TabIndex = 58;
+            this.txtPlaylistOwner.Text = "Tom";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(86, 22);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(59, 19);
+            this.label2.TabIndex = 57;
+            this.label2.Text = "Owner";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(340, 56);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(68, 14);
+            this.label16.TabIndex = 56;
+            this.label16.Text = "--- Songs ---";
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.Location = new System.Drawing.Point(35, 1);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(112, 19);
+            this.label22.TabIndex = 40;
+            this.label22.Text = "Playlist Name";
+            // 
+            // pnlPlaylist1
+            // 
+            this.pnlPlaylist1.Controls.Add(this.button37);
+            this.pnlPlaylist1.Controls.Add(this.button38);
+            this.pnlPlaylist1.Controls.Add(this.button39);
+            this.pnlPlaylist1.Controls.Add(this.button40);
+            this.pnlPlaylist1.Controls.Add(this.button41);
+            this.pnlPlaylist1.Controls.Add(this.button42);
+            this.pnlPlaylist1.Controls.Add(this.button43);
+            this.pnlPlaylist1.Controls.Add(this.button44);
+            this.pnlPlaylist1.Controls.Add(this.button45);
+            this.pnlPlaylist1.Controls.Add(this.button46);
+            this.pnlPlaylist1.Controls.Add(this.textBox4);
+            this.pnlPlaylist1.Controls.Add(this.button1);
+            this.pnlPlaylist1.Controls.Add(this.button2);
+            this.pnlPlaylist1.Controls.Add(this.textBox7);
+            this.pnlPlaylist1.Controls.Add(this.textBox8);
+            this.pnlPlaylist1.Controls.Add(this.button9);
+            this.pnlPlaylist1.Controls.Add(this.button10);
+            this.pnlPlaylist1.Controls.Add(this.button11);
+            this.pnlPlaylist1.Controls.Add(this.button12);
+            this.pnlPlaylist1.Controls.Add(this.textBox9);
+            this.pnlPlaylist1.Controls.Add(this.button13);
+            this.pnlPlaylist1.Controls.Add(this.button14);
+            this.pnlPlaylist1.Controls.Add(this.textBox5);
+            this.pnlPlaylist1.Controls.Add(this.textBox6);
+            this.pnlPlaylist1.Controls.Add(this.button5);
+            this.pnlPlaylist1.Controls.Add(this.button6);
+            this.pnlPlaylist1.Controls.Add(this.button7);
+            this.pnlPlaylist1.Controls.Add(this.button8);
+            this.pnlPlaylist1.Controls.Add(this.textBox3);
+            this.pnlPlaylist1.Controls.Add(this.button3);
+            this.pnlPlaylist1.Controls.Add(this.button4);
+            this.pnlPlaylist1.Controls.Add(this.btnDelete3);
+            this.pnlPlaylist1.Controls.Add(this.btnDelete2);
+            this.pnlPlaylist1.Controls.Add(this.btnDelete1);
+            this.pnlPlaylist1.Controls.Add(this.btnViewDetails3);
+            this.pnlPlaylist1.Controls.Add(this.btnViewDetails2);
+            this.pnlPlaylist1.Controls.Add(this.btnViewDetails1);
+            this.pnlPlaylist1.Controls.Add(this.txtCheckOut3);
+            this.pnlPlaylist1.Controls.Add(this.textBox2);
+            this.pnlPlaylist1.Controls.Add(this.textBox1);
+            this.pnlPlaylist1.Location = new System.Drawing.Point(15, 98);
+            this.pnlPlaylist1.Name = "pnlPlaylist1";
+            this.pnlPlaylist1.Size = new System.Drawing.Size(753, 245);
+            this.pnlPlaylist1.TabIndex = 48;
+            // 
+            // textBox4
+            // 
+            this.textBox4.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox4.Location = new System.Drawing.Point(0, 66);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.ReadOnly = true;
+            this.textBox4.Size = new System.Drawing.Size(606, 23);
+            this.textBox4.TabIndex = 28;
+            this.textBox4.Text = "      4   Song Name                                  Artist";
+            // 
+            // textBox7
+            // 
+            this.textBox7.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox7.Location = new System.Drawing.Point(0, 181);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.ReadOnly = true;
+            this.textBox7.Size = new System.Drawing.Size(606, 23);
+            this.textBox7.TabIndex = 25;
+            this.textBox7.Text = "      9   Song Name                                  Artist";
+            // 
+            // textBox8
+            // 
+            this.textBox8.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox8.Location = new System.Drawing.Point(0, 204);
+            this.textBox8.Name = "textBox8";
+            this.textBox8.ReadOnly = true;
+            this.textBox8.Size = new System.Drawing.Size(606, 23);
+            this.textBox8.TabIndex = 22;
+            this.textBox8.Text = "      10  Renegade                                   Styx";
+            this.textBox8.Visible = false;
+            // 
+            // textBox9
+            // 
+            this.textBox9.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox9.Location = new System.Drawing.Point(0, 158);
+            this.textBox9.Name = "textBox9";
+            this.textBox9.ReadOnly = true;
+            this.textBox9.Size = new System.Drawing.Size(606, 23);
+            this.textBox9.TabIndex = 19;
+            this.textBox9.Text = "      8   Song Name                                  Artist";
+            // 
+            // textBox5
+            // 
+            this.textBox5.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox5.Location = new System.Drawing.Point(0, 112);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.ReadOnly = true;
+            this.textBox5.Size = new System.Drawing.Size(606, 23);
+            this.textBox5.TabIndex = 16;
+            this.textBox5.Text = "      6   Song Name                                  Artist";
+            // 
+            // textBox6
+            // 
+            this.textBox6.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox6.Location = new System.Drawing.Point(0, 135);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.ReadOnly = true;
+            this.textBox6.Size = new System.Drawing.Size(606, 23);
+            this.textBox6.TabIndex = 13;
+            this.textBox6.Text = "      7   Song Name                                  Artist";
+            // 
+            // textBox3
+            // 
+            this.textBox3.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox3.Location = new System.Drawing.Point(0, 89);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.ReadOnly = true;
+            this.textBox3.Size = new System.Drawing.Size(606, 23);
+            this.textBox3.TabIndex = 10;
+            this.textBox3.Text = "      5   Song Name                                  Artist";
+            // 
+            // txtCheckOut3
+            // 
+            this.txtCheckOut3.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCheckOut3.Location = new System.Drawing.Point(0, 44);
+            this.txtCheckOut3.Name = "txtCheckOut3";
+            this.txtCheckOut3.ReadOnly = true;
+            this.txtCheckOut3.Size = new System.Drawing.Size(606, 23);
+            this.txtCheckOut3.TabIndex = 2;
+            this.txtCheckOut3.Text = "      3   Song Name                                  Artist";
+            // 
+            // textBox2
+            // 
+            this.textBox2.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox2.Location = new System.Drawing.Point(0, 22);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.ReadOnly = true;
+            this.textBox2.Size = new System.Drawing.Size(606, 23);
+            this.textBox2.TabIndex = 1;
+            this.textBox2.Text = "      2   Song Name                                  Artist";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(0, 0);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(606, 23);
+            this.textBox1.TabIndex = 0;
+            this.textBox1.Text = "      1   Song Name                                  Artist";
+            // 
+            // dgAlbums
+            // 
+            this.dgAlbums.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(208)))), ((int)(((byte)(242)))));
+            this.dgAlbums.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgAlbums.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.AlbumID,
+            this.TDate,
+            this.AlbumTitle,
+            this.ViewDetails});
+            this.dgAlbums.Location = new System.Drawing.Point(15, 73);
+            this.dgAlbums.Name = "dgAlbums";
+            this.dgAlbums.Size = new System.Drawing.Size(753, 267);
+            this.dgAlbums.TabIndex = 47;
+            this.dgAlbums.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgAlbums_CellContentClick);
+            // 
+            // AlbumID
+            // 
+            this.AlbumID.HeaderText = "#";
+            this.AlbumID.Name = "AlbumID";
+            this.AlbumID.Width = 25;
+            // 
+            // TDate
+            // 
+            this.TDate.HeaderText = "Song Name";
+            this.TDate.Name = "TDate";
+            this.TDate.Width = 300;
+            // 
+            // AlbumTitle
+            // 
+            this.AlbumTitle.HeaderText = "Artist";
+            this.AlbumTitle.Name = "AlbumTitle";
+            this.AlbumTitle.Width = 240;
+            // 
+            // ViewDetails
+            // 
+            this.ViewDetails.HeaderText = "";
+            this.ViewDetails.Name = "ViewDetails";
+            this.ViewDetails.Width = 120;
+            // 
+            // pnlPlaylist3
+            // 
+            this.pnlPlaylist3.Controls.Add(this.textBox11);
+            this.pnlPlaylist3.Controls.Add(this.button17);
+            this.pnlPlaylist3.Controls.Add(this.button18);
+            this.pnlPlaylist3.Controls.Add(this.button21);
+            this.pnlPlaylist3.Controls.Add(this.button22);
+            this.pnlPlaylist3.Controls.Add(this.button23);
+            this.pnlPlaylist3.Controls.Add(this.button24);
+            this.pnlPlaylist3.Controls.Add(this.button25);
+            this.pnlPlaylist3.Controls.Add(this.button26);
+            this.pnlPlaylist3.Controls.Add(this.textBox13);
+            this.pnlPlaylist3.Controls.Add(this.textBox14);
+            this.pnlPlaylist3.Controls.Add(this.textBox15);
+            this.pnlPlaylist3.Location = new System.Drawing.Point(15, 98);
+            this.pnlPlaylist3.Name = "pnlPlaylist3";
+            this.pnlPlaylist3.Size = new System.Drawing.Size(753, 245);
+            this.pnlPlaylist3.TabIndex = 50;
+            // 
+            // textBox11
+            // 
+            this.textBox11.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox11.Location = new System.Drawing.Point(0, 66);
+            this.textBox11.Name = "textBox11";
+            this.textBox11.ReadOnly = true;
+            this.textBox11.Size = new System.Drawing.Size(606, 23);
+            this.textBox11.TabIndex = 28;
+            this.textBox11.Text = "      1   Song Name                                  Artist";
+            // 
+            // textBox13
+            // 
+            this.textBox13.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox13.Location = new System.Drawing.Point(0, 44);
+            this.textBox13.Name = "textBox13";
+            this.textBox13.ReadOnly = true;
+            this.textBox13.Size = new System.Drawing.Size(606, 23);
+            this.textBox13.TabIndex = 2;
+            this.textBox13.Text = "      1   Song Name                                  Artist";
+            // 
+            // textBox14
+            // 
+            this.textBox14.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox14.Location = new System.Drawing.Point(0, 22);
+            this.textBox14.Name = "textBox14";
+            this.textBox14.ReadOnly = true;
+            this.textBox14.Size = new System.Drawing.Size(606, 23);
+            this.textBox14.TabIndex = 1;
+            this.textBox14.Text = "      1   Song Name                                  Artist";
+            // 
+            // textBox15
+            // 
+            this.textBox15.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox15.Location = new System.Drawing.Point(0, 0);
+            this.textBox15.Name = "textBox15";
+            this.textBox15.ReadOnly = true;
+            this.textBox15.Size = new System.Drawing.Size(606, 23);
+            this.textBox15.TabIndex = 0;
+            this.textBox15.Text = "      1   Song Name                                  Artist";
+            // 
+            // pnlPlaylist2
+            // 
+            this.pnlPlaylist2.Controls.Add(this.textBox10);
+            this.pnlPlaylist2.Controls.Add(this.button15);
+            this.pnlPlaylist2.Controls.Add(this.button16);
+            this.pnlPlaylist2.Controls.Add(this.textBox16);
+            this.pnlPlaylist2.Controls.Add(this.button27);
+            this.pnlPlaylist2.Controls.Add(this.button28);
+            this.pnlPlaylist2.Controls.Add(this.button29);
+            this.pnlPlaylist2.Controls.Add(this.button30);
+            this.pnlPlaylist2.Controls.Add(this.button31);
+            this.pnlPlaylist2.Controls.Add(this.button32);
+            this.pnlPlaylist2.Controls.Add(this.button33);
+            this.pnlPlaylist2.Controls.Add(this.button34);
+            this.pnlPlaylist2.Controls.Add(this.textBox17);
+            this.pnlPlaylist2.Controls.Add(this.textBox18);
+            this.pnlPlaylist2.Controls.Add(this.textBox19);
+            this.pnlPlaylist2.Location = new System.Drawing.Point(15, 98);
+            this.pnlPlaylist2.Name = "pnlPlaylist2";
+            this.pnlPlaylist2.Size = new System.Drawing.Size(753, 245);
+            this.pnlPlaylist2.TabIndex = 49;
+            // 
+            // textBox10
+            // 
+            this.textBox10.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox10.Location = new System.Drawing.Point(0, 66);
+            this.textBox10.Name = "textBox10";
+            this.textBox10.ReadOnly = true;
+            this.textBox10.Size = new System.Drawing.Size(606, 23);
+            this.textBox10.TabIndex = 28;
+            this.textBox10.Text = "      1   Song Name                                  Artist";
+            // 
+            // textBox16
+            // 
+            this.textBox16.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox16.Location = new System.Drawing.Point(0, 89);
+            this.textBox16.Name = "textBox16";
+            this.textBox16.ReadOnly = true;
+            this.textBox16.Size = new System.Drawing.Size(606, 23);
+            this.textBox16.TabIndex = 10;
+            this.textBox16.Text = "      1   Song Name                                  Artist";
+            // 
+            // textBox17
+            // 
+            this.textBox17.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox17.Location = new System.Drawing.Point(0, 44);
+            this.textBox17.Name = "textBox17";
+            this.textBox17.ReadOnly = true;
+            this.textBox17.Size = new System.Drawing.Size(606, 23);
+            this.textBox17.TabIndex = 2;
+            this.textBox17.Text = "      1   Song Name                                  Artist";
+            // 
+            // textBox18
+            // 
+            this.textBox18.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox18.Location = new System.Drawing.Point(0, 22);
+            this.textBox18.Name = "textBox18";
+            this.textBox18.ReadOnly = true;
+            this.textBox18.Size = new System.Drawing.Size(606, 23);
+            this.textBox18.TabIndex = 1;
+            this.textBox18.Text = "      1   Song Name                                  Artist";
+            // 
+            // textBox19
+            // 
+            this.textBox19.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox19.Location = new System.Drawing.Point(0, 0);
+            this.textBox19.Name = "textBox19";
+            this.textBox19.ReadOnly = true;
+            this.textBox19.Size = new System.Drawing.Size(606, 23);
+            this.textBox19.TabIndex = 0;
+            this.textBox19.Text = "      1   Song Name                                  Artist";
+            // 
+            // tabControl1
+            // 
+            this.tabControl1.Controls.Add(this.Playlist);
+            this.tabControl1.Controls.Add(this.Notes);
+            this.tabControl1.Font = new System.Drawing.Font("Arial", 10F);
+            this.tabControl1.Location = new System.Drawing.Point(0, 24);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(790, 370);
+            this.tabControl1.TabIndex = 33;
+            this.tabControl1.Selected += new System.Windows.Forms.TabControlEventHandler(this.tabControl1_Selected);
+            // 
+            // fromPlaylistNameToolStripMenuItem
+            // 
+            this.fromPlaylistNameToolStripMenuItem.Name = "fromPlaylistNameToolStripMenuItem";
+            this.fromPlaylistNameToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.fromPlaylistNameToolStripMenuItem.Text = "From Playlist Name";
+            this.fromPlaylistNameToolStripMenuItem.Click += new System.EventHandler(this.fromPlaylistNameToolStripMenuItem_Click);
+            // 
+            // sentFromUserToolStripMenuItem
+            // 
+            this.sentFromUserToolStripMenuItem.Name = "sentFromUserToolStripMenuItem";
+            this.sentFromUserToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.sentFromUserToolStripMenuItem.Text = "Sent From User";
+            this.sentFromUserToolStripMenuItem.Click += new System.EventHandler(this.sentFromUserToolStripMenuItem_Click);
+            // 
+            // addAllSongsFromSelectedAlbumToolStripMenuItem
+            // 
+            this.addAllSongsFromSelectedAlbumToolStripMenuItem.Name = "addAllSongsFromSelectedAlbumToolStripMenuItem";
+            this.addAllSongsFromSelectedAlbumToolStripMenuItem.Size = new System.Drawing.Size(265, 22);
+            this.addAllSongsFromSelectedAlbumToolStripMenuItem.Text = "Add All Songs From Selected Album";
+            // 
+            // byAlbumNameToolStripMenuItem
+            // 
+            this.byAlbumNameToolStripMenuItem.Name = "byAlbumNameToolStripMenuItem";
+            this.byAlbumNameToolStripMenuItem.Size = new System.Drawing.Size(265, 22);
+            this.byAlbumNameToolStripMenuItem.Text = "By Album Name";
+            // 
+            // button37
+            // 
+            this.button37.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(107)))), ((int)(((byte)(255)))));
+            this.button37.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.button37.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button37.ForeColor = System.Drawing.Color.White;
+            this.button37.Location = new System.Drawing.Point(532, 66);
+            this.button37.Name = "button37";
+            this.button37.Size = new System.Drawing.Size(74, 23);
+            this.button37.TabIndex = 40;
+            this.button37.Text = "Details";
+            this.toolTip1.SetToolTip(this.button37, "View the Details of this Transaction");
+            this.button37.UseVisualStyleBackColor = false;
+            // 
+            // button38
+            // 
+            this.button38.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(107)))), ((int)(((byte)(255)))));
+            this.button38.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.button38.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button38.ForeColor = System.Drawing.Color.White;
+            this.button38.Location = new System.Drawing.Point(532, 204);
+            this.button38.Name = "button38";
+            this.button38.Size = new System.Drawing.Size(74, 23);
+            this.button38.TabIndex = 38;
+            this.button38.Text = "Details";
+            this.toolTip1.SetToolTip(this.button38, "View the Details of this Transaction");
+            this.button38.UseVisualStyleBackColor = false;
+            this.button38.Visible = false;
+            // 
+            // button39
+            // 
+            this.button39.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(107)))), ((int)(((byte)(255)))));
+            this.button39.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.button39.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button39.ForeColor = System.Drawing.Color.White;
+            this.button39.Location = new System.Drawing.Point(532, 181);
+            this.button39.Name = "button39";
+            this.button39.Size = new System.Drawing.Size(74, 23);
+            this.button39.TabIndex = 39;
+            this.button39.Text = "Details";
+            this.toolTip1.SetToolTip(this.button39, "View the Details of this Transaction");
+            this.button39.UseVisualStyleBackColor = false;
+            // 
+            // button40
+            // 
+            this.button40.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(107)))), ((int)(((byte)(255)))));
+            this.button40.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.button40.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button40.ForeColor = System.Drawing.Color.White;
+            this.button40.Location = new System.Drawing.Point(532, 158);
+            this.button40.Name = "button40";
+            this.button40.Size = new System.Drawing.Size(74, 23);
+            this.button40.TabIndex = 37;
+            this.button40.Text = "Details";
+            this.toolTip1.SetToolTip(this.button40, "View the Details of this Transaction");
+            this.button40.UseVisualStyleBackColor = false;
+            // 
+            // button41
+            // 
+            this.button41.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(107)))), ((int)(((byte)(255)))));
+            this.button41.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.button41.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button41.ForeColor = System.Drawing.Color.White;
+            this.button41.Location = new System.Drawing.Point(532, 135);
+            this.button41.Name = "button41";
+            this.button41.Size = new System.Drawing.Size(74, 23);
+            this.button41.TabIndex = 35;
+            this.button41.Text = "Details";
+            this.toolTip1.SetToolTip(this.button41, "View the Details of this Transaction");
+            this.button41.UseVisualStyleBackColor = false;
+            // 
+            // button42
+            // 
+            this.button42.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(107)))), ((int)(((byte)(255)))));
+            this.button42.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.button42.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button42.ForeColor = System.Drawing.Color.White;
+            this.button42.Location = new System.Drawing.Point(532, 112);
+            this.button42.Name = "button42";
+            this.button42.Size = new System.Drawing.Size(74, 23);
+            this.button42.TabIndex = 36;
+            this.button42.Text = "Details";
+            this.toolTip1.SetToolTip(this.button42, "View the Details of this Transaction");
+            this.button42.UseVisualStyleBackColor = false;
+            // 
+            // button43
+            // 
+            this.button43.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(107)))), ((int)(((byte)(255)))));
+            this.button43.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.button43.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button43.ForeColor = System.Drawing.Color.White;
+            this.button43.Location = new System.Drawing.Point(532, 89);
+            this.button43.Name = "button43";
+            this.button43.Size = new System.Drawing.Size(74, 23);
+            this.button43.TabIndex = 34;
+            this.button43.Text = "Details";
+            this.toolTip1.SetToolTip(this.button43, "View the Details of this Transaction");
+            this.button43.UseVisualStyleBackColor = false;
+            // 
+            // button44
+            // 
+            this.button44.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(107)))), ((int)(((byte)(255)))));
+            this.button44.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.button44.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button44.ForeColor = System.Drawing.Color.White;
+            this.button44.Location = new System.Drawing.Point(532, 44);
+            this.button44.Name = "button44";
+            this.button44.Size = new System.Drawing.Size(74, 23);
+            this.button44.TabIndex = 33;
+            this.button44.Text = "*Details*";
+            this.toolTip1.SetToolTip(this.button44, "View the Details of this Transaction");
+            this.button44.UseVisualStyleBackColor = false;
+            this.button44.Click += new System.EventHandler(this.button44_Click);
+            // 
+            // button45
+            // 
+            this.button45.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(107)))), ((int)(((byte)(255)))));
+            this.button45.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.button45.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button45.ForeColor = System.Drawing.Color.White;
+            this.button45.Location = new System.Drawing.Point(532, 22);
+            this.button45.Name = "button45";
+            this.button45.Size = new System.Drawing.Size(74, 23);
+            this.button45.TabIndex = 32;
+            this.button45.Text = "Details";
+            this.toolTip1.SetToolTip(this.button45, "View the Details of this Transaction");
+            this.button45.UseVisualStyleBackColor = false;
+            // 
+            // button46
+            // 
+            this.button46.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(107)))), ((int)(((byte)(255)))));
+            this.button46.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.button46.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button46.ForeColor = System.Drawing.Color.White;
+            this.button46.Location = new System.Drawing.Point(532, 0);
+            this.button46.Name = "button46";
+            this.button46.Size = new System.Drawing.Size(74, 27);
+            this.button46.TabIndex = 31;
+            this.button46.Text = "Details";
+            this.toolTip1.SetToolTip(this.button46, "View the Details of this Transaction");
+            this.button46.UseVisualStyleBackColor = false;
+            // 
             // UserPlaylists
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(208)))), ((int)(((byte)(242)))));
-            this.ClientSize = new System.Drawing.Size(795, 606);
+            this.ClientSize = new System.Drawing.Size(799, 606);
             this.Controls.Add(this.lbTrace);
             this.Controls.Add(this.pnlNavigation);
             this.Controls.Add(this.tabControl1);
@@ -2172,8 +2473,31 @@ namespace LibraryApp
         private Button button35;
         private Button button20;
         private Button button19;
-        private Label txtVisibility;
         private ToolStripMenuItem sendLinkToUserToolStripMenuItem;
+        private Label label1;
+        private ComboBox cbVisibility;
+        private ToolStripMenuItem reportsToolStripMenuItem;
+        private ToolStripMenuItem addReportsToolStripMenuItem;
+        private ComboBox cbSelect;
+        private Label label10;
+        private Button button36;
+        private ToolStripMenuItem popularPlaylistsToolStripMenuItem;
+        private ToolStripMenuItem personalPlaylistToolStripMenuItem;
+        private ToolStripMenuItem fromALinkToolStripMenuItem;
+        private ToolStripMenuItem fromPlaylistNameToolStripMenuItem;
+        private ToolStripMenuItem sentFromUserToolStripMenuItem;
+        private ToolStripMenuItem byAlbumNameToolStripMenuItem;
+        private ToolStripMenuItem addAllSongsFromSelectedAlbumToolStripMenuItem;
+        private Button button37;
+        private Button button38;
+        private Button button39;
+        private Button button40;
+        private Button button41;
+        private Button button42;
+        private Button button43;
+        private Button button44;
+        private Button button45;
+        private Button button46;
     }
 }
 

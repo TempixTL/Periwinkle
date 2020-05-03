@@ -26,6 +26,7 @@ namespace LibraryApp
         public SupportingClass SupportingClassForm;
         public Undelete UndeleteForm;
         public Search SearchForm;
+        public SearchSelect SearchSelectForm;
         public MembershipUpgrade MembershipForm;
 
         public String UserName = "thicks";
@@ -125,6 +126,14 @@ namespace LibraryApp
             SearchForm.MdiParent = this;
             SearchForm.Location = new Point(300, 200);
             SearchForm.Show();
+        }
+
+        public void LaunchSearchSelect(String NewText, String NewDescription, String NewRec1, String NewRec2, String NewRec3, String NewRec4, String NewRec5)
+        {
+            SearchSelectForm = new SearchSelect(this, NewText,  NewDescription, NewRec1, NewRec2, NewRec3, NewRec4, NewRec5);
+            SearchSelectForm.MdiParent = this;
+            SearchSelectForm.Location = new Point(300, 200);
+            SearchSelectForm.Show();
         }
 
         public void LaunchMembershipUpgradeWindow(String Name, String CurrentMembership)
