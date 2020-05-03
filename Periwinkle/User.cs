@@ -1028,5 +1028,16 @@ namespace LibraryApp
                 txtPerks.Text = "Ad-free Streaming on Multiple Devices\r\nUp to Five Devices per Account\r\nFree Shipping on All Physical Orders\r\nUnlimited Library Size\r\nIncludes Artist Profile and Uploading Capabilies";
             }
         }
+
+        private void btnCheckOutTransfer_Click(object sender, EventArgs e)
+        {
+
+            MessageBox.Show("Opens in Playlist Sub-System");
+        }
+
+        private void btnPayFineTransfer_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Thank you for your payment!");
+        }
     }
 }
