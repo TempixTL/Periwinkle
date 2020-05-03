@@ -163,6 +163,7 @@ namespace LibraryApp
                 txtID.Text = "ID:1";
                 txtID2.Text = txtID.Text;
                 txtPlaylistOwner.Text = "Tom";
+                txtMinutes.Text = "000,000,00,376";
                 txtNotes.Text = "Playlist of rock music";
                 txtVisibility.Text = "Private";
                 if (cbVisibility.Text.Length != 0){
@@ -179,6 +180,7 @@ namespace LibraryApp
                 txtID.Text = "ID:2";
                 txtID2.Text = txtID.Text;
                 txtPlaylistOwner.Text = "Tom";
+                txtMinutes.Text = "000,000,00,056";
                 txtNotes.Text = "Playlist of rap songs";
                 txtVisibility.Text = "Public";
 
@@ -193,6 +195,7 @@ namespace LibraryApp
                 txtID.Text = "ID:3";
                 txtID2.Text = txtID.Text;
                 txtPlaylistOwner.Text = "Joseph";
+                txtMinutes.Text = "000,000,00,013";
                 txtNotes.Text = "Playlist of songs I like";
                 txtVisibility.Text = "Public";
 
@@ -1210,7 +1213,7 @@ namespace LibraryApp
 
         private void fromALinkToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            LaunchSearchWindow("Enter the playlist link to add to your playlist library.", "Paste the Link", "Add Playlist", "");
+            LaunchSearchWindow("Enter the unlisted/public playlist link to add to your playlist library.", "Paste the Link", "Add Playlist", "");
         }
 
         private void personalPlaylistToolStripMenuItem_Click(object sender, EventArgs e)
@@ -1252,6 +1255,17 @@ namespace LibraryApp
         }
 
         private void addReportsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void searchBySongTitleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            pf.LaunchSearchWindow("Search Your 3 Playlist By Name", "Enter Name", "Classical and Rock n' Roll", "Push the View Button to Go to Your playlist", "Playlist 1", "Playlist 2", "Playlist 3", "Playlist 4", "Classical and Rock n' Roll");
+
+        }
+
+        private void addAllSongsFromSelectedAlbumToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
         }
