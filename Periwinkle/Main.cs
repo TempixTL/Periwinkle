@@ -15,12 +15,18 @@ namespace LibraryApp
         public User UserForm;
         public Artist ArtistForm;
         public Music MusicForm;
+
+        public UserPlaylists PlaylistsForm;
+        public Following FollowingForm;
+        
+
         public bool UserInViewMode = true;
         public bool UserInEditMode = false;
         public bool UserInAddMode = false;
         public SupportingClass SupportingClassForm;
         public Undelete UndeleteForm;
         public Search SearchForm;
+        public SearchSelect SearchSelectForm;
         public MembershipUpgrade MembershipForm;
 
         public String UserName = "thicks";
@@ -38,6 +44,11 @@ namespace LibraryApp
             ArtistForm.MdiParent = this;
             MusicForm = new Music(this);
             MusicForm.MdiParent = this;
+
+            PlaylistsForm = new UserPlaylists(this);
+            PlaylistsForm.MdiParent = this;
+            FollowingForm = new Following(this);
+            FollowingForm.MdiParent = this;
         }
 
         private void Main_Load(object sender, EventArgs e)
@@ -83,6 +94,8 @@ namespace LibraryApp
 
         private void userSubSystemToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            UserForm = new User(this);
+            UserForm.MdiParent = this;
             UserForm.Show();
         }
 
@@ -107,12 +120,20 @@ namespace LibraryApp
             UndeleteForm.Text = NewText;
         }
 
-        public void LaunchSearchWindow(String NewText, String Prompt, String Example)
+        public void LaunchSearchWindow(String NewText, String Prompt, String Example, String NewDescription, String NewRec1, String NewRec2, String NewRec3, String NewRec4, String NewRec5)
         {
-            SearchForm = new Search(this, NewText, Prompt, Example);
+            SearchForm = new Search(this, NewText, Prompt, Example, NewDescription, NewRec1, NewRec2, NewRec3, NewRec4, NewRec5);
             SearchForm.MdiParent = this;
             SearchForm.Location = new Point(300, 200);
             SearchForm.Show();
+        }
+
+        public void LaunchSearchSelect(String NewText, String NewDescription, String NewRec1, String NewRec2, String NewRec3, String NewRec4, String NewRec5)
+        {
+            SearchSelectForm = new SearchSelect(this, NewText,  NewDescription, NewRec1, NewRec2, NewRec3, NewRec4, NewRec5);
+            SearchSelectForm.MdiParent = this;
+            SearchSelectForm.Location = new Point(300, 200);
+            SearchSelectForm.Show();
         }
 
         public void LaunchMembershipUpgradeWindow(String Name, String CurrentMembership)
@@ -125,12 +146,31 @@ namespace LibraryApp
 
         private void checkOutSubSystemToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            ArtistForm = new Artist(this);
+            ArtistForm.MdiParent = this;
             ArtistForm.Show();
+            //ArtistForm.
         }
 
         private void mediaSubSystemToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            MusicForm = new Music(this);
+            MusicForm.MdiParent = this;
             MusicForm.Show();
+        }
+
+        private void playlistToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            PlaylistsForm = new UserPlaylists(this);
+            PlaylistsForm.MdiParent = this;
+            PlaylistsForm.Show();
+        }
+
+        private void followingToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FollowingForm = new Following(this);
+            FollowingForm.MdiParent = this;
+            FollowingForm.Show();
         }
     }
 }

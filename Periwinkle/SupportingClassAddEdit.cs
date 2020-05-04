@@ -35,6 +35,20 @@ namespace LibraryApp
             MyOption = Option;
         }
 
+        public SupportingClassAddEdit(Main parent, String NewDescription,
+            String Option, String NewValue)
+        {
+            InitializeComponent();
+            //sc = parent;
+            this.Height = 135;
+            this.Width = 350;
+            this.Location = new Point(850, 410);
+            Text = Option + " " + NewDescription;
+            lbDescription.Text = NewDescription;
+            txtValue.Text = NewValue;
+            MyOption = Option;
+        }
+
         private void SupportingClassAddEdit_Load(object sender, EventArgs e)
         {
             menuStrip1.Renderer = new MyRenderer();
@@ -77,13 +91,18 @@ namespace LibraryApp
 
         private void saveToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            sc.Update(txtValue.Text, MyOption);
+            //sc.Update(txtValue.Text, MyOption);
             this.Close();
         }
 
         private void cancelToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void txtValue_TextChanged(object sender, EventArgs e)
+        {
+
         }
 
         //--------------------------------------------------------------------------------
