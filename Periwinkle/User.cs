@@ -13,7 +13,7 @@ namespace LibraryApp
         private String Database = "Trinity";
         private long Port = 12345;
         private bool DataToggle = true;
-        private String QuickLinkText = "Full Name";
+        private String QuickLinkText = "Last Name";
         private int RecordNo = 0;
 
         private List<Control> editFields = new List<Control>();
@@ -533,8 +533,6 @@ namespace LibraryApp
             saveToolStripMenuItem.Visible = false;
             cancelToolStripMenuItem.Visible = false;
             searchToolStripMenuItem.Visible = true;
-            reportsToolStripMenuItem.Visible = false;
-            administrativeToolStripMenuItem.Visible = true;
             closeToolStripMenuItem.Visible = true;
             dATAToolStripMenuItem.Visible = true;
 
@@ -551,7 +549,7 @@ namespace LibraryApp
             }
 
             // --------------------- Hide The Phone Buttons ----------------------
-            btnCellPhone.Show();
+            //btnCellPhone.Show();
 
             // ----------------- Hide The Data Transfer Buttons ------------------
             btnPayFineTransfer.Show();
@@ -630,8 +628,6 @@ namespace LibraryApp
             deleteToolStripMenuItem.Visible = false;
             undeleteToolStripMenuItem.Visible = false;
             searchToolStripMenuItem.Visible = false;
-            reportsToolStripMenuItem.Visible = false;
-            administrativeToolStripMenuItem.Visible = false;
             closeToolStripMenuItem.Visible = false;
             dATAToolStripMenuItem.Visible = false;
 
@@ -651,7 +647,7 @@ namespace LibraryApp
             }
 
             // --------------------- Hide The Phone Buttons ----------------------
-            btnCellPhone.Hide();
+            //btnCellPhone.Hide();
 
             // ----------------- Hide The Data Transfer Buttons ------------------
             btnPayFineTransfer.Hide();
@@ -1027,6 +1023,22 @@ namespace LibraryApp
             {
                 txtPerks.Text = "Ad-free Streaming on Multiple Devices\r\nUp to Five Devices per Account\r\nFree Shipping on All Physical Orders\r\nUnlimited Library Size\r\nIncludes Artist Profile and Uploading Capabilies";
             }
+        }
+
+        private void btnCheckOutTransfer_Click(object sender, EventArgs e)
+        {
+
+            MessageBox.Show("Opens in Playlist Sub-System");
+        }
+
+        private void btnPayFineTransfer_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Thank you for your payment!");
+        }
+
+        private void btnEmail_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Sending Email to User...\nHello Computer Scientist!");
         }
     }
 }
