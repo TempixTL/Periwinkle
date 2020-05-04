@@ -45,6 +45,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Following.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Following.Designer.cs">
+      <DependentUpon>Following.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserPlaylists.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserPlaylists.Designer.cs">
+      <DependentUpon>UserPlaylists.cs</DependentUpon>
+    </Compile>
     <Compile Include="Main.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -107,6 +119,12 @@
     <Compile Include="User.Designer.cs">
       <DependentUpon>User.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Following.resx">
+      <DependentUpon>Following.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserPlaylists.resx">
+      <DependentUpon>UserPlaylists.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>

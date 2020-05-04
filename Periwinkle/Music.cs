@@ -805,7 +805,7 @@ namespace LibraryApp
 
         private void closeToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            this.Close();
         }
 
         private void EditToolStripMenuItem_Click(object sender, EventArgs e)
@@ -966,27 +966,27 @@ namespace LibraryApp
 
         private void searchToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            pf.LaunchSearchWindow("Search User By Name", "Enter Name", "Hicks, T");
+            //pf.LaunchSearchWindow("Search User By Name", "Enter Name", "Hicks, T");
         }
 
         private void byNameToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            pf.LaunchSearchWindow("Search User By Name", "Enter Name", "Hicks, T");
+            //pf.LaunchSearchWindow("Search User By Name", "Enter Name", "Hicks, T");
         }
 
         private void byIDToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            pf.LaunchSearchWindow("Search User By ID", "Enter ID", "223");
+            //pf.LaunchSearchWindow("Search User By ID", "Enter ID", "223");
         }
 
         private void byUniversityIDToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            pf.LaunchSearchWindow("Search User By University ID", "Enter University ID", "00133456");
+            //pf.LaunchSearchWindow("Search User By University ID", "Enter University ID", "00133456");
         }
 
         private void byPhoneToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            pf.LaunchSearchWindow("Search User By Phone", "Enter Phone", "(210) 999-7438");
+            //pf.LaunchSearchWindow("Search User By Phone", "Enter Phone", "(210) 999-7438");
         }
     }
 }

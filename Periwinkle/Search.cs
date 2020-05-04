@@ -17,7 +17,18 @@ namespace LibraryApp
 
         SupportingClass sc;
         String MyOption;
+        String example;
         SearchSelect SearchSelectForm;
+
+        bool openSearch = true;
+
+        String selectDescription;
+        String selectRec1;
+        String selectRec2;
+        String selectRec3;
+        String selectRec4;
+        String selectRec5;
+
 
         public Search()
         {
@@ -36,6 +47,7 @@ namespace LibraryApp
             lbExample.Text = NewDescription;
             txtValue.Text = NewValue;
             MyOption = Option;
+            openSearch = true;
         }
 
         public Search(Main parent, String NewText, String Prompt, String Example)
@@ -44,8 +56,42 @@ namespace LibraryApp
             this.Location = new Point(980, 380);
             txtPrompt.Text = Prompt;
             lbExample.Text = "Example --> " + Prompt + ": " + Example;
+            example = Example;
             this.Text = NewText;
             pf = parent;
+            openSearch = true;
+        }
+
+        public Search(Main parent, String NewText, String Prompt, String btnText, String filler)
+        {
+            InitializeComponent();
+            this.Location = new Point(980, 380);
+            txtPrompt.Text = Prompt;
+            lbExample.Text = "";
+            //example = Example;
+            this.Text = NewText;
+            pf = parent;
+            openSearch = false;
+            btnSearchNow.Text = btnText;
+        }
+
+        public Search(Main parent, String NewText, String Prompt, String Example, String NewDescription, String NewRec1, String NewRec2, String NewRec3, String NewRec4, String NewRec5)
+        {
+            InitializeComponent();
+            this.Location = new Point(980, 380);
+            txtPrompt.Text = Prompt;
+            lbExample.Text = "Example --> " + Prompt + ": " + Example;
+            example = Example;
+            this.Text = NewText;
+            pf = parent;
+            openSearch = true;
+
+            selectDescription = NewDescription;
+            selectRec1 = NewRec1;
+            selectRec2 = NewRec2;
+            selectRec3 = NewRec3;
+            selectRec4 = NewRec4;
+            selectRec5 = NewRec5;
         }
 
         private void SupportingClassAddEdit_Load(object sender, EventArgs e)
@@ -101,18 +147,22 @@ namespace LibraryApp
 
         private void btnSearchNow_Click(object sender, EventArgs e)
         {
-            if (txtValue.Text == "Lewis, Makr")
-                MessageBox.Show("I am sorry, but the value you entered is not in our database!");
-            else
+            if (openSearch)
             {
-                if (txtValue.Text == "Vivaldi")
+                if (txtValue.Text == "Lewis, Makr")
+                    MessageBox.Show("I am sorry, but the value you entered is not in our database!");
+                else
                 {
-                    SearchSelectForm = new SearchSelect();
-                    SearchSelectForm.Show();
-                    SearchSelectForm.MdiParent = pf;
+                    if (txtValue.Text == example)
+                    {
+                        SearchSelectForm = new SearchSelect(pf, this.Text, selectDescription, selectRec1, selectRec2, selectRec3, selectRec4, selectRec5);
+                        SearchSelectForm.Show();
+                        SearchSelectForm.MdiParent = pf;
+                    }
+                    this.Close();
                 }
-                this.Close();
             }
+            else this.Close();
         }
 
         private void txtPrompt_TextChanged(object sender, EventArgs e)

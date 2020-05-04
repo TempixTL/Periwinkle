@@ -5,7 +5,7 @@ using System.Windows.Forms;
 
 namespace LibraryApp
 {
-    public partial class Artist : Form
+    public partial class Following : Form
     {
         private Main pf;
 
@@ -14,19 +14,23 @@ namespace LibraryApp
         private long Port = 12345;
         private bool DataToggle = true;
         private String QuickLinkText = "Full Name";
-        public int ViewFirstRecord = 0; 
+        public int ViewFirstRecord = 0;
+
+        public SupportingClassAddEdit AddPlaylist;
+        public Search SendToUser;
 
         private List<Control> editFields = new List<Control>();
+        bool addedArtistVisible = false;
 
         // Tom Lauerman Initialization Utilities
         #region User -- User_Load -- MyRenderer
 
-        public Artist()
+        public Following()
         {
             InitializeComponent();
         }
 
-        public Artist(Main parent)
+        public Following(Main parent)
         {
             InitializeComponent();
             pf = parent;
@@ -40,18 +44,35 @@ namespace LibraryApp
             ReloadQuickLinkToolTips();
             ViewMode();
 
-            editFields.Add(txtFirst);
-            editFields.Add(txtMI);
-            editFields.Add(txtLast);
-            editFields.Add(txtArtistName);
+            //editFields.Add(txtFirst);
+            //editFields.Add(txtMI);
+            //editFields.Add(txtLast);
+            //editFields.Add(txtArtistName);
             //editFields.Add(txtPassword);
             //editFields.Add(txtEmail);
             //editFields.Add(txtHomePhone);
             //editFields.Add(txtCellPhone);
-            editFields.Add(txtDateEstablished);
-            editFields.Add(cbGenre);
-            editFields.Add(txtNotes);
-            editFields.Add(txtProfile);
+            //editFields.Add(txtDateEstablished);
+            //editFields.Add(cbGenre);
+            //editFields.Add(txtNotes);
+            //editFields.Add(txtProfile);
+        }
+
+        public void LaunchSupportingClassWindow(String NewDescription,
+            String Option, String NewValue)
+        {
+            AddPlaylist = new SupportingClassAddEdit(pf, NewDescription,
+            Option, NewValue);
+            AddPlaylist.MdiParent = pf;
+            AddPlaylist.Show();
+            //AddPlaylist.Text = NewText;
+        }
+
+        public void LaunchSearchWindow(String NewText, String Prompt, String btnText, String filler)
+        {
+            SendToUser = new Search(pf, NewText, Prompt, btnText, filler);
+            SendToUser.MdiParent = pf;
+            SendToUser.Show();
         }
 
         private class MyRenderer : ToolStripProfessionalRenderer
@@ -133,56 +154,18 @@ namespace LibraryApp
         // Environment: C# VS 2017
         private void FillFormVariables()
         {
-            if (ViewFirstRecord == 0)
-            {
-                txtFirst.Text = "Antonio";
-                txtMI.Text = "L";
-                txtLast.Text = "Vivaldi";
-                txtID.Text = "ID 1";
-                txtArtistName.Text = "Antonio Vivaldi";
-                txtDateEstablished.Text = "03041678";
-                cbGenre.Text = "Classical";
-                txtProfile.Text = "Antonio Lucio Vivaldi was an Italian Baroque musical composer, virtuoso violinist, teacher, " +
-                                  "and Roman Catholic priest. Born in Venice, the capital of the Venetian Republic, " +
-                                  "he is regarded as one of the greatest Baroque composers, and his influence during his lifetime " +
-                                  "was widespread across Europe.";
-                txtNotes.Text = "See more at https://en.wikipedia.org/wiki/Antonio_Vivaldi";
-            }
-            else if (ViewFirstRecord == 1)
-            {
-                //band? variable needed
-                txtFirst.Text = "";
-                txtMI.Text = "";
-                txtLast.Text = "";
-                txtID.Text = "ID 2";
-                txtArtistName.Text = "Rush";
-                txtDateEstablished.Text = "09181968";
-                cbGenre.Text = "Rock";
-                txtProfile.Text = "Rush was a Canadian rock band consisting of Geddy Lee (bass, vocals, keyboards), " +
-                                  "Alex Lifeson (guitars), and Neil Peart (drums, percussion, lyricist). Formed in 1968, " +
-                                  "the band went through several configurations until arriving at its longest and classic line-up " +
-                                  "when Peart replaced original drummer John Rutsey in July 1974, " +
-                                  "two weeks before the group's first tour of the United States.";
-                txtNotes.Text = "See more at https://en.wikipedia.org/wiki/Rush_(band)";
-            }
-            else
-            {
-                txtFirst.Text = "Angus";
-                txtMI.Text = "M";
-                txtLast.Text = "Young";
-                txtID.Text = "ID 3";
-                txtArtistName.Text = "Angus Young";
-                txtDateEstablished.Text = "02171975";
-                cbGenre.Text = "Rock";
-                txtProfile.Text = "Angus McKinnon Young (born 31 March 1955) is an Australian guitarist, best known as the co-founder, " +
-                                  "lead guitarist, songwriter and only constant member of the Australian hard rock band AC/DC. " +
-                                  "He is known for his energetic performances, schoolboy-uniform stage outfits and his own version of " +
-                                  "Chuck Berry's duckwalk. Young was ranked 24th in Rolling Stone magazine's 100 greatest guitarists of " +
-                                  "all-time list.";
-                txtNotes.Text = "See more at https://en.wikipedia.org/wiki/Angus_Young";
-            }
+            if (ViewFirstRecord == 0) txtFocusedArtist.Text = txtArtist1.Text;
+            else if (ViewFirstRecord == 1) txtFocusedArtist.Text = txtArtist2.Text;
+            else if (ViewFirstRecord == 2) txtFocusedArtist.Text = txtArtist3.Text;
+            else if (ViewFirstRecord == 3) txtFocusedArtist.Text = txtArtist4.Text;
+            else if (ViewFirstRecord == 4) txtFocusedArtist.Text = txtArtist5.Text;
+            else if (ViewFirstRecord == 5) txtFocusedArtist.Text = txtArtist6.Text;
+            else if (ViewFirstRecord == 6) txtFocusedArtist.Text = txtArtist7.Text;
+            else if (ViewFirstRecord == 7) txtFocusedArtist.Text = txtArtist8.Text;
+            else if (ViewFirstRecord == 8) txtFocusedArtist.Text = txtArtist9.Text;
 
-            SynchronizeCommonFields();
+
+            //SynchronizeCommonFields();
         }
 
         // FillFormBlank
@@ -195,15 +178,15 @@ namespace LibraryApp
         // Environment: C# VS 2017
         private void FillFormBlank()
         {
-            txtFirst.Text = "";
-            txtMI.Text = "";
-            txtLast.Text = "";
-            txtID.Text = "ID";
-            txtArtistName.Text = "";
-            txtDateEstablished.Text = "";
-            cbGenre.Text = "--- Select Genre ---";
+            pnlPlaylist1.Hide();
+            //pnlPlaylist2.Hide();
+            //pnlPlaylist3.Hide();
+            //txtPlaylistName.Text = "";
+            txtPlaylistName2.Text = "";
+            txtPlaylistOwner.Text = "";
             txtNotes.Text = "";
-            txtProfile.Text = "";
+            txtFocusedArtist.Text = "";
+            
 
             SynchronizeCommonFields();
         }
@@ -218,14 +201,14 @@ namespace LibraryApp
         // Environment: C# VS 2017
         private void SynchronizeCommonFields()
         {
-            txtArtistName2.Text = txtArtistName.Text;
+            /*txtArtistName2.Text = txtArtistName.Text;
             txtArtistName3.Text = txtArtistName.Text;
             txtArtistName4.Text = txtArtistName.Text;
 
             txtID2.Text = txtID.Text;
             txtID2.Text = txtID.Text;
             txtID3.Text = txtID.Text;
-            txtID4.Text = txtID.Text;
+            txtID4.Text = txtID.Text;*/
         }
 
         // ProcessDataToggle
@@ -303,7 +286,8 @@ namespace LibraryApp
         // Environment: C# VS 2017
         private void LoadLastRecord()
         {
-            ViewFirstRecord = 2;
+            if (addedArtistVisible) ViewFirstRecord = 8;
+            else ViewFirstRecord = 7;
             FillFormVariables();
         }
 
@@ -332,7 +316,8 @@ namespace LibraryApp
         // Environment: C# VS 2017
         private void LoadNextRecord()
         {
-            ViewFirstRecord = (ViewFirstRecord+1)%3;
+            if(addedArtistVisible) ViewFirstRecord = (ViewFirstRecord+1)%9;
+            else ViewFirstRecord = (ViewFirstRecord + 1) % 8;
             FillFormVariables();
         }
 
@@ -346,7 +331,12 @@ namespace LibraryApp
         // Environment: C# VS 2017
         private void LoadPreviousRecord()
         {
-            if (ViewFirstRecord == 0) ViewFirstRecord = 2;
+
+            if (ViewFirstRecord == 0)
+            {
+                if (addedArtistVisible) ViewFirstRecord = 8;
+                else ViewFirstRecord = 7;
+            }
             else ViewFirstRecord--;
             FillFormVariables();
         }
@@ -371,18 +361,15 @@ namespace LibraryApp
         // Environment: C# VS 2017
         private void LoadFirstLetterRecord(char Letter)
         {
-            if (Letter == 'V')
-            {
-                ViewFirstRecord = 0;
-            }
-            else if (Letter == 'R')
-            {
-                ViewFirstRecord = 1;
-            }
-            else if (Letter == 'Y')
-            {
-                ViewFirstRecord = 2;
-            }
+            if (Letter == 'Y') ViewFirstRecord = 0;
+            else if (Letter == 'L') ViewFirstRecord = 1;
+            else if (Letter == 'A') ViewFirstRecord = 2;
+            else if (Letter == 'S') ViewFirstRecord = 3;
+            else if (Letter == 'B') ViewFirstRecord = 4;
+            else if (Letter == 'P') ViewFirstRecord = 5;
+            else if (Letter == 'T') ViewFirstRecord = 6;
+            else if (Letter == 'K') ViewFirstRecord = 7;
+
 
             FillFormVariables();
         }
@@ -462,9 +449,9 @@ namespace LibraryApp
             lbTraceNote("-", "Test Module 3", "ComboBox Control", "Settings");
 
             lbTrace.Items.Add("cbOrderBy.Text ....... = " + cbOrderBy.Text);
-            lbTrace.Items.Add("cbSelect.Text ........ = " + cbSelect.Text);
-            lbTrace.Items.Add("cbDeptID.DispalyValue  = " + cbGenre.Text.ToString());
-            lbTrace.Items.Add("cbDeptID.SelectedValue = " + cbGenre.SelectedValue.ToString());
+            //lbTrace.Items.Add("cbSelect.Text ........ = " + cbSelect.Text);
+            //lbTrace.Items.Add("cbDeptID.DispalyValue  = " + cbGenre.Text.ToString());
+            //lbTrace.Items.Add("cbDeptID.SelectedValue = " + cbGenre.SelectedValue.ToString());
             lbTrace.Items.Add("");
         }
 
@@ -533,60 +520,25 @@ namespace LibraryApp
             pf.UserInAddMode = false;
 
             // ------------------ Control MenuStrip Buttons ----------------------
-            addToolStripMenuItem.Visible = true;
-            editToolStripMenuItem.Visible = true;
+            //addToolStripMenuItem.Visible = true;
+            //editToolStripMenuItem.Visible = true;
             deleteToolStripMenuItem.Visible = true;
             undeleteToolStripMenuItem.Visible = true;
             saveToolStripMenuItem.Visible = false;
             cancelToolStripMenuItem.Visible = false;
             searchToolStripMenuItem.Visible = true;
-            reportsToolStripMenuItem.Visible = true;
+            //reportsToolStripMenuItem.Visible = true;
             //administrativeToolStripMenuItem.Visible = true;
             closeToolStripMenuItem.Visible = true;
             dATAToolStripMenuItem.Visible = true;
 
             // ------ Must Change FlatStyle Property From Standard To Flat -------
             // ------------------------- CoboBoxes ------------------------------- 
-            textBox1.ReadOnly = true;
-            textBox2.ReadOnly = true;
-            txtCheckOut3.ReadOnly = true;
-            textBox4.ReadOnly = true;
-            textBox12.ReadOnly = true;
-            textBox11.ReadOnly = true;
-            textBox10.ReadOnly = true;
-            textBox16.ReadOnly = true;
-            textBox15.ReadOnly = true;
-            textBox13.ReadOnly = true;
-            textBox8.ReadOnly = true;
-            textBox7.ReadOnly = true;
 
-            pnlAlbums.Show();
-            pnlBands.Show();
-            pnlMembers.Show();
-            pnlSongs.Show();
-
-            foreach (Control cntrl in editFields)
-            {
-                var txtCntrl = cntrl as TextBoxBase;
-                if (txtCntrl != null)
-                    txtCntrl.ReadOnly = true;
-
-                cntrl.BackColor = Color.White;
-            }
-
-            //rbMale.BackColor = Color.Transparent;
-            //rbFemale.BackColor = Color.Transparent;
-            //rbMale.ForeColor = Color.White;
-            //rbFemale.ForeColor = Color.White;
-
-            //chAdministrator.BackColor = Color.Transparent;
-
-            // --------------------- Hide The Phone Buttons ----------------------
-            //btnHomePhone.Show();
-            //btnCellPhone.Show();
-
-            // ----------------- Hide The Data Transfer Buttons ------------------
-
+            //txtPlaylistName.ReadOnly = true;
+            //txtPlaylistName.BackColor = Color.FromArgb(242, 208, 242);
+            txtNotes.ReadOnly = true;
+            txtNotes.BackColor = Color.FromArgb(255, 255, 255);
 
             // ---------------------- Navigation Controls -------------------------
             pnlNavigation.Show();
@@ -609,8 +561,8 @@ namespace LibraryApp
             }
 
             // Transaction Views
-            pnlAlbums.Show();
-            pnlAlbums.BringToFront();
+            pnlPlaylist1.Show();
+            pnlPlaylist1.BringToFront();
 
             // Fill Form Variables
             if (!DataToggle)
@@ -654,33 +606,21 @@ namespace LibraryApp
             pf.UserInEditMode = true;
 
             // ------------------ Control MenuStrip Buttons ----------------------
-            addToolStripMenuItem.Visible = false;
-            editToolStripMenuItem.Visible = false;
+            //addToolStripMenuItem.Visible = false;
+            //editToolStripMenuItem.Visible = false;
             saveToolStripMenuItem.Visible = true;
             cancelToolStripMenuItem.Visible = true;
             deleteToolStripMenuItem.Visible = false;
             undeleteToolStripMenuItem.Visible = false;
             searchToolStripMenuItem.Visible = false;
-            reportsToolStripMenuItem.Visible = false;
+            //reportsToolStripMenuItem.Visible = false;
             //administrativeToolStripMenuItem.Visible = false;
             closeToolStripMenuItem.Visible = false;
             dATAToolStripMenuItem.Visible = false;
-            txtProfile.Visible = true;
+            //txtProfile.Visible = true;
 
             // ------------ Make All TextBoxes Available To Edit ----------------
             // ---------------- Change Background To EditColor -----------------
-            textBox1.ReadOnly = false;
-            textBox2.ReadOnly = false;
-            txtCheckOut3.ReadOnly = false;
-            textBox4.ReadOnly = false;
-            textBox12.ReadOnly = false;
-            textBox11.ReadOnly = false;
-            textBox10.ReadOnly = false;
-            textBox16.ReadOnly = false;
-            textBox15.ReadOnly = false;
-            textBox13.ReadOnly = false;
-            textBox8.ReadOnly = false;
-            textBox7.ReadOnly = false;
 
             // ------ Must Change FlatStyle Property From Standard To Flat -------
             // ------------------------- CoboBoxes ------------------------------- 
@@ -693,6 +633,10 @@ namespace LibraryApp
 
                 cntrl.BackColor = Color.FromArgb(227, 220, 184);
             }
+            //txtPlaylistName.ReadOnly = false;
+            //txtPlaylistName.BackColor = Color.FromArgb(227, 220, 184);
+            txtNotes.ReadOnly = false;
+            txtNotes.BackColor = Color.FromArgb(227, 220, 184);
 
             // ---------------------- Navigation Controls -------------------------
             pnlNavigation.Hide();
@@ -701,7 +645,7 @@ namespace LibraryApp
             // Transaction Panels
             if (pf.UserInAddMode)
             {
-                pnlAlbums.Hide();
+                pnlPlaylist1.Hide();
                 //pnlCODetail.Hide();
             }
         }
@@ -720,10 +664,6 @@ namespace LibraryApp
         {
             pf.UserInAddMode = true;
             FillFormBlank();
-            pnlAlbums.Hide();
-            pnlBands.Hide();
-            pnlMembers.Hide();
-            pnlSongs.Hide();
             EditMode();
         }
         //===========================================================================//
@@ -771,6 +711,7 @@ namespace LibraryApp
         public void Save()
         {
             ViewMode();
+            //txtPlaylistName2.Text = txtPlaylistName.Text;
         }
         //===========================================================================//
         //== Cancel ==//
@@ -783,6 +724,7 @@ namespace LibraryApp
         //===========================================================================//
         private void Cancel()
         {
+            FillFormVariables();
             ViewMode();
         }
         //--------------------------------------------------------------------------------
@@ -807,10 +749,10 @@ namespace LibraryApp
             departments.Add(6, "K-Pop");
             departments.Add(15, "Jazz");
 
-            cbGenre.DataSource = new BindingSource(departments, null);
+            /*cbGenre.DataSource = new BindingSource(departments, null);
             cbGenre.DisplayMember = "Value";
             cbGenre.ValueMember = "Key";
-            cbGenre.DropDownStyle = ComboBoxStyle.DropDownList;
+            cbGenre.DropDownStyle = ComboBoxStyle.DropDownList;*/
         }
 
         private void btnTest_Click(object sender, EventArgs e)
@@ -867,7 +809,7 @@ namespace LibraryApp
 
         private void AddToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            AddMode();
+            LaunchSupportingClassWindow("New Playlist", "Add", "");
         }
 
         private void SaveToolStripMenuItem_Click(object sender, EventArgs e)
@@ -940,7 +882,7 @@ namespace LibraryApp
         private void tabControl1_Selected(Object sender, TabControlEventArgs e)
         {
             // Hide Detail Components
-            dgSongs.Hide();
+            /*dgSongs.Hide();
             pnlSongs.Hide();
             lblSongs.Hide();
             dgMembers.Hide();
@@ -960,29 +902,29 @@ namespace LibraryApp
 
             button5.Show();
             button8.Show();
-            textBox7.Show();
+            textBox7.Show();*/
 
         }
 
         private void btnViewDetails3_Click(object sender, EventArgs e)
         {
-            dgSongs.Show();
+            /*dgSongs.Show();
             pnlSongs.Show();
             lblSongs.Show();
 
-            pnlSongs.BringToFront();
+            pnlSongs.BringToFront();*/
         }
 
         private void btnDelete3_Click(object sender, EventArgs e)
         {
             btnDelete3.Hide();
-            btnViewDetails3.Hide();
-            txtCheckOut3.Hide();
+            //btnViewDetails3.Hide();
+            txtArtist3.Hide();
 
             // Hide Detail Components
-            dgSongs.Hide();
+            /*dgSongs.Hide();
             pnlSongs.Hide();
-            lblSongs.Hide();
+            lblSongs.Hide();*/
         }
 
         private void btnNextRight_Click(object sender, EventArgs e)
@@ -1017,7 +959,7 @@ namespace LibraryApp
 
         private void undeleteToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            pf.LaunchUndeleteWindow("Undelete Users", "User Name", "Ateez", "Yasunori Nishiki", "Blue Oyster Cult", "Fairway, Ann", "Angus Young");
+            pf.LaunchUndeleteWindow("Undelete Users", "User Name", "Rock", "70s", "Blues", "Classical", "K-Pop");
         }
 
         private void searchToolStripMenuItem_Click(object sender, EventArgs e)
@@ -1027,7 +969,10 @@ namespace LibraryApp
 
         private void byNameToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            pf.LaunchSearchWindow("Search User By Name", "Enter Name", "Vivaldi", "Push The View Button To Load The Sought Record", "Vivaldi, Iseppo", "Vivaldi, Bonaventura", "Vivaldi, Margarita ", "Vivaldi, Cecilia ", "Vivaldi, Antonio ");
+            //pf.LaunchSearchWindow("Search Song By Name", "Enter Name", "Renegade", "Push the View Button to Add the song", "", "", "", "", "Renegade, Styx");
+            //textBox8.Show();
+            //button10.Show();
+            //button9.Show();
         }
 
         private void byIDToolStripMenuItem_Click(object sender, EventArgs e)
@@ -1038,6 +983,10 @@ namespace LibraryApp
         private void byUniversityIDToolStripMenuItem_Click(object sender, EventArgs e)
         {
             //pf.LaunchSearchWindow("Search User By University ID", "Enter University ID", "00133456");
+            pf.LaunchSearchWindow("Search Artist by Name", "Enter Name", "Blue Oyster Cult", "Push the View Button to Add the song", "Blue Man Group", "The Moody Blues", "Blue October", "The Blues Brothers", "Blue Oyster Cult");
+            txtArtist9.Show();
+            button11.Show();
+            addedArtistVisible = true;
         }
 
         private void byPhoneToolStripMenuItem_Click(object sender, EventArgs e)
@@ -1052,7 +1001,7 @@ namespace LibraryApp
 
         private void btnV_Click(object sender, EventArgs e)
         {
-            LoadFirstLetterRecord('V');
+            
         }
 
         private void btnR_Click(object sender, EventArgs e)
@@ -1067,23 +1016,23 @@ namespace LibraryApp
 
         private void button25_Click(object sender, EventArgs e)
         {
-            dgMembers.Show();
-            pnlMembers.Show();
-            lblMembers.Show();
+            //dgMembers.Show();
+            //pnlMembers.Show();
+            //lblMembers.Show();
 
-            pnlMembers.BringToFront();
+            //pnlMembers.BringToFront();
         }
 
         private void button21_Click(object sender, EventArgs e)
         {
-            button21.Hide();
-            button25.Hide();
-            textBox15.Hide();
+            //button21.Hide();
+            //button25.Hide();
+            //textBox15.Hide();
 
             // Hide Detail Components
-            dgMembers.Hide();
-            pnlMembers.Hide();
-            lblMembers.Hide();
+            //dgMembers.Hide();
+            //pnlMembers.Hide();
+            //lblMembers.Hide();
         }
 
         private void button16_Click(object sender, EventArgs e)
@@ -1094,13 +1043,94 @@ namespace LibraryApp
         private void button5_Click(object sender, EventArgs e)
         {
             button5.Hide();
-            button8.Hide();
-            textBox7.Hide();
+            //button8.Hide();
+            txtArtist9.Hide();
         }
 
         private void reportsToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void searchToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnC_Click(object sender, EventArgs e)
+        {
+            LoadFirstLetterRecord('C');
+        }
+
+        private void btnM_Click(object sender, EventArgs e)
+        {
+            LoadFirstLetterRecord('M');
+        }
+
+        private void button35_Click(object sender, EventArgs e)
+        {
+            //txtVisibility.Text = "Pubic";
+            MessageBox.Show("Playlist is now available to anyone with a link \n\n Here is your link: \n PeriwinkleMusic.cs/Playlist?=TomRocknRoll");
+        }
+
+        private void cbOrderBy_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void sendLinkToUserToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            LaunchSearchWindow("Send playlist link to a user", "Enter Username", "Send", "");
+        }
+
+        private void button19_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Now Playing From Start");
+        }
+
+        private void button20_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Now Playing In Random Order");
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Connects to Artist Sub-System");
+        }
+
+        private void btnA_Click(object sender, EventArgs e)
+        {
+            LoadFirstLetterRecord('A');
+        }
+
+        private void btnB_Click(object sender, EventArgs e)
+        {
+            LoadFirstLetterRecord('B');
+        }
+
+        private void btnK_Click(object sender, EventArgs e)
+        {
+            LoadFirstLetterRecord('K');
+        }
+
+        private void btnP_Click(object sender, EventArgs e)
+        {
+            LoadFirstLetterRecord('P');
+        }
+
+        private void btnS_Click(object sender, EventArgs e)
+        {
+            LoadFirstLetterRecord('S');
+        }
+
+        private void btnT_Click(object sender, EventArgs e)
+        {
+            LoadFirstLetterRecord('T');
+        }
+
+        private void button17_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Yasunori Nishiki has released a new album! \n Check the Music Sub-System to see more");
         }
     }
 }

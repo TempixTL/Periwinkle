@@ -259,7 +259,6 @@
             this.txtRec6.Name = "txtRec6";
             this.txtRec6.Size = new System.Drawing.Size(319, 26);
             this.txtRec6.TabIndex = 16;
-            this.txtRec6.Text = "Vivaldi, Gerolama ";
             // 
             // btnView5
             // 
