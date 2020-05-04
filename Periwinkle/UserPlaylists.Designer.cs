@@ -2540,21 +2540,21 @@ namespace LibraryApp
             // 
             this.shareToUserToolStripMenuItem.Name = "shareToUserToolStripMenuItem";
             this.shareToUserToolStripMenuItem.Size = new System.Drawing.Size(299, 22);
-            this.shareToUserToolStripMenuItem.Text = "Share to User";
+            this.shareToUserToolStripMenuItem.Text = "*Share to User*";
             this.shareToUserToolStripMenuItem.Click += new System.EventHandler(this.shareToUserToolStripMenuItem_Click);
             // 
             // shareWithLinkToolStripMenuItem
             // 
             this.shareWithLinkToolStripMenuItem.Name = "shareWithLinkToolStripMenuItem";
             this.shareWithLinkToolStripMenuItem.Size = new System.Drawing.Size(299, 22);
-            this.shareWithLinkToolStripMenuItem.Text = "Share With Link";
+            this.shareWithLinkToolStripMenuItem.Text = "*Share With Link*";
             this.shareWithLinkToolStripMenuItem.Click += new System.EventHandler(this.shareWithLinkToolStripMenuItem_Click);
             // 
             // shareOnSocialMediaToolStripMenuItem
             // 
             this.shareOnSocialMediaToolStripMenuItem.Name = "shareOnSocialMediaToolStripMenuItem";
             this.shareOnSocialMediaToolStripMenuItem.Size = new System.Drawing.Size(299, 22);
-            this.shareOnSocialMediaToolStripMenuItem.Text = "Share on Social Media";
+            this.shareOnSocialMediaToolStripMenuItem.Text = "*Share on Social Media*";
             this.shareOnSocialMediaToolStripMenuItem.Click += new System.EventHandler(this.shareOnSocialMediaToolStripMenuItem_Click);
             // 
             // amministrationAddEditDeleteSocialsToolStripMenuItem

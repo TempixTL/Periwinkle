@@ -163,7 +163,7 @@ namespace LibraryApp
                 txtID.Text = "ID:1";
                 txtID2.Text = txtID.Text;
                 txtPlaylistOwner.Text = "Tom";
-                txtMinutes.Text = "000,000,00,376";
+                txtMinutes.Text = "000,000,000,376";
                 txtNotes.Text = "Playlist of rock music";
                 txtVisibility.Text = "Private";
                 if (cbVisibility.Text.Length != 0){
@@ -180,7 +180,7 @@ namespace LibraryApp
                 txtID.Text = "ID:2";
                 txtID2.Text = txtID.Text;
                 txtPlaylistOwner.Text = "Tom";
-                txtMinutes.Text = "000,000,00,056";
+                txtMinutes.Text = "000,000,000,056";
                 txtNotes.Text = "Playlist of rap songs";
                 txtVisibility.Text = "Public";
 
@@ -195,7 +195,7 @@ namespace LibraryApp
                 txtID.Text = "ID:3";
                 txtID2.Text = txtID.Text;
                 txtPlaylistOwner.Text = "Joseph";
-                txtMinutes.Text = "000,000,00,013";
+                txtMinutes.Text = "000,000,000,013";
                 txtNotes.Text = "Playlist of songs I like";
                 txtVisibility.Text = "Public";
 
@@ -223,6 +223,8 @@ namespace LibraryApp
             cbVisibility.Text = "--- Select Visibility ---";
             txtNotes.Text = "";
             txtID.Text = "ID:";
+            txtVisibility.Text = "";
+            txtMinutes.Text = "000,000,000,000";
             
 
             SynchronizeCommonFields();
@@ -1022,7 +1024,7 @@ namespace LibraryApp
 
         private void undeleteToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            pf.LaunchUndeleteWindow("Undelete Playlists", "Playlists", "Fun Songs!", "Songs That Make My Mom Go Crazy", "Edgy Songs for Edgy Teens", "My Study Music", "Rock n' Roll");
+            pf.LaunchUndeleteWindow("Undelete Playlists", "Playlists", "Fun Songs!", "Songs That Make My Mom Go Crazy", "Edgy Songs for Edgy Teens", "My Study Music", "Classical and Rock n' Roll");
         }
 
         private void searchToolStripMenuItem_Click(object sender, EventArgs e)
